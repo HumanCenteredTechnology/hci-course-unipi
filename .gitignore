@@ -1,0 +1,26 @@
+# python
+__pycache__/
+*.pyc
+
+# build outputs
+build/
+dist/
+
+# pdf generati
+*.pdf
+
+# pandoc temporary
+*.log
+*.aux
+*.out
+
+# os
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# local scripts output
+tools/output/
