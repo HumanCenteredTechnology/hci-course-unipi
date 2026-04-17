@@ -5,7 +5,6 @@ import subprocess
 import logging
 from pypdf import PdfWriter, PdfReader
 
-# Silenziamo i fastidiosi log di pypdf sulle annotazioni/link LaTeX
 logging.getLogger("pypdf").setLevel(logging.ERROR)
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
@@ -27,9 +26,8 @@ def natural_sort_key(s):
     return[int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
 
 def url_encode_path(path):
-    # Sostituiamo solo gli spazi e uniformiamo gli slash. 
-    # Questo metodo è più compatibile con GitHub e gli editor locali.
-    return path.replace("\\", "/").replace(" ", "%20")
+    # La codifica URL definitiva e sicura (es. trasforma gli spazi in %20 senza corrompere gli slash)
+    return urllib.parse.quote(path.replace("\\", "/"), safe="/")
 
 def get_rel_link(target_path):
     rel_path = os.path.relpath(target_path, ROOT_DIR)
@@ -39,7 +37,7 @@ def check_dependencies():
     try:
         subprocess.run(["pandoc", "-v"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
     except Exception:
-        logging.warning("PANDOC non trovato. I Markdown non verranno convertiti.")
+        logging.warning("PANDOC non trovato.")
         
     try:
         subprocess.run(["soffice", "--version"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
@@ -49,7 +47,7 @@ def check_dependencies():
             subprocess.run(["libreoffice", "--version"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
             return "libreoffice"
         except Exception:
-            logging.warning("LIBREOFFICE non trovato. I PPTX non verranno convertiti.")
+            logging.warning("LIBREOFFICE non trovato.")
             return None
 
 # ==========================================
@@ -67,14 +65,15 @@ def process_pptx(directory, lo_cmd):
                 
                 logging.info(f"Converting PPTX to PDF: {file}")
                 try:
-                    subprocess.run([lo_cmd, "--headless", "--convert-to", "pdf", file, "--outdir", root],
+                    # Aggiunto --nologo per evitare blocchi nei server Linux
+                    subprocess.run([lo_cmd, "--headless", "--nologo", "--nofirststartwizard", "--convert-to", "pdf", file, "--outdir", root],
                         cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     
                     if os.path.exists(pdf_path) and os.path.getsize(pdf_path) > 0:
                         os.remove(pptx_path)
-                        logging.info(f"PPTX originale eliminato con successo: {file}")
+                        logging.info(f"PPTX originale eliminato: {file}")
                 except subprocess.CalledProcessError as e:
-                    logging.error(f"Errore nella conversione di {file}")
+                    logging.error(f"Errore nella conversione PPTX di {file}")
 
 def process_markdown(directory):
     md_pdfs_generated =[]
@@ -90,11 +89,24 @@ def process_markdown(directory):
             if not os.path.exists(pdf_path) or os.path.getmtime(md_path) > os.path.getmtime(pdf_path):
                 logging.info(f"Converting MD to PDF: {file}")
                 try:
-                    # Se fallisce qui, di solito è colpa di un path immagine errato nel .md
-                    subprocess.run(["pandoc", file, "-o", pdf_name, "--pdf-engine=pdflatex", "-V", "geometry:margin=1in"],
-                        cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    # Ora usiamo wkhtmltopdf (via HTML). NESSUN crash per caratteri speciali!
+                    cmd =[
+                        "pandoc", file, "-o", pdf_name, 
+                        "--pdf-engine=wkhtmltopdf", 
+                        "-V", "margin-top=25mm", 
+                        "-V", "margin-bottom=25mm", 
+                        "-V", "margin-left=25mm", 
+                        "-V", "margin-right=25mm"
+                    ]
+                    subprocess.run(cmd, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 except Exception as e:
-                    logging.error(f"Errore Pandoc su {file}. Controlla i path delle immagini al suo interno!")
+                    # Nel caso Pandoc fallisca, riproviamo col motore standard (pdflatex) come fallback
+                    try:
+                        logging.warning(f"wkhtmltopdf fallito su {file}, tento con pdflatex...")
+                        cmd_fallback =["pandoc", file, "-o", pdf_name, "--pdf-engine=pdflatex"]
+                        subprocess.run(cmd_fallback, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    except Exception:
+                        logging.error(f"Errore DEFINITIVO Pandoc su {file}. Controlla i path delle immagini!")
                     
             if os.path.exists(pdf_path):
                 md_pdfs_generated.append(pdf_path)
@@ -158,7 +170,7 @@ def generate_table_navigation():
                 pdf_version = f"{md_base}.pdf"
                 if pdf_version in all_pdfs:
                     pdf_link = get_rel_link(os.path.join(module_path, pdf_version))
-                    notes_links.append(f"{EMOJI_DOC_PDF} [{md_base}]({pdf_link})")
+                    notes_links.append(f"{EMOJI_DOC_PDF}[{md_base}]({pdf_link})")
             notes_cell = "<br>".join(notes_links) if notes_links else "-"
             
             theme_cell = f"[{theme}]({theme_link})" if first_row else ""

@@ -3,7 +3,7 @@ name: Generate PDFs and Update README
 on:
   push:
     branches:
-      - '*'  # Cambia con nome del branch principale, per ora main
+      - '*'
     paths:
       - 'course_notes/**/*.pptx'
       - 'course_notes/**/*.md'
@@ -16,18 +16,21 @@ jobs:
       contents: write
 
     steps:
+      # Aggiornato alla v4 per rimuovere il warning di Node.js 20
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
+      # Aggiornato alla v5
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install System Dependencies (LibreOffice & Pandoc)
+      - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libreoffice pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+          # Installiamo wkhtmltopdf al posto di LaTeX per zero crash!
+          sudo apt-get install -y libreoffice pandoc wkhtmltopdf
 
       - name: Install Python Dependencies
         run: pip install pypdf
@@ -40,13 +43,15 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           
-          # -A assicura di fare il commit anche delle eliminazioni dei PPTX!
+          # Aggiunge tutto, comprese le eliminazioni
           git add -A
           
-          # Fai commit solo se ci sono file modificati o eliminati
+          # FORZATURA: Se hai un .gitignore che blocca i pdf, questo lo bypassa!
+          git add -f "**/*.pdf"
+          
           if git diff --staged --quiet; then
             echo "Nessun cambiamento rilevato."
           else
-            git commit -m "docs: Auto-generate PDFs, remove PPTX, and update README"
+            git commit -m "docs: Auto-generate PDFs via wkhtmltopdf and update README"
             git push
           fi
