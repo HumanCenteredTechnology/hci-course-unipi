@@ -29,9 +29,9 @@ Since the bot deletes PPTX files after conversion:
 
 ---
 
-TO ADD COMMENTS A MARKDONW DOC PLEASE USE:
+### TO ADD COMMENTS A MARKDONW DOC PLEASE USE:
 `[//]: #` 
-If you use HTML to comment the comments WILL appear in the final PDF
+> If you use HTML to comment the comments WILL appear in the final PDF
 ---
 
 ## 📁 Repository Structure

@@ -141,6 +141,7 @@ def process_markdown(directory, stats):
                     cmd =[
                         "pandoc", file, "-o", pdf_name, 
                         "--strip-comments",
+                        "--webtex",
                         "--pdf-engine=wkhtmltopdf", 
                         "-V", "margin-top=25mm", 
                         "-V", "margin-bottom=25mm", 
