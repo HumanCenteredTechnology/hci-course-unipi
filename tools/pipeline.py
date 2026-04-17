@@ -5,6 +5,10 @@ import subprocess
 import logging
 from pypdf import PdfWriter, PdfReader
 
+# Silenziamo i fastidiosi log di pypdf sulle annotazioni/link LaTeX
+logging.getLogger("pypdf").setLevel(logging.ERROR)
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
 # ==========================================
 # CONFIGURAZIONI DELLA PIPELINE 
 # ==========================================
@@ -18,15 +22,14 @@ MASTER_PDF_NAME = "Appunti_HCI_Riassunti_Completi.pdf"
 
 EMOJI_FOLDER = "📁"
 EMOJI_DOC_PDF = "📕"
-EMOJI_SLIDES = "📊"
-
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
 def natural_sort_key(s):
     return[int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
 
 def url_encode_path(path):
-    return urllib.parse.quote(path.replace("\\", "/"))
+    # Sostituiamo solo gli spazi e uniformiamo gli slash. 
+    # Questo metodo è più compatibile con GitHub e gli editor locali.
+    return path.replace("\\", "/").replace(" ", "%20")
 
 def get_rel_link(target_path):
     rel_path = os.path.relpath(target_path, ROOT_DIR)
@@ -67,7 +70,6 @@ def process_pptx(directory, lo_cmd):
                     subprocess.run([lo_cmd, "--headless", "--convert-to", "pdf", file, "--outdir", root],
                         cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     
-                    # Se il PDF è stato creato correttamente, eliminiamo il file .pptx
                     if os.path.exists(pdf_path) and os.path.getsize(pdf_path) > 0:
                         os.remove(pptx_path)
                         logging.info(f"PPTX originale eliminato con successo: {file}")
@@ -88,10 +90,11 @@ def process_markdown(directory):
             if not os.path.exists(pdf_path) or os.path.getmtime(md_path) > os.path.getmtime(pdf_path):
                 logging.info(f"Converting MD to PDF: {file}")
                 try:
+                    # Se fallisce qui, di solito è colpa di un path immagine errato nel .md
                     subprocess.run(["pandoc", file, "-o", pdf_name, "--pdf-engine=pdflatex", "-V", "geometry:margin=1in"],
                         cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 except Exception as e:
-                    logging.error(f"Errore Pandoc su {file}")
+                    logging.error(f"Errore Pandoc su {file}. Controlla i path delle immagini al suo interno!")
                     
             if os.path.exists(pdf_path):
                 md_pdfs_generated.append(pdf_path)
@@ -122,10 +125,10 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
 
 def generate_table_navigation():
     lines =[
-        "> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere anche ai file Markdown originali usati per stilare gli appunti e alle cartelle contenenti tutte le relative immagini.",
+        "> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.",
         "",
-        "| Theme | Module | Slides (PDF) | Notes (PDF) |",
-        "|-------|--------|--------------|-------------|"
+        "| Theme | Module | Notes |",
+        "|-------|--------|-------|"
     ]
     
     themes =[d for d in os.listdir(NOTES_DIR) if os.path.isdir(os.path.join(NOTES_DIR, d)) and d.startswith("[") and "Appunti" not in d]
@@ -146,19 +149,8 @@ def generate_table_navigation():
             module_link = get_rel_link(module_path)
             files = os.listdir(module_path)
             
-            md_bases = [f.replace(".md", "") for f in files if f.endswith(".md")]
-            all_pdfs = [f for f in files if f.endswith(".pdf")]
-            
-            # Se il nome del PDF non ha un .md corrispondente, è una Slide, altrimenti è una Nota convertita
-            slide_pdfs = [f for f in all_pdfs if f.replace(".pdf", "") not in md_bases]
-            slide_pdfs.sort(key=natural_sort_key)
-            
-            slides_links =[]
-            for sp in slide_pdfs:
-                sp_name = sp.replace(".pdf", "")
-                sp_link = get_rel_link(os.path.join(module_path, sp))
-                slides_links.append(f"{EMOJI_SLIDES} [{sp_name}]({sp_link})")
-            slides_cell = "<br>".join(slides_links) if slides_links else "-"
+            md_bases =[f.replace(".md", "") for f in files if f.endswith(".md")]
+            all_pdfs =[f for f in files if f.endswith(".pdf")]
             
             # Link esclusivamente ai PDF derivati dai markdown
             notes_links =[]
@@ -172,7 +164,7 @@ def generate_table_navigation():
             theme_cell = f"[{theme}]({theme_link})" if first_row else ""
             first_row = False
             
-            lines.append(f"| {theme_cell} | {EMOJI_FOLDER} [{module}]({module_link}) | {slides_cell} | {notes_cell} |")
+            lines.append(f"| {theme_cell} | {EMOJI_FOLDER} [{module}]({module_link}) | {notes_cell} |")
     
     return "\n".join(lines)
 
