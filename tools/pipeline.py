@@ -51,15 +51,43 @@ def check_dependencies():
             return None
 
 # ==========================================
-# CONVERSIONI
+# TELEMETRIA E CONVERSIONI
 # ==========================================
 
-def process_pptx(directory, lo_cmd):
+def get_stat(stats, root):
+    """Inizializza il dizionario delle statistiche per una cartella se non esiste."""
+    if root not in stats:
+        stats[root] = {
+            'pptx_found': 0, 'pptx_conv': 0, 'pptx_err': 0,
+            'md_found': 0, 'md_conv': 0, 'md_err': 0,
+            'final_slides': 0, 'final_notes': 0
+        }
+    return stats[root]
+
+def init_module_stats():
+    """Censisce in anticipo tutte le cartelle dei Moduli per assicurarsi che appaiano nel log finale."""
+    stats = {}
+    if not os.path.exists(NOTES_DIR): return stats
+    for theme in os.listdir(NOTES_DIR):
+        theme_path = os.path.join(NOTES_DIR, theme)
+        if not os.path.isdir(theme_path) or not theme.startswith("[") or "Appunti" in theme:
+            continue
+        for module in os.listdir(theme_path):
+            module_path = os.path.join(theme_path, module)
+            if not os.path.isdir(module_path) or module.startswith("Media_"):
+                continue
+            get_stat(stats, module_path)
+    return stats
+
+def process_pptx(directory, lo_cmd, stats):
     if not lo_cmd: return
     for root, _, files in os.walk(directory):
-        if "Media_" in root: continue
+        if "Media_" in root or "Appunti Completi" in root: continue
         for file in files:
             if file.endswith(".pptx"):
+                s = get_stat(stats, root)
+                s['pptx_found'] += 1
+                
                 pptx_path = os.path.join(root, file)
                 pdf_path = os.path.splitext(pptx_path)[0] + ".pdf"
                 
@@ -70,17 +98,24 @@ def process_pptx(directory, lo_cmd):
                     
                     if os.path.exists(pdf_path) and os.path.getsize(pdf_path) > 0:
                         os.remove(pptx_path)
+                        s['pptx_conv'] += 1
                         logging.info(f"PPTX originale eliminato: {file}")
+                    else:
+                        s['pptx_err'] += 1
                 except subprocess.CalledProcessError as e:
+                    s['pptx_err'] += 1
                     logging.error(f"Errore nella conversione PPTX di {file}")
 
-def process_markdown(directory):
+def process_markdown(directory, stats):
     md_pdfs_generated =[]
     for root, _, files in os.walk(directory):
-        if "Media_" in root: continue
+        if "Media_" in root or "Appunti Completi" in root: continue
         
-        md_files =[f for f in files if f.endswith(".md") and f != "README.md" and "Appunti" not in f]
+        md_files =[f for f in files if f.endswith(".md") and f != "README.md"]
         for file in md_files:
+            s = get_stat(stats, root)
+            s['md_found'] += 1
+            
             md_path = os.path.join(root, file)
             pdf_name = os.path.splitext(file)[0] + ".pdf"
             pdf_path = os.path.join(root, pdf_name)
@@ -88,7 +123,6 @@ def process_markdown(directory):
             if not os.path.exists(pdf_path) or os.path.getmtime(md_path) > os.path.getmtime(pdf_path):
                 logging.info(f"Converting MD to PDF: {file}")
                 try:
-                    # Impostazione "Libro/Accademico": 2.5cm verticali, 4cm orizzontali
                     cmd =[
                         "pandoc", file, "-o", pdf_name, 
                         "--strip-comments",
@@ -99,17 +133,20 @@ def process_markdown(directory):
                         "-V", "margin-right=40mm"
                     ]
                     subprocess.run(cmd, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    s['md_conv'] += 1
                 except Exception as e:
                     try:
                         logging.warning(f"wkhtmltopdf fallito su {file}, tento con pdflatex...")
-                        # Stessi identici margini applicati al motore di emergenza pdflatex
                         cmd_fallback =[
                             "pandoc", file, "-o", pdf_name, 
+                            "--strip-comments",
                             "--pdf-engine=pdflatex", 
                             "-V", "geometry:top=25mm,bottom=25mm,left=40mm,right=40mm"
                         ]
                         subprocess.run(cmd_fallback, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        s['md_conv'] += 1
                     except Exception:
+                        s['md_err'] += 1
                         logging.error(f"Errore DEFINITIVO Pandoc su {file}. Controlla i path delle immagini!")
                     
             if os.path.exists(pdf_path):
@@ -136,14 +173,12 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
         merger.write(f_out)
 
 # ==========================================
-# GESTIONE README
+# GESTIONE README E LOG FINALE
 # ==========================================
 
 def generate_table_navigation():
-    # Link calcolato dinamicamente al Master PDF
     master_pdf_link = get_rel_link(os.path.join(MASTER_PDF_FOLDER, MASTER_PDF_NAME))
     
-    # Intestazione aggiornata con il link in grande rilievo
     lines =[
         f"### 📚 [👉 Link repo per scaricare gli Appunti Completi in PDF]({master_pdf_link})",
         "",
@@ -199,11 +234,9 @@ def update_readme(nav_text):
     
     start = "<!-- AUTO_NAV_START -->"
     end = "<!-- AUTO_NAV_END -->"
-    # Sostituiamo in modo esatto senza aggiungere newline in più ogni volta
     new_section = f"{start}\n\n## Repository Navigation\n\n{nav_text}\n\n{end}"
     
     if start in content and end in content:
-        # Prende tutto prima dello start e tutto dopo l'end, e ci piazza in mezzo la sezione aggiornata
         before = content.split(start)[0]
         after = content.split(end)[1]
         content = before + new_section + after
@@ -213,17 +246,52 @@ def update_readme(nav_text):
     with open(README, "w", encoding="utf-8") as f:
         f.write(content)
 
+def print_execution_summary(stats):
+    print("\n" + "="*90)
+    print("📊 RIEPILOGO GRANULARE ESECUZIONE PIPELINE GITHUB ACTIONS 📊".center(90))
+    print("="*90)
+    
+    for root in sorted(stats.keys(), key=natural_sort_key):
+        # Calcolo situazione PDF Finali Uscenti
+        files = os.listdir(root)
+        md_bases =[f.replace(".md", "") for f in files if f.endswith(".md")]
+        all_pdfs =[f for f in files if f.endswith(".pdf")]
+        
+        for pdf in all_pdfs:
+            if pdf.replace(".pdf", "") in md_bases:
+                stats[root]['final_notes'] += 1
+            else:
+                stats[root]['final_slides'] += 1
+        
+        rel_path = os.path.relpath(root, NOTES_DIR).replace(os.sep, ' / ')
+        s = stats[root]
+        
+        # Stampiamo il blocco per la singola cartella
+        print(f"\n📁 {rel_path}")
+        print(f"   ▶ SLIDES : Entrati {s['pptx_found']} PPTX  | Convertiti: {s['pptx_conv']} | Errori: {s['pptx_err']} || Usciti: {s['final_slides']} PDF (Slides) totali in cartella")
+        print(f"   ▶ NOTES  : Entrati {s['md_found']} MD    | Convertiti: {s['md_conv']} | Errori: {s['md_err']} || Usciti: {s['final_notes']} PDF (Notes) totali in cartella")
+        
+    print("\n" + "="*90 + "\n")
+
 def main():
     logging.info("=== AVVIO PIPELINE ===")
     lo_cmd = check_dependencies()
     
-    process_pptx(NOTES_DIR, lo_cmd)
-    md_pdfs = process_markdown(NOTES_DIR)
-    merge_pdfs(md_pdfs, MASTER_PDF_FOLDER, MASTER_PDF_NAME)
+    # 0. Inizializza statistiche mappando le cartelle
+    stats = init_module_stats()
     
+    # 1. Processa tutto passando le statistiche per il tracking
+    process_pptx(NOTES_DIR, lo_cmd, stats)
+    md_pdfs = process_markdown(NOTES_DIR, stats)
+    
+    # 2. Fonde i PDF e aggiorna la UI (Tabella nel Readme)
+    merge_pdfs(md_pdfs, MASTER_PDF_FOLDER, MASTER_PDF_NAME)
     nav_text = generate_table_navigation()
     update_readme(nav_text)
-    logging.info("=== PIPELINE COMPLETATA ===")
+    
+    # 3. Mette il fiocco finale stampando il Log Granulare
+    print_execution_summary(stats)
+    logging.info("=== PIPELINE COMPLETATA CON SUCCESSO ===")
 
 if __name__ == "__main__":
     main()
