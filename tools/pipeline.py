@@ -91,6 +91,7 @@ def process_markdown(directory):
                     # Impostazione "Libro/Accademico": 2.5cm verticali, 4cm orizzontali
                     cmd =[
                         "pandoc", file, "-o", pdf_name, 
+                        "--strip-comments",
                         "--pdf-engine=wkhtmltopdf", 
                         "-V", "margin-top=25mm", 
                         "-V", "margin-bottom=25mm", 
@@ -144,7 +145,7 @@ def generate_table_navigation():
     
     # Intestazione aggiornata con il link in grande rilievo
     lines =[
-        f"### 📚 [👉 Clicca qui per scaricare gli Appunti Completi in un unico PDF]({master_pdf_link})",
+        f"### 📚 [👉 Link repo per scaricare gli Appunti Completi in PDF]({master_pdf_link})",
         "",
         "> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.",
         "",
