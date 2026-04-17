@@ -16,8 +16,10 @@ ROOT_DIR = os.path.abspath(os.path.join(TOOLS_DIR, ".."))
 
 NOTES_DIR = os.path.join(ROOT_DIR, "course_notes")
 README = os.path.join(ROOT_DIR, "README.md")
-MASTER_PDF_FOLDER = os.path.join(NOTES_DIR, "[4] IUM Appunti Riassunti Completi")
-MASTER_PDF_NAME = "Appunti_HCI_Riassunti_Completi.pdf"
+
+# Nomi aggiornati per la cartella e il PDF del merge
+MASTER_PDF_FOLDER = os.path.join(NOTES_DIR, "[4] Appunti Completi")
+MASTER_PDF_NAME = "Appunti_Completi.pdf"
 
 EMOJI_FOLDER = "📁"
 EMOJI_DOC_PDF = "📕"
@@ -26,7 +28,6 @@ def natural_sort_key(s):
     return[int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
 
 def url_encode_path(path):
-    # La codifica URL definitiva e sicura (es. trasforma gli spazi in %20 senza corrompere gli slash)
     return urllib.parse.quote(path.replace("\\", "/"), safe="/")
 
 def get_rel_link(target_path):
@@ -65,7 +66,6 @@ def process_pptx(directory, lo_cmd):
                 
                 logging.info(f"Converting PPTX to PDF: {file}")
                 try:
-                    # Aggiunto --nologo per evitare blocchi nei server Linux
                     subprocess.run([lo_cmd, "--headless", "--nologo", "--nofirststartwizard", "--convert-to", "pdf", file, "--outdir", root],
                         cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     
@@ -80,6 +80,7 @@ def process_markdown(directory):
     for root, _, files in os.walk(directory):
         if "Media_" in root: continue
         
+        # Ignoriamo i file README o i file che contengono "Appunti" nel nome per evitare ricorsioni
         md_files =[f for f in files if f.endswith(".md") and f != "README.md" and "Appunti" not in f]
         for file in md_files:
             md_path = os.path.join(root, file)
@@ -89,7 +90,6 @@ def process_markdown(directory):
             if not os.path.exists(pdf_path) or os.path.getmtime(md_path) > os.path.getmtime(pdf_path):
                 logging.info(f"Converting MD to PDF: {file}")
                 try:
-                    # Ora usiamo wkhtmltopdf (via HTML). NESSUN crash per caratteri speciali!
                     cmd =[
                         "pandoc", file, "-o", pdf_name, 
                         "--pdf-engine=wkhtmltopdf", 
@@ -100,7 +100,6 @@ def process_markdown(directory):
                     ]
                     subprocess.run(cmd, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 except Exception as e:
-                    # Nel caso Pandoc fallisca, riproviamo col motore standard (pdflatex) come fallback
                     try:
                         logging.warning(f"wkhtmltopdf fallito su {file}, tento con pdflatex...")
                         cmd_fallback =["pandoc", file, "-o", pdf_name, "--pdf-engine=pdflatex"]
@@ -117,6 +116,7 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
     if not pdf_list: return
     logging.info(f"Merging {len(pdf_list)} files in {output_filename}...")
     
+    # SE LA CARTELLA NON ESISTE, LA CREA IN AUTOMATICO QUI:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
         
@@ -143,6 +143,7 @@ def generate_table_navigation():
         "|-------|--------|-------|"
     ]
     
+    # La tabella ignorerà la cartella "Appunti" grazie al filtro: "Appunti" not in d
     themes =[d for d in os.listdir(NOTES_DIR) if os.path.isdir(os.path.join(NOTES_DIR, d)) and d.startswith("[") and "Appunti" not in d]
     themes.sort(key=natural_sort_key)
     
@@ -164,13 +165,12 @@ def generate_table_navigation():
             md_bases =[f.replace(".md", "") for f in files if f.endswith(".md")]
             all_pdfs =[f for f in files if f.endswith(".pdf")]
             
-            # Link esclusivamente ai PDF derivati dai markdown
             notes_links =[]
             for md_base in sorted(md_bases, key=natural_sort_key):
                 pdf_version = f"{md_base}.pdf"
                 if pdf_version in all_pdfs:
                     pdf_link = get_rel_link(os.path.join(module_path, pdf_version))
-                    notes_links.append(f"{EMOJI_DOC_PDF}[{md_base}]({pdf_link})")
+                    notes_links.append(f"{EMOJI_DOC_PDF} [{md_base}]({pdf_link})")
             notes_cell = "<br>".join(notes_links) if notes_links else "-"
             
             theme_cell = f"[{theme}]({theme_link})" if first_row else ""
@@ -204,6 +204,7 @@ def main():
     logging.info("=== AVVIO PIPELINE ===")
     lo_cmd = check_dependencies()
     
+    # L'ordine esatto: prima processa tutto, poi fa il merge (e crea la cartella [4]), poi fa la tabella
     process_pptx(NOTES_DIR, lo_cmd)
     md_pdfs = process_markdown(NOTES_DIR)
     merge_pdfs(md_pdfs, MASTER_PDF_FOLDER, MASTER_PDF_NAME)
