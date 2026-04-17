@@ -60,12 +60,13 @@ def get_stat(stats, root):
         stats[root] = {
             'pptx_found': 0, 'pptx_conv': 0, 'pptx_err': 0,
             'md_found': 0, 'md_conv': 0, 'md_err': 0,
+            'initial_pdf_slides': 0, 'initial_pdf_notes': 0,
             'final_slides': 0, 'final_notes': 0
         }
     return stats[root]
 
 def init_module_stats():
-    """Censisce in anticipo tutte le cartelle dei Moduli per assicurarsi che appaiano nel log finale."""
+    """Censisce lo stato INIZIALE delle cartelle prima di qualsiasi operazione."""
     stats = {}
     if not os.path.exists(NOTES_DIR): return stats
     for theme in os.listdir(NOTES_DIR):
@@ -76,7 +77,21 @@ def init_module_stats():
             module_path = os.path.join(theme_path, module)
             if not os.path.isdir(module_path) or module.startswith("Media_"):
                 continue
-            get_stat(stats, module_path)
+            
+            s = get_stat(stats, module_path)
+            
+            # Fotografia iniziale: Quanti MD e PDF ci sono già?
+            files = os.listdir(module_path)
+            md_bases =[f.replace(".md", "") for f in files if f.endswith(".md") and f != "README.md"]
+            all_pdfs = [f for f in files if f.endswith(".pdf")]
+            
+            for pdf in all_pdfs:
+                # Se c'è un MD col nome del PDF, è una nota. Altrimenti è una slide.
+                if pdf.replace(".pdf", "") in md_bases:
+                    s['initial_pdf_notes'] += 1
+                else:
+                    s['initial_pdf_slides'] += 1
+                    
     return stats
 
 def process_pptx(directory, lo_cmd, stats):
@@ -179,8 +194,8 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
 def generate_table_navigation():
     master_pdf_link = get_rel_link(os.path.join(MASTER_PDF_FOLDER, MASTER_PDF_NAME))
     
-    lines =[
-        f"### 📚 [👉 Link repo per scaricare gli Appunti Completi in PDF]({master_pdf_link})",
+    lines = [
+        f"### 📚[👉 Link repo per scaricare gli Appunti Completi in PDF]({master_pdf_link})",
         "",
         "> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.",
         "",
@@ -206,8 +221,8 @@ def generate_table_navigation():
             module_link = get_rel_link(module_path)
             files = os.listdir(module_path)
             
-            md_bases =[f.replace(".md", "") for f in files if f.endswith(".md")]
-            all_pdfs =[f for f in files if f.endswith(".pdf")]
+            md_bases = [f.replace(".md", "") for f in files if f.endswith(".md")]
+            all_pdfs = [f for f in files if f.endswith(".pdf")]
             
             notes_links =[]
             for md_base in sorted(md_bases, key=natural_sort_key):
@@ -247,15 +262,15 @@ def update_readme(nav_text):
         f.write(content)
 
 def print_execution_summary(stats):
-    print("\n" + "="*90)
-    print("📊 RIEPILOGO GRANULARE ESECUZIONE PIPELINE GITHUB ACTIONS 📊".center(90))
-    print("="*90)
+    print("\n" + "="*100)
+    print("📊 RIEPILOGO GRANULARE ESECUZIONE PIPELINE GITHUB ACTIONS 📊".center(100))
+    print("="*100)
     
     for root in sorted(stats.keys(), key=natural_sort_key):
         # Calcolo situazione PDF Finali Uscenti
         files = os.listdir(root)
-        md_bases =[f.replace(".md", "") for f in files if f.endswith(".md")]
-        all_pdfs =[f for f in files if f.endswith(".pdf")]
+        md_bases =[f.replace(".md", "") for f in files if f.endswith(".md") and f != "README.md"]
+        all_pdfs = [f for f in files if f.endswith(".pdf")]
         
         for pdf in all_pdfs:
             if pdf.replace(".pdf", "") in md_bases:
@@ -266,30 +281,29 @@ def print_execution_summary(stats):
         rel_path = os.path.relpath(root, NOTES_DIR).replace(os.sep, ' / ')
         s = stats[root]
         
-        # Stampiamo il blocco per la singola cartella
         print(f"\n📁 {rel_path}")
-        print(f"   ▶ SLIDES : Entrati {s['pptx_found']} PPTX  | Convertiti: {s['pptx_conv']} | Errori: {s['pptx_err']} || Usciti: {s['final_slides']} PDF (Slides) totali in cartella")
-        print(f"   ▶ NOTES  : Entrati {s['md_found']} MD    | Convertiti: {s['md_conv']} | Errori: {s['md_err']} || Usciti: {s['final_notes']} PDF (Notes) totali in cartella")
+        print(f"   ▶ SLIDES : Inizio [{s['pptx_found']} PPTX, {s['initial_pdf_slides']} PDF]  -->  Convertiti: {s['pptx_conv']} | Errori: {s['pptx_err']} || Fine: {s['final_slides']} PDF totali (Slides)")
+        print(f"   ▶ NOTES  : Inizio [{s['md_found']} MD, {s['initial_pdf_notes']} PDF]    -->  Convertiti: {s['md_conv']} | Errori: {s['md_err']} || Fine: {s['final_notes']} PDF totali (Notes)")
         
-    print("\n" + "="*90 + "\n")
+    print("\n" + "="*100 + "\n")
 
 def main():
     logging.info("=== AVVIO PIPELINE ===")
     lo_cmd = check_dependencies()
     
-    # 0. Inizializza statistiche mappando le cartelle
+    # 0. Inizializza statistiche scattando la FOTOGRAFIA INIZIALE della repo
     stats = init_module_stats()
     
-    # 1. Processa tutto passando le statistiche per il tracking
+    # 1. Processa tutto
     process_pptx(NOTES_DIR, lo_cmd, stats)
     md_pdfs = process_markdown(NOTES_DIR, stats)
     
-    # 2. Fonde i PDF e aggiorna la UI (Tabella nel Readme)
+    # 2. Merge e UI
     merge_pdfs(md_pdfs, MASTER_PDF_FOLDER, MASTER_PDF_NAME)
     nav_text = generate_table_navigation()
     update_readme(nav_text)
     
-    # 3. Mette il fiocco finale stampando il Log Granulare
+    # 3. Confronto e Stampa Log
     print_execution_summary(stats)
     logging.info("=== PIPELINE COMPLETATA CON SUCCESSO ===")
 
