@@ -415,6 +415,7 @@ L'unione di metodi qualitativi e quantitativi è estremamente potente per ottene
 <br>
 
 <!-- SEPARATORE PER RICORDARE CHE E' UN'ALTRA SLIDE!!! -->
+
 # 6 La Ricerca Quantitativa 
 
 La parte di ricerca quantitativa utilizza numeri per prendere decisioni, quindi misurare, comparare le alternative in maniera oggettiva – non che la parte qualitativa compari in maniera soggettiva, ma inteso riguardo alle misure esatte e sperimentali.
