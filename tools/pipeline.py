@@ -17,7 +17,6 @@ ROOT_DIR = os.path.abspath(os.path.join(TOOLS_DIR, ".."))
 NOTES_DIR = os.path.join(ROOT_DIR, "course_notes")
 README = os.path.join(ROOT_DIR, "README.md")
 
-# Nomi aggiornati per la cartella e il PDF del merge
 MASTER_PDF_FOLDER = os.path.join(NOTES_DIR, "[4] Appunti Completi")
 MASTER_PDF_NAME = "Appunti_Completi.pdf"
 
@@ -80,7 +79,6 @@ def process_markdown(directory):
     for root, _, files in os.walk(directory):
         if "Media_" in root: continue
         
-        # Ignoriamo i file README o i file che contengono "Appunti" nel nome per evitare ricorsioni
         md_files =[f for f in files if f.endswith(".md") and f != "README.md" and "Appunti" not in f]
         for file in md_files:
             md_path = os.path.join(root, file)
@@ -90,19 +88,25 @@ def process_markdown(directory):
             if not os.path.exists(pdf_path) or os.path.getmtime(md_path) > os.path.getmtime(pdf_path):
                 logging.info(f"Converting MD to PDF: {file}")
                 try:
+                    # Impostazione "Libro/Accademico": 2.5cm verticali, 4cm orizzontali
                     cmd =[
                         "pandoc", file, "-o", pdf_name, 
                         "--pdf-engine=wkhtmltopdf", 
                         "-V", "margin-top=25mm", 
                         "-V", "margin-bottom=25mm", 
-                        "-V", "margin-left=25mm", 
-                        "-V", "margin-right=25mm"
+                        "-V", "margin-left=40mm", 
+                        "-V", "margin-right=40mm"
                     ]
                     subprocess.run(cmd, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 except Exception as e:
                     try:
                         logging.warning(f"wkhtmltopdf fallito su {file}, tento con pdflatex...")
-                        cmd_fallback =["pandoc", file, "-o", pdf_name, "--pdf-engine=pdflatex"]
+                        # Stessi identici margini applicati al motore di emergenza pdflatex
+                        cmd_fallback =[
+                            "pandoc", file, "-o", pdf_name, 
+                            "--pdf-engine=pdflatex", 
+                            "-V", "geometry:top=25mm,bottom=25mm,left=40mm,right=40mm"
+                        ]
                         subprocess.run(cmd_fallback, cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     except Exception:
                         logging.error(f"Errore DEFINITIVO Pandoc su {file}. Controlla i path delle immagini!")
@@ -116,7 +120,6 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
     if not pdf_list: return
     logging.info(f"Merging {len(pdf_list)} files in {output_filename}...")
     
-    # SE LA CARTELLA NON ESISTE, LA CREA IN AUTOMATICO QUI:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
         
@@ -136,14 +139,19 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
 # ==========================================
 
 def generate_table_navigation():
+    # Link calcolato dinamicamente al Master PDF
+    master_pdf_link = get_rel_link(os.path.join(MASTER_PDF_FOLDER, MASTER_PDF_NAME))
+    
+    # Intestazione aggiornata con il link in grande rilievo
     lines =[
+        f"### 📚 [👉 Clicca qui per scaricare gli Appunti Completi in un unico PDF]({master_pdf_link})",
+        "",
         "> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.",
         "",
         "| Theme | Module | Notes |",
         "|-------|--------|-------|"
     ]
     
-    # La tabella ignorerà la cartella "Appunti" grazie al filtro: "Appunti" not in d
     themes =[d for d in os.listdir(NOTES_DIR) if os.path.isdir(os.path.join(NOTES_DIR, d)) and d.startswith("[") and "Appunti" not in d]
     themes.sort(key=natural_sort_key)
     
@@ -176,7 +184,7 @@ def generate_table_navigation():
             theme_cell = f"[{theme}]({theme_link})" if first_row else ""
             first_row = False
             
-            lines.append(f"| {theme_cell} | {EMOJI_FOLDER} [{module}]({module_link}) | {notes_cell} |")
+            lines.append(f"| {theme_cell} | {EMOJI_FOLDER}[{module}]({module_link}) | {notes_cell} |")
     
     return "\n".join(lines)
 
@@ -190,10 +198,14 @@ def update_readme(nav_text):
     
     start = "<!-- AUTO_NAV_START -->"
     end = "<!-- AUTO_NAV_END -->"
-    new_section = f"{start}\n\n### Repository Navigation\n{nav_text}\n\n{end}"
+    # Sostituiamo in modo esatto senza aggiungere newline in più ogni volta
+    new_section = f"{start}\n\n## Repository Navigation\n\n{nav_text}\n\n{end}"
     
     if start in content and end in content:
-        content = content.split(start)[0] + new_section + content.split(end)[1]
+        # Prende tutto prima dello start e tutto dopo l'end, e ci piazza in mezzo la sezione aggiornata
+        before = content.split(start)[0]
+        after = content.split(end)[1]
+        content = before + new_section + after
     else:
         content += "\n\n" + new_section
     
@@ -204,7 +216,6 @@ def main():
     logging.info("=== AVVIO PIPELINE ===")
     lo_cmd = check_dependencies()
     
-    # L'ordine esatto: prima processa tutto, poi fa il merge (e crea la cartella [4]), poi fa la tabella
     process_pptx(NOTES_DIR, lo_cmd)
     md_pdfs = process_markdown(NOTES_DIR)
     merge_pdfs(md_pdfs, MASTER_PDF_FOLDER, MASTER_PDF_NAME)
