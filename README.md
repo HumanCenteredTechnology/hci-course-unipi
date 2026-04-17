@@ -27,7 +27,7 @@ Below you can quickly access all themes and modules in the repository.
 
 ## Repository Navigation
 
-### 📚 [👉 Clicca qui per scaricare gli Appunti Completi in un unico PDF](course_notes/%5B4%5D%20Appunti%20Completi/Appunti_Completi.pdf)
+### 📚 [👉 Link repo per scaricare gli Appunti Completi in PDF](course_notes/%5B4%5D%20Appunti%20Completi/Appunti_Completi.pdf)
 
 > 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.
 
