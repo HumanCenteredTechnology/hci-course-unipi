@@ -86,15 +86,10 @@ Questa deriva da 6 principi psicologici fondamentali:
 
 
 1.  **Affordances**
-
 2.  **Signifiers**
-
 3.  **Mapping**
-
 4.  **Feedback**
-
 5.  **Conceptual model of the system and System Image**
-
 6.  **Constraints**
 
 
@@ -240,11 +235,8 @@ L’incastro finale del modellino emerge quindi dall’interazione di più vinco
 Esistono dunque quattro classi di vincoli:
 
 1.  **Vincoli fisici**: sono legati alle proprietà del mondo fisico e agli oggetti materiali. Un esempio sono i pezzi della LEGO che possono incastrarsi solo in un determinato modo oppure una chiavetta USB che entra nella porta solo in un verso specifico.
-
 2.  **Vincoli culturali**: derivano da abitudini, **convenzioni** sociali e pratiche condivise all’interno di una cultura. Un esempio è il senso di scrittura che varia in diverse parti del mondo.
-
 3.  **Vincoli semantici**: si legano al significato della situazione e aiutano a circoscrivere l'insieme delle azioni possibili. Si basano sulla conoscenza della situazione e del mondo. Un esempio è la posizione sensata del motociclista, ovvero che deve stare seduto rivolto in avanti.
-
 4.  **Vincoli logici**: si basano sulla pura logica umana e sulle relazioni tra elementi. Se nel completare un modellino LEGO rimanesse fuori un singolo pezzo, sapremmo dove infilarlo.
 
 Un designer sfrutta questi vincoli al meglio per portare l'utente verso un modello mentale del prodotto che si avvicini il più possibile al modello concettuale desiderato.

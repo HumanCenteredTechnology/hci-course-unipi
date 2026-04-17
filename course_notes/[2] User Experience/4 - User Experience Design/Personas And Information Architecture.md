@@ -294,19 +294,12 @@ A seconda del livello di dettaglio e complessità richiesto, un caso d’uso pu�
 Secondo la metodologia proposta da *Kenworthy (1997)*, la creazione di un caso d’uso può essere articolata nei seguenti passaggi:
 
 1.  Identificare chi utilizzerà il sistema o il sito web.
-
 2.  Selezionare uno di questi utenti.
-
 3.  Definire cosa quell’utente desidera fare sul sito: **ogni cosa che l'utente fa diventa un caso d’uso**.
-
 4.  Determinare il flusso normale degli eventi quando l’utente utilizza il sistema.
-
 5.  Descrivere questo flusso base nella descrizione del caso d'uso, indicando cosa fa l’utente e come il sistema risponde (reazioni di cui l'utente dovrebbe essere consapevole).
-
 6.  Considerare i percorsi alternativi e aggiungerli per "estendere" il caso d’uso.
-
 7.  Individuare eventuali somiglianze tra casi d’uso diversi e documentarle come flussi comuni.
-
 8.  Ripetere i passaggi da 2 a 7 per tutti gli altri utenti identificati.
 
 <figure data-latex-placement="h!">
@@ -332,11 +325,8 @@ Abbiamo già visto come comprendere gli utenti attraverso **personas** e **scena
 Questi pattern emergono indipendentemente dal tipo di interfaccia o dalle caratteristiche demografiche dell’utente. Comprendere questi pattern ci aiuta a:
 
 - Progettare interfacce che risultino naturali per gli utenti.
-
 - Supportare strategie e abitudini comuni.
-
 - Evitare di opporsi ai comportamenti naturali dell’utente.
-
 - Creare interazioni più intuitive.
 
 Vediamo adesso alcuni pattern tipici.
@@ -410,7 +400,6 @@ Alcuni siti salvano automaticamente moduli parzialmente compilati o altri dati p
 Gli utenti raramente creano tutto in una volta sola. Iniziano con piccole parti, ci lavorano, fanno un passo indietro per guardare il risultato, testano, aggiustano e poi continuano a costruire il resto. Le interfacce “a costruttore” devono supportare questo stile di lavoro:
 
 - Mantenendo l’interfaccia reattiva a modifiche rapide e salvataggi frequenti.
-
 - Fornendo feedback costante: mostrando costantemente all’utente l’aspetto e il comportamento complessivo mentre lavora.
 
 Quando buoni strumenti supportano le attività creative, possono indurre un utente in uno stato di **flow**, dove il piacere dell’attività è la ricompensa stessa.
@@ -509,11 +498,8 @@ Tutti questi comportamenti descritti (la tendenza al *satisficing*, il cambiare 
 Ora servono metodi sistematici per supportare questi comportamenti. L’**Information Architecture (IA)** fornisce la struttura di riferimento:
 
 - **Organizzare** i contenuti per far “accontentare” gli utenti in modo sicuro.
-
 - **Strutturare** la navigazione per supportare la memoria spaziale e offrire vie di fuga.
-
 - **Etichettare** chiaramente, così che l’esplorazione appaia sicura.
-
 - **Creare strutture flessibili** che consentano di cambiare direzione facilmente.
 
 L’architettura dell’informazione si concentra sull’organizzare, strutturare e etichettare i contenuti in modo efficace e sostenibile. L’obiettivo è aiutare gli utenti a trovare informazioni e completare compiti. Per farlo, bisogna capire come le varie parti si incastrano per formare un insieme coerente e come gli elementi si relazionano all’interno del sistema.  
@@ -521,11 +507,8 @@ L’architettura dell’informazione si concentra sull’organizzare, strutturar
 Perché è importante una buona IA? Secondo Peter Morville, lo scopo dell’IA è aiutare gli utenti a comprendere:
 
 - Dove si trovano.
-
 - Cosa hanno trovato.
-
 - Cosa c’è intorno.
-
 - Cosa aspettarsi dopo.
 
 Di conseguenza, una buona IA influenza la **content strategy**, aiutando a scegliere le parole giuste e guidando il **design dell’interfaccia** e dell’interazione.
@@ -535,19 +518,14 @@ Per avere successo, è necessario comprendere gli standard del settore per la cr
 Lou Rosenfeld e Peter Morville, nel libro *Information Architecture for the World Wide Web*, indicano i principali componenti dell’IA:
 
 - **Schemi e strutture organizzative**: come si categorizza e struttura l’informazione.
-
 - **Sistemi di etichettatura**: come si rappresenta l’informazione.
-
 - **Sistemi di navigazione**: come gli utenti esplorano o si spostano tra le informazioni.
-
 - **Sistemi di ricerca**: come gli utenti cercano le informazioni.
 
 Per creare questi sistemi informativi, occorre comprendere la natura **interdipendente** di utenti, contenuti e contesto. Rosenfeld e Morville definiscono questa relazione “**ecologia dell’informazione**”, rappresentata come un diagramma di Venn in cui ogni cerchio rappresenta:
 
 - **Contesto**: obiettivi aziendali, finanziamenti, politica, cultura, tecnologia, risorse, vincoli.
-
 - **Contenuti**: obiettivi dei contenuti, tipi di documenti e dati, volume, struttura esistente, governance e proprietà.
-
 - **Utenti**: pubblico, compiti, bisogni, comportamento nella ricerca di informazioni, esperienza.
 
 <figure data-latex-placement="h!">
@@ -621,7 +599,6 @@ Implementare schemi indipendenti è vantaggioso perché mantiene la semplicità 
 Abbiamo esaminato i principi con cui organizziamo i contenuti. Ora vediamo quali **forme strutturali** possono assumere queste organizzazioni quando vengono implementate. Lo stesso principio organizzativo può assumere forme diverse:
 
 - **Netflix** organizza per argomento (genere) in una struttura **gerarchica**.
-
 - **Wikipedia** organizza per argomento in una struttura a **matrice**, con molti collegamenti interconnessi.
 
 La scelta della struttura influenza il modo in cui gli utenti navigano e comprendono lo spazio informativo. Una struttura organizzativa definisce le **relazioni tra i vari contenuti**.  
@@ -629,11 +606,8 @@ La scelta della struttura influenza il modo in cui gli utenti navigano e compren
 Strutture efficaci permettono agli utenti di **prevedere dove trovare** le informazioni sul sito. È importante rispettare le aspettative degli utenti e adottare metodi coerenti di organizzazione e visualizzazione, in modo che possano estendere ciò che imparano da pagine familiari a quelle nuove. Le quattro principali strutture organizzative sono:
 
 - **Gerarchica**
-
 - **Sequenziale**
-
 - **A matrice**
-
 - **A modello di database**
 
 ### Strutture gerarchiche
@@ -714,7 +688,6 @@ Gli utenti si affidano agli **information architect** per creare raggruppamenti 
 Lo studio dell’architettura dell’informazione guida il processo di progettazione della **navigazione**. La navigazione riguarda l’**orientamento dell’utente** all’interno dell’interfaccia, e il suo obiettivo principale è:
 
 - Permettere all’utente di trovare informazioni e funzioni desiderate.
-
 - Incoraggiare l'utente verso direzioni che potrebbero essergli utili o desiderabili.
 
 I principi fondamentali per una buona navigazione sono:
@@ -738,21 +711,14 @@ L’interfaccia fornisce spesso strumenti indiretti per favorire la scoperta, an
 Quando si progetta un’interfaccia, è importante essere **coerenti e prevedibili** nella scelta degli elementi. Che ne siano consapevoli o meno, gli utenti si abituano al fatto che determinati elementi si comportino in un certo modo: adottare elementi familiari al momento opportuno migliora il completamento del task, l'efficienza e la soddisfazione. Gli elementi dell’interfaccia includono:
 
 - **Controlli di input**: checkbox, radio button, menu a discesa (dropdown lists), list box, pulsanti, interruttori (toggles), campi di testo e di data.
-
 - **Componenti di navigazione**: breadcrumb, slider, barra di ricerca, paginazione, tag, icone.
-
 - **Componenti informativi**: tooltips, icone, barre di progresso, notifiche, message boxes, finestre modali.
-
 - **Contenitori**: accordion.
 
 ### Sintesi dei principi chiave di progettazione
 
 - **Progetta in base ai comportamenti degli utenti**: ogni decisione di IA deve supportare il modo in cui gli utenti pensano e agiscono (satisficing, memoria spaziale, esplorazione sicura).
-
 - **Gli schemi organizzativi definiscono i principi**, le strutture ne determinano la forma: scegli prima la logica di categorizzazione (argomento, compito, cronologia), poi decidi la forma in cui organizzarli (gerarchia, matrice, sequenza).
-
 - **Una buona IA è invisibile**: gli utenti la notano solo quando è progettata male. L’obiettivo è una navigazione fluida e un’organizzazione intuitiva.
-
 - **Bilancia findability e discoverability**: aiuta gli utenti a trovare ciò che cercano, ma abilitali anche a scoprire cose nuove che non sapevano di volere/avere bisogno.
-
 - **La coerenza favorisce l’abituazione**: pattern prevedibili, etichette chiare e coerenza spaziale permettono agli utenti di costruire modelli mentali e lavorare in modo efficiente.

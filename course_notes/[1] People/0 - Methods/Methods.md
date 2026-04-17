@@ -1,6 +1,7 @@
 # 1. Introduzione ai Concetti Base
 
 Prima di addentrarci nella progettazione, è utile definire alcuni termini fondamentali legati al modello di business e all'offerta:
+
 * **Gratis**: assenza totale di scambio.
 * **Free**: nessun costo monetario diretto per l'utente, ma il servizio viene "pagato" tramite la cessione di tempo (es. visione di pubblicità) o dati personali.
 * **Prodotto**: qualsiasi entità utile per la quale un utente è disposto a investire denaro o tempo.

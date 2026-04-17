@@ -134,17 +134,13 @@ Questo perché nel livello in questione risiedono i pattern comportamentali (le 
 I tre livelli di *processing* dunque non sono compartimenti stagni, ma lavorano in parallelo e si influenzano reciprocamente, ad esempio:
 
 - un'interfaccia visceralmente sgradevole può compromettere la percezione comportamentale, anche se tecnicamente è ben progettata;
-
 - un'esperienza comportamentale frustrante (troppi errori) può innescare una valutazione riflessiva negativa del prodotto;
-
 - una valutazione riflessiva positiva ("questo prodotto è perfetto per le mie esigenze") può rendere più tollerabili piccoli difetti viscerali o comportamentali.
 
 Da ciascun livello insomma possiamo trarre una lezione importante per il design del nostro prodotto, ovvero che è importante:
 
 1.  costruire una narrazione (positiva) memorabile attorno all’esperienza d’uso (livello riflessivo)
-
 2.  fornire un feedback chiaro e creare pattern di interazione coerenti per facilitare l’automatizzazione (livello comportamentale)
-
 3.  curare l’estetica con la stessa attenzione dedicata alla funzionalità (livello viscerale).
 
 La tabella seguente aiuterà a focalizzare quanto spiegato in precedenza.
@@ -207,7 +203,6 @@ Questa distinzione tra slip e mistake tuttavia non descrive tutti i tipi di erro
 Tuttavia, emerge una differenza critica: gli Slip sono errori di esecuzione e vengono solitamente riconosciuti e corretti facilmente se il feedback è immediato (vedo che ho fatto un’azione sbagliata o diversa da quella intenzionale e correggo). I Mistake, invece, sono errori molto più 'robusti': l'utente è convinto di agire nel giusto (basandosi su un modello mentale errato) e potrebbe ignorare i feedback negativi o razionalizzarli, persistendo nella procedura errata. Ad esempio:
 
 - Slip: l’utente preme CTRL + S per salvare un documento, ma, non accorgendosi di avere ancora attiva la finestra del browser, si apre il menù Salva pagina del browser (un feedback inaspettato).
-
 - Mistake: l’utente riavvia il computer perché solitamente risolve i problemi, senza capire che in realtà questa volta il problema è la connessione di rete.
 
 In entrambi i casi, l’utente sta usando soluzioni affidabili, testate nel tempo e tramite l’esperienza, che quindi “di solito funzionano”, ma fuori dal loro ambito di validità. Inoltre alcuni errori si collocano a metà strada tra le categorie degli slip e dei mistake. È necessario dunque dividere gli slip e i mistake in altre sottocategorie:
@@ -255,13 +250,9 @@ In Giappone è stata sviluppata da tempo una procedura particolarmente efficace 
 Vediamo un esempio pratico. Immaginiamo che un veicolo non si accenda. Applichiamo la tecnica dei cinque perché:
 
 1.  Perché il veicolo non si accende? Perché la batteria è scarica.
-
 2.  Perché la batteria è scarica? Perché l'alternatore non funziona e non la ricarica.
-
 3.  Perché l'alternatore non funziona? Perché la cinghia dell'alternatore è rotta.
-
 4.  Perché la cinghia dell'alternatore è rotta? Perché era ben oltre il suo tempo di servizio e non è stata sostituita.
-
 5.  Perché non è stata sostituita per tempo? Perché il veicolo non è stato sottoposto a manutenzione secondo le tempistiche raccomandate.
 
 Se ci fossimo fermati al primo "perché" ("la batteria è scarica"), avremmo semplicemente sostituito la batteria, ma il problema si sarebbe ripresentato poco dopo. Scavando più a fondo, scopriamo che la vera causa del problema è un sistema di manutenzione inadeguato ed è questa l'area su cui dobbiamo intervenire per risolvere definitivamente il problema.

@@ -30,6 +30,7 @@ Nel ciclo di vita di un prodotto, è essenziale distinguere due ruoli complement
 # 5. Metodologie per l'Innovazione: L'approccio IDEO
 
 Quando si parla di applicare l'HCD per generare innovazione dirompente, l'agenzia di design IDEO rappresenta un punto di riferimento globale. Il principio cardine della filosofia di IDEO è l'**empatia** totale verso l'utente finale. Per scoprire cosa le persone desiderano veramente, i designer devono entrare nel loro mondo attraverso due azioni pratiche:
+
 1.  **Osservare il comportamento**: studiare le persone nel loro contesto naturale (ad esempio, se si progetta un'aspirapolvere, bisogna guardare le persone mentre puliscono casa).
 2.  **Vivere la situazione**: mettersi fisicamente ed emotivamente nei panni dell'utente per provare in prima persona la reale esperienza d'uso.
 
@@ -72,6 +73,7 @@ Oltre a essere un modo di pensare e di lavorare, il Design Thinking fornisce un 
 <img src="Media_Innovation_Methods/design_thinking_steps.png" style="width: 70%; height: 70%;">
 
 Il processo si articola classicamente in **5 fasi** iterative:
+
 1. **Empathise (Empatizzare)**: studiare profondamente gli utenti per comprenderne l'esperienza.
 2. **Define (Definire)**: sintetizzare i bisogni degli utenti, il loro problema centrale e le intuizioni (*insights*) raccolte.
 3. **Ideate (Ideare)**: sfidare le assunzioni di base e generare idee per soluzioni innovative.
@@ -128,9 +130,11 @@ Un principio chiave di Scrum è l'accettazione di due realtà ineluttabili: i cl
 
 **Il Ciclo dello Sprint**
 Lo Sprint è l'unità base di sviluppo in Scrum. La sua durata è concordata e prefissata, variando normalmente tra una e quattro settimane (con due settimane come standard più comune). 
+
 * Inizia con un evento di *Sprint Planning*, che stabilisce un obiettivo chiaro e seleziona gli elementi necessari dal *Product Backlog*. 
 * Durante lo Sprint, il team monitora i progressi in riunioni giornaliere di 15 minuti chiamate *Daily Scrums*. 
 * Si conclude con due eventi: la *Sprint Review*, per mostrare agli stakeholder il lavoro effettivamente completato, e la *Sprint Retrospective*, per identificare lezioni apprese e migliorare le dinamiche di lavoro in vista del ciclo successivo.
+
 \
 \
 <img src="Media_Innovation_Methods/sprints.png" style="width: 80%; max-width: 600px; height: auto;">
@@ -138,9 +142,11 @@ Lo Sprint è l'unità base di sviluppo in Scrum. La sua durata è concordata e p
 \
 **I Ruoli in Scrum**
 Il framework si regge su tre ruoli ben definiti, eliminando la figura tradizionale del project manager autoritario:
+
 1. **Product Owner**: rappresenta gli stakeholder ed è la "voce del cliente". È responsabile dei risultati di business del prodotto. Definisce le funzionalità in termini centrati sull'utente (tipicamente sotto forma di *User Stories*), le inserisce nel Product Backlog e le prioritizza in base all'importanza e alle dipendenze strategiche.
 2. **Development Team (Team di Sviluppo)**: il gruppo di professionisti che realizza materialmente il prodotto.
 3. **Scrum Master**: agisce come un facilitatore e un "cuscinetto" protettivo tra il team di sviluppo e qualsiasi influenza o distrazione esterna. Non è un capo, ma un *servant-leader* che si assicura che le regole e le pratiche del framework Scrum vengano comprese e rispettate da tutti.
+
 \
 \
 <img src="Media_Innovation_Methods/framework_scrum.png" style="width: 80%; max-width: 600px; height: auto;">

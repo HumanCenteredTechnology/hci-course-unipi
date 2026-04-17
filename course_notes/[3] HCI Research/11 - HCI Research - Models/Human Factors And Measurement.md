@@ -15,7 +15,6 @@ I **test quantitativi**, invece, ci permettono di sapere *esattamente* il *perch
 Per chiarire questo concetto: immaginiamo di testare un medicinale.
 
 1.  **Valutazione Qualitativa:** Chiedere alle persone **come si sentono** (l'esperienza soggettiva).
-
 2.  **Valutazione Quantitativa:** Verificare se le persone sono **effettivamente guarite** dalla malattia (il risultato oggettivo).
 
 Se un medicinale non funziona, ovvero non cura la malattia, probabilmente richiede ulteriori indagini, anche se i riscontri qualitativi sono positivi (cioè, se le persone dicono di sentirsi meglio, ma la malattia non è sconfitta). Per questo, **non possiamo scegliere di usare solo un tipo di test**.
@@ -27,7 +26,6 @@ Il nostro obiettivo qui è l'aspetto **quantitativo**. Senza misurazioni, la ric
 Se consideriamo la Human-Computer Interaction (HCI) come una scienza sociale, essa presenta due aspetti fondamentali:
 
 1.  **L'Aspetto Descrittivo**
-
 2.  **L'Aspetto Normativo**
 
 **1. Aspetto Descrittivo**
@@ -35,9 +33,7 @@ Se consideriamo la Human-Computer Interaction (HCI) come una scienza sociale, es
 Nell'aspetto descrittivo, andiamo a verificare e comprendere:
 
 - Se le cose esistono e se ci sono effetti.
-
 - Come si strutturano le interazioni.
-
 - Come funzionano i sistemi, ecc.
 
 **2. Aspetto Normativo**
@@ -49,7 +45,6 @@ Quando prendiamo una certa decisione di design, stiamo applicando quello che per
 Come ogni buona scienza che si rispetti, dovremmo far precedere **l'aspetto normativo da quello descrittivo**.
 
 - **Prima** andiamo a vedere **se** una cosa può funzionare (Descrizione).
-
 - **Poi** cerchiamo di applicarla (Normativa).
 
 Ovviamente, nel processo reale, le cose non procedono sempre in maniera così lineare. Spesso il design iniziale è una scommessa (un'ipotesi normativa): pensiamo che possa funzionare.
@@ -70,9 +65,7 @@ Questa esigenza di misurazione si mappa perfettamente sulla definizione di usabi
 Nelle performance andiamo a vedere metriche come:
 
 - Il **tempo per completare un task**.
-
 - Il numero di **errori** commessi.
-
 - Il livello di **difficoltà** percepita dagli utenti.
 
 Questo si allinea bene con i concetti di efficienza e **apprendibilità** (*learnability*) di un'innovazione.
@@ -80,9 +73,7 @@ Questo si allinea bene con i concetti di efficienza e **apprendibilità** (*lear
 Una volta che andiamo a misurare queste cose, i dati ci permettono di:
 
 1.  **Comparare soluzioni diverse:** Attraverso l'analisi statistica, possiamo comparare diverse azioni di design o diverse tecnologie (ad esempio, un chatbot rispetto a un'interfaccia grafica) per vedere quale sia la migliore.
-
 2.  **Diagnosticare Problemi:** A seconda della tipologia e della qualità dei dati, possiamo diagnosticare **dove e perché** gli utenti hanno problemi in uno specifico design.
-
 3.  **Costruire Conoscenza Generalizzabile:** Questo è fondamentale. Ci permette di generalizzare e di **distillare conoscenze cumulative** sul comportamento umano.
 
 Questa conoscenza ci aiuta a capire come solitamente gli esseri umani si comportano in determinati contesti e, di conseguenza, come possiamo **informare il prossimo design**.
@@ -108,15 +99,10 @@ Noi, quindi, **non osserviamo direttamente il costrutto latente**. Non osserviam
 Per esempio, come indicatori possiamo:
 
 - Chiedere alle persone **come si sentono** (con questionari, *self-report*).
-
 - Vedere **quanto tempo** ci hanno messo a completare un compito.
-
 - Registrare **quanti errori** hanno fatto.
-
 - Contare **quanti clic** hanno eseguito.
-
 - Analizzare il **movimento degli occhi** (tramite *eye-tracking*).
-
 - Misurare le **caratteristiche fisiologiche** (*ad esempio*, il battito cardiaco, l'attivazione).
 
 Tutte queste cose possono essere **indicative** di un costrutto latente (come l'usabilità o l'apprendimento).
@@ -126,7 +112,6 @@ Tutte queste cose possono essere **indicative** di un costrutto latente (come l'
 Il problema principale è che il costrutto, essendo qualcosa di **latente** (nascosto/astratto), **non ha una mappatura uno a uno con un indicatore**.
 
 - **Un costrutto può essere rappresentato da molti indicatori:** Un singolo costrutto, come l'usabilità, è particolarmente complicato e sfumato e può essere misurato attraverso diversi metodi. Per questo, un solo indicatore non è sufficiente.
-
 - **Un indicatore è influenzato da diversi costrutti:** Lo stesso indicatore può essere influenzato da diversi costrutti (ci possono essere spiegazioni alternative). Ad esempio, il fatto che una persona impieghi molto tempo a completare un *task* non è necessariamente legato solo a una cattiva usabilità del sistema. Potrebbe anche essere collegato a caratteristiche personali dell'utente (come l'esperienza pregressa o la scarsa familiarità).
 
 Quindi, è difficile collegare in modo univoco gli indicatori a un solo costrutto.
@@ -136,15 +121,12 @@ Quindi, è difficile collegare in modo univoco gli indicatori a un solo costrutt
 In generale, per effettuare una buona misurazione (o "configurazione"), dobbiamo soddisfare tre requisiti fondamentali:
 
 1.  **Chiara Definizione del Costrutto:** Dobbiamo prima di tutto avere una chiara definizione del costrutto che stiamo studiando (es. "cosa intendiamo esattamente per apprendimento?"). Questo è fondamentale, ma viene spesso dato per scontato. Nella ricerca, è necessario essere **molto precisi** e indicare quale definizione teorica si sta adottando, anche specificando le teorie che ne sono alla base.
-
 2.  **Rapporto Plausibile tra Costrutto e Indicatori:** Dobbiamo avere un rapporto **plausibile** (credibile e teoricamente fondato) tra il costrutto e gli indicatori che si intendono utilizzare. Questo è un problema specialmente quando non esiste una letteratura scientifica consolidata che dimostri il *link* tra i due. Ad esempio, ci si chiede: l'apprendimento può essere misurato con il solo tempo di esecuzione del *task*? O è più efficace un questionario specifico? E cosa cambia se le domande o le scale di misurazione sono leggermente diverse?
-
 3.  **Consapevolezza delle Limitazioni:** Essendo dei costrutti latenti, dobbiamo essere sempre consapevoli delle loro limitazioni e delle possibili spiegazioni alternative. Non possiamo stabilire con certezza dei **nessi causali** (causa-effetto) assoluti basandoci solo su queste misurazioni.
 
 C'è sempre una certa probabilità che:
 
 - Lo strumento di misura scelto non sia efficace.
-
 - La teoria che è alla base del costrutto o dell'indicatore non sia sufficientemente forte.
 
 Molto spesso, soprattutto in una materia relativamente giovane come questa, ci troviamo a utilizzare **il meglio che abbiamo**, che non è necessariamente il metodo ideale. Questo, comunque, è un aspetto caratteristico dell'evoluzione di qualsiasi campo scientifico e non è un problema limitato solo a questa disciplina.
@@ -156,14 +138,14 @@ Qui, invece, **non abbiamo questa diretta corrispondenza**.
 In HCI (e nelle scienze sociali in generale):
 
 - **Non abbiamo** una definizione universale e chiara dei costrutti.
-
 - **Non abbiamo** un legame diretto e lineare tra costrutti e misurazioni.
-
 - Spesso, anche le **misurazioni** stesse non sono semplici o immediatamente oggettive.
 
 Di conseguenza, **tutto rimane in parte soggettivo**.
 
 Questa complessità comporta il dover essere **il più rigorosi possibile**. Se il **rigore metodologico** viene meno, allora l'intero lavoro di ricerca perde di validità e significato.
+
+
 # **2. FONDAMENTI DI PSICOMETRIA**
 
 Vediamo adesso come misurare questi costrutti, attingendo ai fondamenti della **Psicometria**.
@@ -177,9 +159,7 @@ Viene solitamente citata per la progettazione di **questionari** (come quelli ut
 Uno degli obiettivi principali della psicometria è assicurarsi che gli strumenti di misura siano:
 
 1.  **Affidabili:** Lo strumento deve essere **stabile** e **fornire risultati coerenti.** Se applico lo stesso strumento a persone diverse in condizioni simili, devo ottenere risultati che non siano casuali. Se i risultati sembrano completamente casuali ("background noise"), probabilmente lo strumento non è affidabile.
-
 2.  **Validi:** Questo si ricollega al concetto di *link* affermato prima. Dobbiamo assicurarci che lo strumento stia **effettivamente misurando ciò che intendiamo misurare**, e che i risultati non siano dovuti a un altro costrutto latente.
-
 3.  **Sensibili all'Errore:** Bisogna conoscere il potenziale **errore di misurazione** e l'impatto che tale errore può avere sulle conclusioni ottenute.
 
 Perché la psicometria è importante in HCI?
@@ -189,9 +169,7 @@ Tutti i **questionari** e le scale che utilizziamo o adattiamo (come la **SUS - 
 Poiché operiamo in un campo dove non sempre esiste una teoria solida di riferimento per i costrutti latenti (la materia è "giovane"), se non applichiamo un rigore psicometrico:
 
 - **Non sappiamo** se uno strumento di misura è davvero **affidabile**.
-
 - **Non sappiamo** se misura davvero ciò che dobbiamo misurare (**validità**).
-
 - **Non sappiamo** come interpretare e valutare i dati in modo appropriato, specialmente **quale test statistico** applicare.
 
 Ad esempio, se applichiamo un test parametrico a un dato che, per sua natura, dovrebbe essere non parametrico (perché magari non presenta una distribuzione normale, ovvero a campana), l'analisi sarà viziata.
@@ -201,7 +179,6 @@ Oppure, i tempi di esecuzione di un *task*, non si distribuiscono normalmente; s
 Questo è fondamentale perché, se usiamo il **test statistico sbagliato**, giungiamo a **conclusioni errate**:
 
 - **Falsi Negativi:** Non troviamo un effetto quando invece c'è.
-
 - **Falsi Positivi:** Troviamo un effetto quando in realtà non c'è.
 
 Questo significa che stiamo interpretando male i dati e traendo conclusioni sbagliate sulla nostra ipotesi di design.
@@ -235,7 +212,6 @@ Lo strumento deve non correlare in modo forte con costrutti che non sono collega
 > *Esempio:* Il questionario di usabilità non dovrebbe correlare troppo con i questionari che misurano la personalità. Se l'alta correlazione si verifica, significa che:
 
 - il costrutto di usabilità che stiamo usando è troppo simile a quello di personalità;
-
 - lo strumento di misura (il questionario) in realtà sta misurando inavvertitamente la personalità anziché l'usabilità.
 
 **3. Validità di Criterio (Criterion Validity)**
@@ -249,7 +225,6 @@ Se un alto punteggio di usabilità non è correlato negativamente con il numero 
 È cruciale ricordare che una scala o una misura può essere molto affidabile, ma non valida.
 
 - Affidabilità: Lo strumento funziona bene internamente e misura sempre la stessa cosa in modo coerente.
-
 - Validità: Lo strumento misura la cosa giusta.
 
 *Esempio:* Potrei voler misurare l'usabilità, ma per caso sto misurando la personalità. La mia misurazione di personalità può essere molto affidabile (esce sempre lo stesso risultato), ma alla fine, mi rendo conto che non sto misurando l'usabilità.
@@ -269,7 +244,6 @@ Questo tipo di affidabilità verifica se le singole domande (*item*) all'interno
 Esempio: Se abbiamo un questionario che misura la soddisfazione del sistema, tutte le domande relative alla soddisfazione devono **correlare tra loro**.
 
 - Se l'utente risponde in modo coerente (ad esempio, alta soddisfazione su tutte e tre le domande: "È stato usabile?", "Ti sei sentito soddisfatto?", "Ti sei sentito soddisfatto da quest'altra cosa?"), allora c'è alta consistenza interna.
-
 - Se le risposte non correlano tra loro, significa che le domande non stanno misurando lo stesso costrutto e qualcosa non funziona nello strumento.
 
 **2. Affidabilità Test-Retest**
@@ -289,15 +263,12 @@ Esempio: Se chiediamo a due o tre ricercatori di osservare le registrazioni vide
 Una misura **poco affidabile** significa che è molto esposta all'**errore casuale** e questo ha gravi conseguenze statistiche:
 
 - **Riduce la potenza statistica:** È più difficile individuare se un effetto (una differenza reale) esiste.
-
 - **Può mascherare differenze reali:** Se misuriamo due oggetti che hanno una differenza di 1.5 cm ma il nostro strumento (il righello) ha un errore di misurazione (o *rumore*) pari o superiore a 1.5 cm non riusciremo a vedere la differenza tra le interfacce.
 
 **Azioni Pratiche per l'Affidabilità**
 
 - **Verifica Statistica:** Si utilizzano indici come l'**Alpha di Cronbach** o l'**Omega di McDonald** per verificare la consistenza interna.
-
 - **Revisione degli *Item*:** Si controllano le **correlazioni item-totale**. Se alcuni item risultano problematici, si rimuovono o si revisionano.
-
 - **Evitare Domande Problematiche:** È fondamentale **evitare domande estremamente vaghe o "a doppia canna"** (double-barreled), ovvero domande che chiedono **due cose diverse** contemporaneamente nello stesso item.
 
 ## **2.3 SCALE DI MISURAZIONE E RISPOSTE LIKERT**
@@ -345,7 +316,6 @@ Le singole voci di una **Scala Likert** sono strettamente **ordinali**. Questo �
 Tuttavia, è accettabile trattare approssimativamente i dati Likert come una scala a intervalli quando si verificano specifiche condizioni:
 
 1.  **Somma o Media degli Item:** Quando non analizziamo un singolo item (che rimane strettamente ordinale), ma aggreghiamo diversi item calcolandone la **somma o la media** per valutare lo stesso costrutto.
-
 2.  **Scale Bilanciate e Simmetriche:** Quando le opzioni di risposta sono **bilanciate e simmetriche** (ad esempio, una scala con un punto neutrale centrale e opzioni simmetricamente speculari ai lati, come "Fortemente in disaccordo" vs "Fortemente d'accordo").
 
 Tenere a mente questa distinzione è **estremamente importante** nel momento in cui si deve scegliere il test di ipotesi (test statistico) da applicare!
@@ -360,9 +330,7 @@ Per offrire alcuni consigli pratici sulla scelta delle scale e degli strumenti, 
 **La Definizione ISO di Usabilità**
 
 - **Efficacia:** Una persona riesce a raggiungere gli obiettivi?
-
 - **Efficienza:** Quanto rapidamente e con quanta accuratezza raggiunge gli obiettivi?
-
 - **Soddisfazione:** Quanto è soddisfatto nell'ottenere gli obiettivi in uno specifico contesto d'uso?
 
 Quando si usano questionari per misurare l'usabilità, si sta usando una **misura percettiva o soggettiva** della persona.
@@ -384,25 +352,19 @@ Paradossalmente, le persone potrebbero valutare un sistema come *piacevole* o *f
 La **System Usability Scale (SUS)** è uno dei questionari più famosi e utilizzati per la misurazione dell'usabilità percepita.
 
 - È composta da **10 domande** (*item*) su una scala **Likert** a 5 valori.
-
   - Le domande **dispari** (1, 3, 5, 7, 9) sono formulate in modo **positivo** ("Trovo il sistema facile da usare").
-
   - Le domande **pari** (2, 4, 6, 8, 10) sono formulate in modo **negativo** ("Ho trovato il sistema inutilmente complesso").
-
   - Ci si aspetta una correlazione negativa tra le risposte agli *item* positivi e quelli negativi.
-
 - I punteggi vengono convertiti e sommati per ottenere un valore finale compreso tra **0 e 100**.
 
 **Punti di Forza della SUS:**
 
 1.  **Affidabilità e Validità Dimostrate:** È molto utilizzata e supportata da una vasta letteratura che dimostra la sua robustezza (funziona abbastanza bene).
-
 2.  **Agnostica dal contesto:** Può essere applicata a una vasta gamma di sistemi (app, siti web, computer, dispositivi mobili, ecc.), rendendola ottima per la **comparazione** tra sistemi diversi.
 
 **Limitazioni:**
 
 1.  **Linguaggio Datato:** Alcuni *item* sono ormai **datati** e possono risultare ambigui (es. applicandola ad un chatbot🡪per questo, esistono scale specifiche più moderne).
-
 2.  **Mischia i Costrutti:** La SUS tende a misurare principalmente solo due aspetti dell'usabilità: l’**accettazione** da parte dell'utente e la **soddisfazione percepita**.
 
 > La SUS **non è un buon indicatore della performance oggettiva**.
@@ -418,7 +380,6 @@ Un'altra scala comune è l'**UMUX** (*Usability Metric for User Experience*).
 Esistono due versioni:
 
 1.  **Versione Completa:** Composta da 4 domande.
-
 2.  **Versione Breve (UMUX-Lite):** Composta da sole 2 domande.
 
 La **UMUX-Lite** è la versione più utilizzata e indaga tipicamente quanto è stato **utile** il sistema e quanto è stato **facile da usare**.
@@ -426,19 +387,16 @@ La **UMUX-Lite** è la versione più utilizzata e indaga tipicamente quanto è s
 **Vantaggi:**
 
 - È **semplice e veloce** da somministrare. Richiede un tempo minimo da parte dell'utente, chiedendo un punteggio su due soli *item*.
-
 - I suoi risultati **correlano molto bene con la SUS** e con altre misure tradizionali.
 
 **Limitazioni:**
 
 - Avendo solo due domande, è **più sensibile all'errore casuale** rispetto a questionari più lunghi.
-
 - È molto difficile utilizzare la UMUX-Lite per scopi **diagnostici**. Le domande sono molto generiche, quindi se il punteggio è basso, non si riesce a capire che cosa esattamente non ha funzionato nel design.
 
 Si usa tipicamente quando:
 
 - **Il tempo è un fattore limitante** e si ha bisogno di una misura rapida.
-
 - È inserita in un **design sperimentale complesso** che richiede molte sessioni di misurazione. In questi contesti, aggiungere solo 2 domande anziché 10 o 26 fa una grande differenza, poiché il rischio di affaticamento, distrazione o fastidio dell'utente è molto alto.
 
 ## **3.4 Scala di Usabilità dei Chatbot (BUS-11)**
@@ -450,11 +408,8 @@ Questa scala è stata sviluppata da un team di ricercatori e rappresenta un ecce
 A differenza delle scale generiche (come la SUS o la UMUX), che misurano soprattutto la semplice "facilità d'uso" e "soddisfazione", la BUS-11 è una scala **dedicata** a catturare gli aspetti specifici e complessi dei chatbot che le altre scale non riescono a rilevare:
 
 - **Qualità della conversazione**
-
 - **Gestione del contesto**
-
 - **Privacy**
-
 - **Tempo di risposta**
 
 La **BUS-11** è composta da **11 *item*** su una scala **Likert a 5 punti**. Fornisce anche un approccio euristico per i designer, chiamato **BUS-CHECK**.
@@ -462,9 +417,7 @@ La **BUS-11** è composta da **11 *item*** su una scala **Likert a 5 punti**. Fo
 **Vantaggi:**
 
 1.  **Specificità:** È stata sviluppata appositamente per i chatbot.
-
 2.  **Validazione Interculturale:** È stata **validata in diversi contesti e lingue** (Inglese, Tedesco, Olandese, Spagnolo e Italiano). Questo la rende uno strumento robusto e adatto per **studi cross-country**.
-
 3.  **Validità Convergente Forte:** Ha dimostrato una **forte validità convergente con la UMUX-Lite**, il che conferma che, pur essendo specifica, sta misurando in modo efficace i costrutti chiave di usabilità/UX.
 
 **Limitazioni:**
@@ -480,15 +433,12 @@ Il **Carico Mentale** (*Mental Workload*) può essere definito come **l'ammontar
 Quando un utente interagisce con un sistema, il carico mentale che sperimenta dipende da numerosi fattori:
 
 - **Richieste del Task**🡪 Complessità del *task*, pressione temporale o livello di urgenza.
-
 - **Interfaccia/Tecnologia🡪** Chiarezza del *design*, densità delle informazioni, tipo di *feedback*.
-
 - **Fattori Utente🡪** Competenza dell'utente, livello di fatica o di stress al momento del test.
 
 Teoricamente, ci aspetteremmo una relazione lineare e semplice tra Carico Mentale e Performance:
 
 - **Carico Mentale Molto Basso:** Il *task* è molto facile, le risorse usate sono minime🡪 Performance alta (il comportamento è quasi automatico).
-
 - **Carico Mentale Molto Alto:** Sono state utilizzate troppe risorse disponibili🡪Performance peggiore, errori, lentezza, stress (comportamento insicuro o inefficace).
 
 Tuttavia, questa relazione non è sempre valida, o potrebbe essere del tutto errata!
@@ -538,15 +488,10 @@ Come suggerisce il nome, Il NASA-TLX è stato creato dalla **NASA** negli anni '
 I sei livelli sono:
 
 1.  **Carico Mentale**
-
 2.  **Carico Fisico**
-
 3.  **Carico Temporale**
-
 4.  **Livello di Performance**
-
 5.  **Sforzo**
-
 6.  **Frustrazione**
 
 È corretto dire **'livelli'** e non **'dimensioni'**, perché queste ultime implicherebbero che le sei scale rappresentino sei **sottocostrutti distinti e scientificamente provati** del Carico Mentale!
@@ -562,7 +507,6 @@ La scala chiede all'utente di fornire un punteggio da 0 a 100 per ciascuno dei s
 **Vantaggi e Applicazioni:**
 
 - **Velocità e Semplicità:** La versione Raw TLX è rapida da somministrare (solo 6 domande).
-
 - **Vasta Validazione:** È uno strumento **molto comune e validato** in numerosi campi (fattori umani, aviazione, *automotive*, sanità e HCI). La sua popolarità in letteratura ne garantisce una certa affidabilità comparativa.
 
 **Limitazioni:**
@@ -622,15 +566,12 @@ Esistono anche indicatori fisiologici e neurologici che offrono un punto di vist
 **Vantaggi:**
 
 - **Misurazione Continua:** I dati possono essere registrati in modo **continuo nel tempo**, permettendo di catturare i cambiamenti dinamici del carico *durante* l'esecuzione di un *task*.
-
 - Sono **meno sensibili ai bias** di auto-percezione (memoria o onestà) dell'utente.
 
 **Svantaggi:**
 
 - I sensori possono essere **scomodi** e influenzare l'esperienza dell'utente. Sono molto sensibili ad artefatti (movimento, ambiente).
-
 - Molti segnali correlano con l'**attivazione generale** (*arousal*), e non specificamente con il carico cognitivo.
-
 - Spesso richiedono un **ambiente di laboratorio** controllato.
 
 È fondamentale utilizzare i dati fisiologici per **complementare** i dati comportamentali (tempi, errori) e i dati soggettivi (questionari), e **non per sostituirli**. La triangolazione di queste diverse fonti di dati è essenziale per ottenere una visione completa del *workload*.
@@ -656,15 +597,12 @@ Adesso che sappiamo come misurare, dobbiamo garantire che i risultati siano di q
 **1. Istruzioni e Durata (Study Design)**
 
 - **Istruzioni Chiare:** Fornire istruzioni chiare, concise e, se possibile, includere un **blocco di pratica** (*practice block*) per assicurarsi che l'utente abbia compreso il *task*.
-
 - **Limitare la Durata della Sessione:** Mantenere l'esperimento complessivamente breve per evitare l'affaticamento mentale (*survey fatigue*) e il calo di attenzione. Non si intende tanto mettere fretta nell'esecuzione di un singolo *task*, quanto piuttosto evitare che l'intera sessione di test duri così tanto da esaurire la pazienza e l'impegno del partecipante, inducendolo a rispondere in modo inattentivo.
-
 - **Allineare il Compenso:** Il compenso deve essere **allineato allo sforzo** richiesto. Se un *task* è complesso e pagato poco, si incentiva l’imbroglio o la scarsa attenzione. Piattaforme come Prolific forniscono dati sulla paga media oraria per paese per aiutare a stabilire un compenso equo.
 
 **2. Strumenti**
 
 - **Pilot Test:** **Pilotare** i questionari e i *task* (anche con un piccolo campione) per identificare e correggere eventuali ambiguità prima dello studio reale.
-
 - **Evitare Gergo e Ambiguità:** Usare un linguaggio semplice e **non usare domande *multi-barreled*** (che chiedono due cose diverse in un unico *item*).
 
 **3. Controlli e Filtri**
@@ -673,9 +611,7 @@ Adesso che sappiamo come misurare, dobbiamo garantire che i risultati siano di q
 
 - **Controlli di Attenzione (*Attention checks*):** Inserire domande semplici, come "Seleziona il colore rosso" tra più opzioni. Chi sbaglia è probabilmente disattento. 
 **IMPORTANTE**: Vanno **usati con attenzione e in modo trasparente**, senza creare "trappole" ingannevoli che frustrano l'utente onesto o violano le policy etiche delle piattaforme.
-
 - **Controlli di Comprensione:** Porre domande per verificare che l'utente abbia effettivamente assimilato le informazioni critiche fornite all'inizio o durante l'esperimento.
-
 - **Monitoraggio dei Tempi:** Controllare il tempo di completamento del *task*.
   - Se il tempo è **troppo veloce** (es. 15 secondi per un *task* che dovrebbe durarne 3 minuti), è probabile che si tratti di un *cheater* o *bot*.
   - Se il tempo è **troppo lento**, si può trattare di uno *slacker* (qualcuno che si è distratto o sta facendo contemporaneamente altro).
@@ -683,7 +619,6 @@ Adesso che sappiamo come misurare, dobbiamo garantire che i risultati siano di q
 **4. Gestione delle Risposte e Creatività**
 
 - **Pattern di Risposta:** Filtrare i partecipanti che mostrano *straight-lining* o combinazioni di risposte impossibili.
-
 - **Interazione Forzata:** Per assicurarsi che l'utente interagisca realmente con l'interfaccia, è possibile **bloccare il questionario o la risposta** finché l'utente non ha compiuto un'azione specifica (*ad esempio*, un clic su un elemento critico).
 
 Il design deve essere **rigoroso** per evitare gli errori (risultati falsati), ma può anche essere **creativo** nell'uso degli strumenti per garantire il *commitment* dell'utente.

@@ -59,6 +59,7 @@ La standardizzazione dei pacchetti dati auto-descrittivi ha permesso agli svilup
 
 ### Classificazione dei dispositivi di interazione
 Le periferiche HID si dividono in due macro-categorie fondamentali (input e output). Oggi molti dispositivi moderni sono misti, ma la distinzione di base a livello di componenti rimane valida:
+
 *   **Dispositivi di input (Sensori):** Si basano su sensori il cui scopo è rilevare eventi nel mondo fisico e convertirli in informazioni elettroniche (analogiche o digitali). Un esempio è il microfono, che converte le onde sonore in un segnale elettrico.
 *   **Dispositivi di output (Attuatori):** Si basano su attuatori il cui scopo è ricevere un segnale elettrico e convertirlo in un evento fisico nell’ambiente. Un esempio è l’altoparlante, che converte il segnale elettrico in movimento per generare onde sonore.
 
@@ -66,6 +67,7 @@ Le periferiche HID si dividono in due macro-categorie fondamentali (input e outp
 La tastiera è il dispositivo HID di input testuale più diffuso. Per garantire usabilità e coerenza nel mondo, le tastiere seguono standard fisici e meccanici precisi, come l'ISO 9995-2 o l'ANSI (che definiscono distanze tra i tasti e corsa del tasto). Le tastiere comuni "Full-size" moderne contano un numero fisso di tasti (101, 104 o 105).
 
 Un layout di tastiera è la disposizione specifica fisica, visiva o funzionale dei tasti:
+
 *   **Layout fisico:** La disposizione meccanica reale dei tasti. 
 *   **Layout visuale:** La disposizione delle etichette (lettere, simboli) stampate o incise sui tasti.
 *   **Layout funzionale:** La mappatura via software che associa il tasto premuto al carattere a schermo. Il sistema operativo riceve dalla tastiera fisica solo uno "scancode" (riga e colonna del tasto premuto) e, tramite una tabella di conversione, lo traduce in base al layout impostato nel software.
@@ -219,6 +221,7 @@ Un altro limite è la natura effimera del linguaggio (che include tono, cadenza,
 Per via di questi costi, la gestione dell'audio spesso si divide tra locale e cloud. Ad esempio, assistenti come Alexa o Google Home utilizzano il DSP locale unicamente per riconoscere offline una "parola chiave" (wake-word) per garantire reattività e privacy. Solo dopo l'attivazione aprono uno streaming verso un server potente per il parsing della richiesta completa. 
 
 Nonostante le limitazioni, le interfacce vocali **hanno grande successo in contesti specifici**:
+
 *   Vocabolari specializzati (es. ambito medico o legale).
 *   Dettatura di referti, appunti o lettere.
 *   Pratica delle abilità di comunicazione (es. pazienti virtuali).
@@ -318,6 +321,7 @@ Una Natural User Interface (NUI) è un'interfaccia progettata per risultare di f
 È importante fare una distinzione, evidenziata anche da ricercatori come Bill Buxton, tra un'interfaccia **intuitiva** e una **NUI**. Un'azione intuitiva non richiede apprendimento pregresso (es. lo swipe con un dito su iPad che imita lo spostamento fisico di un foglio analogico). Un'azione NUI, invece, può richiedere un apprendimento iniziale (es. lo swipe con quattro dita), ma diventa "naturale" perché si integra perfettamente con il modello mentale del sistema appena acquisito, riducendo il carico cognitivo.
 
 Per la progettazione delle NUI, Joshua Blake elenca quattro linee guida fondamentali:
+
 1. **Instant expertise** (Competenza immediata)
 2. **Progressive learning** (Apprendimento progressivo)
 3. **Direct interaction** (Interazione diretta)

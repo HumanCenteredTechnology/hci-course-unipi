@@ -5,7 +5,6 @@ Tuttavia, è ora necessario cominciare ad approcciarci alla fase di progettazion
 Sarebbe un grave errore partendo da un’idea cominciare a realizzarla senza seguire gli step fondamentali del processo di design. Immaginiamo, ad esempio, di essere uno sviluppatore: vogliamo realizzare un sito web, un’applicazione oppure una nuova funzionalità da aggiungere a un prodotto già esistente. Tuttavia, invece di condividere l’idea con il team e procedere in modo strutturato, ci lanciamo direttamente nella scrittura del codice e nella realizzazione della versione finale del prodotto. A questo punto sorgono alcune domande fondamentali:
 
 - cosa facciamo se una volta ultimato il lavoro emergono problemi o errori difficili e costosi da correggere?
-
 - cosa facciamo se, al terminare dello sviluppo, ci accorgiamo che il prodotto non è realmente utile o non risponde ai bisogni degli utenti?
 
 La risposta è semplice: avremmo sprecato tempo, energie e risorse che avremmo potuto risparmiare oppure impiegare diversamente.  
@@ -16,17 +15,13 @@ In questa fase, eventuali problemi evidenti possono essere individuati e corrett
 **Cosa può fare un wireframe:**
 
 - dare una struttura visuale, cioè una prima forma, all’informazione che il prodotto deve avere.
-
 - incoraggiare la discussione tra membri del team.
-
 - determinare quali sono le funzioni e le caratteristiche della UI.
 
 **Cosa non può fare un wireframe:**
 
 - creare qualcosa di finito (non restituisce il "feeling" dell'aspetto finale).
-
 - un wireframe non ha ’funzioni funzionanti’, cioè non è interattivo.
-
 - non garantisce una comprensione generale da parte di tutti.
 
 ## Il contesto attuale e l’impatto sui wireframe
@@ -44,7 +39,6 @@ Dal punto di vista grafico, il wireframe è qualcosa di semplice, infatti molto 
 Possiamo distinguere i wireframe in base al loro grado di *fidelity*, cioè a quanto si avvicinano alla forma finale del progetto pur rimanendo schemi semplificati. Possiamo quindi avere:
 
 - **Low fidelity wireframes:** contengono un basso grado di fedeltà, un esempio è uno schizzo dell’interfaccia su carta dove si rappresentano solamente le parti essenziali. Questo tipo di approccio contiene elementi estremamente basici, giusto per far capire al team come si vuole impostare la UI, concentrandosi su struttura e layout.
-
 - **High fidelity wireframes:** una rappresentazione dettagliata dell’interfaccia con però ancora uno stile basico, tipografia essenziale, icone e dettagli di documentazione. All’aumentare del livello di fidelity vengono aggiunte anche altre caratteristiche come informazioni più precise sul layout, spacing e testi.
 
 Spesso può succedere di produrre più versioni dello stesso wireframe, migliorandolo progressivamente partendo da un wireframe molto low-fidelity e arricchendolo di volta in volta, oppure realizzarne uno per ogni pagina di un sito o per ogni diversa schermata di un’applicazione.
@@ -60,6 +54,7 @@ Con l'esplosione del mercato dei dispositivi mobili, garantire che i siti siano 
 Il **Responsive Design** è un metodo di progettazione e sviluppo che permette a pagine web o app di adattarsi fluidamente alla dimensione e alla risoluzione dei diversi dispositivi. Questo garantisce un'esperienza utente coerente e facilita alle aziende la manutenzione del sito (essendoci una sola versione da gestire).
 
 Le principali tecniche utilizzate includono:
+
 - **Flexible grid (Griglie flessibili)**: permettono agli elementi di riadattarsi dinamicamente in base alle dimensioni dello schermo.
 - **Flexible images**: le immagini si ridimensionano e si scalano automaticamente.
 - **Media queries & breakpoints**: permettono di applicare stili differenti in base alle specifiche caratteristiche hardware del dispositivo (es. larghezza della finestra).
@@ -72,6 +67,7 @@ L'approccio mobile-first permette un design basato sul **“progress advancement
 Questo si contrappone alla **“graceful degradation”**, un approccio più obsoleto in cui si parte da un design completo e complesso pensato per dispositivi desktop avanzati, per poi tagliare o nascondere funzionalità al fine di adattarlo a dispositivi più piccoli o meno potenti.
 
 ### Best Practices per il Responsive Design
+
 - **Keep it simple**: evitare layout complessi e mantenere un design minimalista.
 - **Prioritize the content**: il contenuto è l'elemento primario e deve essere facilmente leggibile ovunque.
 - **Design for touch**: assicurarsi che bottoni e link siano abbastanza grandi da essere tappati con un dito.
@@ -83,6 +79,7 @@ Questo si contrappone alla **“graceful degradation”**, un approccio più obs
 Oltre al design responsivo, esiste il **Design Adattivo (Adaptive Design)**. Mentre il responsive adatta l'interfaccia in modo fluido e flessibile allo schermo, il design adattivo prevede la creazione di *layout multipli e distinti*, specifici per ogni singolo dispositivo. È una soluzione spesso più costosa, ma talvolta necessaria (es. per le grandi aziende che vogliono ottimizzare un sito per il mobile senza dover ricostruire da zero la vecchia versione desktop).
 
 Tuttavia, l'adattabilità non riguarda solo il dispositivo, ma anche il **contesto d'uso dell'utente**. Qui entra in gioco l'**Adaptive UX**: il sistema si adatta alle caratteristiche specifiche dell'utente (usando dati come la posizione GPS, o modelli utente derivati dagli analytics). Due metodi classici per adattare l'esperienza ai gusti dell'utente sono:
+
 - **Collaborative filtering**: se all'utente A piacciono i contenuti X e Y, e all'utente B piace X, il sistema deduce che B potrebbe essere interessato anche a Y.
 - **Content-based filtering**: il sistema suggerisce contenuti simili in base alle caratteristiche del contenuto stesso, indipendentemente dagli altri utenti.
 
@@ -123,11 +120,8 @@ Un **wireflow** è una combinazione tra uno userflow e una serie di wireframe. S
 Un **mockup** è la rappresentazione ad alta fedeltà di un’interfaccia o di un prodotto digitale. Tale strumento serve per mostrare come apparirà visivamente il design finale del prodotto pur non essendo interattivo. Possiamo considerare il mockup come un’evoluzione del wireframe: alla struttura essenziale vengono aggiunti numerosi elementi di design come colori, font, immagini reali e altri dettagli grafici. Essi vengono creati esclusivamente in formato digitale utilizzando software di design come **Sketch, Adobe XD o Figma**. Il mockup viene dunque utilizzato in una fase più avanzata del processo di progettazione e risulta utile per:
 
 - rifinire e mostrare l’aspetto visivo finale dell’interfaccia.
-
 - comunicare in modo chiaro il design a stakeholder e clienti.
-
 - evidenziare lo stile del prodotto e magari anche compiere un confronto tra diverse versioni dello stesso mockup da presentare ad un cliente.
-
 - supportare il dialogo tra designer e sviluppatori.
 
 L’osservazione finale riguarda il fatto che, nonostante la somiglianza al prodotto finale, il mockup manca delle funzionalità interattive necessarie per condurre test di usabilità completi e raccogliere feedback profondi sul *comportamento* del sistema. Tuttavia, i mockup sono estremamente utili per condurre **specifici studi di usabilità** in cui è necessario ricevere feedback sull'aspetto generale (*look and feel*) del design, come ad esempio il **5-seconds test** e il **first-click test**. Per raccogliere feedback concreti sulle interazioni complesse è invece necessario comprendere i concetti di *pretotipo* e *prototipo*.
@@ -148,17 +142,11 @@ Grazie al pretotyping, possiamo ottenere risposte sull’efficacia o sull’inte
 Poiché un pretotipo può fallire molto rapidamente, il team può correggere velocemente gli errori o decidere senza esitazioni se abbandonare l’idea e investire in alternative più promettenti. Infine, vediamo quali sono i sette pilastri su cui si basa il concetto di pretotyping:
 
 1.  Obbedire alla legge di Fallimento del Mercato.
-
 2.  Assicurarsi di star costruendo il prodotto giusto (*the right it*).
-
 3.  Non perdersi in chiacchiere, idee e opinioni.
-
 4.  Fidarsi solo dei propri dati, trust your own data!
-
 5.  Fare pretotyping.
-
 6.  Parlare con i numeri e con i fatti.
-
 7.  Pensare globalmente e non localmente.
 
 <figure id="fig:placeholder">
@@ -179,13 +167,9 @@ Due fenomeni interessanti che possiamo trovare nella realtà del mercato riguard
 Per realizzare un pretotipo è necessario seguire il cosiddetto *Pretotyping Flow* attraverso questi 5 step:
 
 1.  **Isolare l'Assunzione Chiave (Key Assumption):** Chiedersi qual è quell'unica assunzione sulla propria idea che, se si rivelasse falsa, significherebbe che non si sta assolutamente costruendo il prodotto giusto.
-
 2.  **Scegliere il Tipo di Pretotipo:** Selezionare il tipo di pretotipo che permetterà di isolare e testare in modo mirato l'assunzione chiave.
-
 3.  **Formulare un'Ipotesi di Coinvolgimento del Mercato (Market Engagement Hypothesis):** Quantificare il coinvolgimento atteso per eliminare supposizioni e opinioni dal test. L'ipotesi dovrebbe seguire la struttura formale: *l'X% di Y farà Z*. 
-
 4.  **Testare il Pretotipo:** Inserire il pretotipo nel mondo reale e osservare come le persone interagiscono con esso. Si inizia sempre in piccolo: un luogo, un momento alla volta.
-
 5.  **Imparare, Perfezionare, "Hypozoom":** Valutare i risultati e affinare il pretotipo con i nuovi dati. Se l'ipotesi regge, bisogna decidere in quali altre situazioni testare il prodotto per avere un quadro completo (tecnica chiamata *hypozooming*).
 
 ## Tipologie di pretotipo
@@ -231,15 +215,10 @@ Tuttavia, il processo fondamentale alla base del prototyping consiste nel selezi
 Come accennato precedentemente, la *fidelity* del prodotto è relativa (dipende dalla fase del design) e si muove principalmente su **6 dimensioni**:
 
 - **Realismo visivo/fisico (Visual/Physical realism):** quanto il prototipo assomiglia al prodotto finale in termini di design visivo ed estetica.
-
 - **Scope:** questo parametro indica l’ampiezza e la profondità del design rappresentato, cioè quanto del sistema è incluso nel prototipo e quanto è dettagliatamente sviluppato. In altre parole definisce quanto l’utente potrà vedere, esplorare e testare del prodotto. Lo scope può essere *orizzontale*, offre quindi una visione ampia ma superficiale del prodotto. Ad esempio un e-commerce in cui si può navigare, aggiungere prodotti al carrello senza però completare l’acquisto. Oppure lo scope può essere *verticale* e qui si concentra su una singola funzionalità sviluppata nel dettaglio e pienamente funzionale. Ad esempio, vogliamo testare esclusivamente il flusso completo di checkout per verificare se il sistema di acquisto funziona correttamente.
-
 - **Functionality:** quanto il prototipo funziona davvero, ad esempio i pulsanti, i link o le azioni simulano davvero il comportamento reale?
-
 - **Data:** il prototipo utilizza dati reali o dati fittizi?
-
 - **Autonomy:** il prototipo può funzionare da solo oppure richiede l’intervento di qualcuno per simulare le azioni?
-
 - **Platform:** indica il tipo di implementazione su cui si basa il prototipo ovvero se essa rappresenta una versione temporanea/intermedia oppure una versione più definitiva del prodotto, chiaramente più la versione è definitiva e più il prototipo si avvicina al prodotto finale e reale.
 
 ## Tecniche di Prototipazione
@@ -273,9 +252,7 @@ La piattaforma è supportata da una vasta comunità di utenti e da una ricca lib
 Per quanto riguarda l’organizzazione del lavoro, Figma utilizza un sistema di livelli (layers) che, pur differendo leggermente da quello di software come Photoshop, rimane intuitivo:
 
 - ogni oggetto presente sulla tela è considerato un layer;
-
 - raggruppare più oggetti insieme permette la realizzazione di un layer;
-
 - inserire degli oggetti in un frame fa sì che il frame diventi un livello principale che contiene al suo interno altri sotto-livelli.
 
 Questo sistema aiuta a mantenere i progetti ordinati e facilmente gestibili. Inoltre, Figma permette di utilizzare pagine multiple, ideali per suddividere zone diverse del lavoro, ad esempio tra wireframe, mockup e prototipi. Di recente è stata introdotta anche una funzionalità basata su LLM e AI, chiamata Figma Make, che consente di generare prototipi e diversi tipi di design a partire da un semplice prompt testuale.

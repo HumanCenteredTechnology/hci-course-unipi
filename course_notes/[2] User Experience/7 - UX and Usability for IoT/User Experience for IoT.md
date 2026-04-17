@@ -16,6 +16,7 @@ Questa dispensa introduce i concetti fondamentali dell’UX per l’IoT, analizz
 ## Il valore per l'utente: Output vs. Outcome
 
 Il termine Internet of Things può essere tradotto più fedelmente come *"le cose su Internet"*. Non si tratta puramente di oggetti che comunicano tra loro, ma di dispositivi connessi che devono generare un impatto reale per gli utenti finali. In ambito UX, è fondamentale distinguere tra due concetti:
+
 - **Output:** il risultato tecnico di un sistema (es. i dati grezzi prodotti da un sensore di temperatura).
 - **Outcome:** l’impatto reale e il beneficio che quel risultato ha sull’utente o sulla società (es. il risparmio energetico e il comfort abitativo derivanti da un termostato intelligente).
 
@@ -49,6 +50,7 @@ La comunicazione tra dispositivi e servizi può avvenire attraverso diverse tecn
 
 ### Gateway e edge computing
 In molte applicazioni, i dispositivi non comunicano direttamente con il cloud, ma attraverso gateway locali. Questi elementi svolgono funzioni di:
+
 - Aggregazione e filtraggio dei dati;
 - Traduzione tra protocolli differenti;
 - Elaborazione in locale per ridurre latenza e consumo energetico;
@@ -58,6 +60,7 @@ L’edge computing può inoltre supportare algoritmi avanzati, migliorando resil
 
 ### Piattaforme cloud e servizi remoti
 Il cloud rappresenta il livello centrale dell’architettura IoT. Qui avvengono:
+
 - La raccolta e conservazione dei dati;
 - L’esecuzione di algoritmi e modelli predittivi;
 - La gestione delle automazioni;
@@ -146,9 +149,7 @@ In questo contesto, lo *smart product* assume un ruolo centrale. Un prodotto non
 La trasformazione digitale dei sistemi produttivi richiede una progressiva integrazione tra Information Technology (IT) e Operational Technology (OT), due domini che storicamente hanno operato in modo indipendente. L’IT comprende infrastrutture, reti e sistemi informativi orientati alla gestione del dato, alla scalabilità e ai servizi digitali. L’OT, al contrario, riguarda macchinari, sensori, attuatori e sistemi di controllo industriale che devono garantire continuità, determinismo temporale e sicurezza. Nel modello industriale tradizionale questi due mondi sono separati da barriere tecniche, culturali e organizzative. I sistemi OT utilizzano protocolli proprietari e architetture chiuse, non progettati per l’interconnessione estesa, mentre l’IT opera con tecnologie aperte, dinamiche e basate su servizi distribuiti. La mancata interoperabilità tra i due livelli limita la possibilità di sfruttare in modo efficace il patrimonio informativo generato dagli impianti produttivi, ostacolando la transizione verso modelli decisionali basati sui dati. La convergenza IT/OT rappresenta quindi un elemento strategico dell’Industria 4.0. Essa non consiste nella semplice connessione dei sistemi, ma nella costruzione di un ecosistema unificato in cui dati tecnici, informazioni gestionali e capacità di elaborazione collaborano in modo integrato. Per realizzare questa integrazione è necessario introdurre tecnologie capaci di tradurre, aggregare e normalizzare informazioni eterogenee provenienti da macchinari, linee produttive e sistemi informativi. In questo contesto, l’Industrial Internet of Things (IIoT) svolge un ruolo centrale. Dispositivi intelligenti, nodi di raccolta dati e piattaforme IoT industriali fungono da ponte tra OT e IT, rendendo possibile la comunicazione bidirezionale tra macchine e sistemi digitali. L’IIoT abilita l’acquisizione in tempo reale dei dati operativi, la loro trasmissione verso servizi di elaborazione locali o remoti e l’integrazione con applicazioni gestionali, analitiche o decisionali. Un’infrastruttura IIoT efficace si basa tipicamente su architetture distribuite in cui cooperano diversi livelli funzionali:
 
 - **Device layer**: composto da sensori, attuatori e macchinari connessi che raccolgono dati e generano eventi legati al processo produttivo;
-
 - **Processing layer**: costituito da nodi edge o gateway industriali incaricati di interpretare, filtrare e normalizzare i dati provenienti dal campo, riducendo il carico e permettendo risposte a bassa latenza;
-
 - **Application layer**: ospita piattaforme cloud, sistemi gestionali, servizi analitici e strumenti decisionali basati su modelli predittivi o tecniche di intelligenza artificiale.
 
 Questa architettura rende possibile un flusso di informazione continuo e coerente tra il livello operativo e quello informativo, favorendo processi decisionali rapidi, accurati e data-driven. Questa convergenza IT/OT armonizza queste conoscenze e permette di sfruttare le rispettive competenze in modo complementare.
@@ -225,13 +226,9 @@ Il grafico sottostante mostra la distribuzione globale dei progetti IoT, evidenz
 La classificazione proposta distingue le cinque principali categorie:
 
 - **Smart City**: rappresenta la quota più ampia dei progetti IoT a livello globale. Include soluzioni per illuminazione intelligente, gestione del traffico, monitoraggio ambientale, mobilità connessa e ottimizzazione dei servizi pubblici. L’obiettivo è migliorare l’efficienza urbana e la qualità della vita;
-
 - **Connected Industry**: comprende applicazioni industriali come monitoraggio di macchinari, manutenzione predittiva, robotica connessa e sistemi produttivi automatizzati. È il segmento che più riflette la trasformazione abilitata da Industria 4.0;
-
 - **Connected Building**: include edifici intelligenti con sistemi domotici, controllo energetico, monitoraggio della sicurezza, gestione degli accessi e automazione degli impianti;
-
 - **Connected Car**: riguarda veicoli connessi, telemetria, assistenza alla guida, diagnostica predittiva e servizi smart per mobilità privata e condivisa;
-
 - **Smart Energy**: include reti energetiche intelligenti, smart metering, gestione distribuita dell’energia, integrazione con rinnovabili e ottimizzazione dei consumi.
 
 L’analisi della distribuzione rivela che i progetti IoT sono maggiormente concentrati nei settori che presentano una forte componente infrastrutturale e che traggono benefici immediati dall’ottimizzazione dei processi e dalla disponibilità continua di dati. La dimensione urbana, industriale ed energetica costituisce dunque il nucleo dell’adozione attuale dell’IoT.
@@ -249,13 +246,9 @@ Oltre a comprendere dove l’IoT viene applicato, è essenziale analizzare il li
 L’Hype Cycle identifica *cinque fasi* principali:
 
 1.  **Technology Trigger**: la tecnologia viene introdotta e genera interesse, spesso senza applicazioni solide;
-
 2.  **Peak of Inflated Expectations**: aumentano le aspettative, accompagnate da casi d’uso sperimentali e narrazioni ottimistiche;
-
 3.  **Trough of Disillusionment**: la tecnologia non soddisfa le aspettative e l’interesse diminuisce, mentre sopravvivono solo le applicazioni più fondate;
-
 4.  **Slope of Enlightenment**: emergono utilizzi realistici, competenze più consolidate e una migliore comprensione del valore effettivo;
-
 5.  **Plateau of Productivity**: la tecnologia raggiunge la maturità e viene adottata su larga scala, con un ecosistema stabile di strumenti e standard.
 
 Alcune tecnologie IoT, come i sensori avanzati, il digital twin, le piattaforme cloud per dispositivi connessi in rete o i sistemi edge, si collocano oggi in fasi diverse dell’Hype Cycle. Questo modello è utile per interpretare la dinamicità del settore e per comprendere perché alcune soluzioni maturino rapidamente mentre altre richiedano tempi più lunghi per una piena integrazione industriale.
@@ -373,6 +366,7 @@ L’oggetto fisico rimane centrale. La progettazione deve coordinare la dimensio
 
 Nel web, se una pagina è caricata, la rete funziona. Nell'IoT, la progettazione deve dare per scontato che **la rete non è affidabile** (latenze tra dispositivo, gateway, router e cloud).
 In un'interfaccia standard l'utente si aspetta un feedback entro 100ms. Nell'IoT questo è impossibile da garantire. La soluzione UX consiste nel fornire **feedback multipli**: 
+
 1. Aggiornamento visivo immediato sull'interfaccia (es. *pulsante premuto*).
 2. Conferma che la richiesta è in transito.
 3. Conferma finale dallo stato del dispositivo.
@@ -390,6 +384,7 @@ Senza questa stratificazione, l’utente rischierebbe di premere ripetutamente u
 ## Coerenza, Personalizzazione e Modelli di controllo
 
 L'esperienza deve allineare il modello concettuale al modello mentale dell'utente. Il sistema IoT può adattarsi al contesto d'uso (Personalizzazione) attraverso vari modelli di controllo:
+
 - **Controllo diretto** (interazione fisica)
 - **Controllo remoto** (via cloud/app)
 - **Automazione** (regole autonome)

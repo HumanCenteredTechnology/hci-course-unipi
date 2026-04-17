@@ -1,11 +1,13 @@
 # 1 | Design For Everyone and Everywhere
 
 Le interfacce digitali odierne devono affrontare sfide complesse e interconnesse. I prodotti digitali moderni devono funzionare:
+
 - **Per tutti**: utenti con abilità e necessità diverse.
 - **Ovunque**: smartphone, tablet, desktop, dispositivi indossabili.
 - **In modo coerente**: attraverso team, prodotti e nel corso del tempo.
 
 Per affrontare queste sfide, il design su larga scala si basa su **tre pilastri fondamentali**:
+
 1. **Accessibilità (Accessibility)**: standard per progettare interfacce utilizzabili da tutti, incluse le persone con disabilità.
 2. **Responsive Design**: tecniche per creare interfacce che si adattino a qualsiasi dispositivo o dimensione dello schermo.
 3. **Design Systems**: framework per mantenere la coerenza visiva e funzionale.
@@ -29,12 +31,14 @@ Le **WCAG** (Web Content Accessibility Guidelines) sono gli standard internazion
 4. **Robust (Robusto)**: il contenuto deve poter essere interpretato in modo affidabile da un'ampia varietà di user agent, comprese le tecnologie assistive (uso di HTML semantico, attributi ARIA).
 
 I livelli di conformità WCAG sono tre:
+
 - **Livello A**: Minimo indispensabile (senza di esso, alcuni utenti sono completamente bloccati).
 - **Livello AA**: Baseline raccomandata (la maggior parte dei requisiti legali punta a questo livello).
 - **Livello AAA**: Avanzato (non sempre realizzabile per tutti i tipi di contenuto).
 
 ### Linee Guida Essenziali (Livello AA) e Testing
 Per raggiungere la conformità AA, i requisiti essenziali includono:
+
 - **Contrasto cromatico**: rapporto di 4.5:1 per il testo e 3:1 per i componenti della UI.
 - **Accessibilità da tastiera**: tutte le funzionalità devono essere raggiungibili via tastiera, con indicatori di focus sempre visibili.
 - **Alt text (Testo alternativo)**: descrizioni significative per le immagini (l'attributo `alt` va lasciato vuoto per le immagini puramente decorative).
@@ -43,6 +47,7 @@ Per raggiungere la conformità AA, i requisiti essenziali includono:
 - **Testo ridimensionabile**: l'interfaccia deve funzionare correttamente anche con uno zoom del 200% senza perdita di funzionalità.
 
 Il **Testing** deve essere un mix tra:
+
 - *Automatizzato* (che copre solo il 30-40% dei problemi): tool come WAVE, axe DevTools, Lighthouse.
 - *Manuale* (fondamentale): navigazione solo da tastiera, uso di screen reader (NVDA, JAWS, VoiceOver) e test di zoom.
 
@@ -92,11 +97,13 @@ Alla base dell'adattamento ci sono i **Grid Systems**, che dividono la pagina in
 
 ### Touch vs Mouse e Ottimizzazione delle Performance
 L'interazione mobile porta nuovi paradigmi:
+
 - **Assenza di hover**: gli schermi touch non hanno uno stato "hover"; azioni critiche non devono mai essere nascoste solo all'interno di hover states.
 - I target tattili devono essere ampi (minimo consigliato **44x44px**).
 - Vanno considerati i gesti (swipe, pinch) e le *thumb zones* (la parte inferiore dello schermo è più facile da raggiungere con il pollice).
 
 Per le performance e i media:
+
 - L'invio di immagini desktop su mobile spreca banda. Si usano attributi come `srcset` e `<picture>` per servire dimensioni diverse.
 - Vettoriali (SVG) e caricamento ritardato (`loading="lazy"`) sono raccomandati.
 - Sul piano CSS, strumenti moderni come **Flexbox** (layout monodimensionale) e **CSS Grid** (layout bidimensionale) permettono di gestire l'adattabilità facilmente in ottica mobile-first.
@@ -110,6 +117,7 @@ I benefici sono molteplici: **Coerenza, Efficienza, Qualità** (accessibilità i
 
 ### Metodologia Atomic Design
 Sviluppata per creare sistemi scalabili, divide le interfacce in 5 livelli gerarchici:
+
 1. **Atomi (Atoms)**: i blocchi base indivisibili (es. un pulsante, un campo di input, un'icona).
 2. **Molecole (Molecules)**: combinazioni semplici di atomi (es. un form di ricerca = label + input + pulsante).
 3. **Organismi (Organisms)**: componenti complessi formati da molecole/atomi (es. un header del sito).
@@ -125,11 +133,13 @@ I **Design Tokens** sono le decisioni di design nominate e memorizzate come dati
 Permettono di avere una "singola fonte di verità" agnostica rispetto alla piattaforma (da essi si genera CSS, codice iOS, Android) e una denominazione semantica.
 
 Le **Front-End Style Guides** e la **Living Documentation** (strumenti come *Storybook* o *Figma*) documentano non solo il *cosa*, ma il *perché* e il *come*:
+
 - Mantengono documentazione e codice uniti.
 - Mostrano esempi interattivi e gli stati dei componenti (default, hover, disabled).
 - Includono istruzioni rigide sull'accessibilità e pattern di "Do's and Don'ts".
 
 ### Esempi di Sistemi Notevoli
+
 - **Material Design (Google)**: eccellente per linee guida chiare, cross-platform e accessibilità integrata.
 - **Human Interface Guidelines (Apple)**: fortemente focalizzato sulla coerenza dell'ecosistema Apple.
 - **Carbon (IBM)** e **Ant Design**: orientati ad applicazioni enterprise e data visualization.
@@ -144,6 +154,7 @@ Quando si dispone di un prototipo, l'azione fondamentale da intraprendere è **t
 Questo processo consente di valutare un prodotto o servizio testandolo direttamente con i suoi utenti finali. Attraverso il testing è possibile identificare la maggior parte (seppur non la totalità) dei problemi di usabilità, scoprire opportunità di miglioramento e comprendere a fondo i comportamenti e le preferenze degli utenti.
 
 **Perché fare Usability Testing?**
+
 - **Scoprire problemi** nel design.
 - **Individuare opportunità** per migliorare la progettazione.
 - **Imparare a conoscere gli utenti**, i loro comportamenti e le loro preferenze.
@@ -154,6 +165,7 @@ Esistono due definizioni principali di usabilità, che si concentrano su aspetti
 
 ### 1. La definizione di Nielsen
 Jakob Nielsen definisce l'usabilità come un *attributo di qualità* che valuta quanto sia facile utilizzare le interfacce utente. Essa è definita da **5 componenti di qualità**:
+
 1. **Learnability (Apprendibilità):** Quanto è facile per gli utenti compiere i task basilari la prima volta che incontrano il design?
 2. **Efficiency (Efficienza):** Una volta che gli utenti hanno appreso il design, quanto velocemente riescono a compiere i task?
 3. **Memorability (Memorabilità):** Quando gli utenti tornano ad utilizzare il design dopo un periodo di inutilizzo, quanto facilmente riescono a ristabilire la loro competenza?
@@ -161,6 +173,7 @@ Jakob Nielsen definisce l'usabilità come un *attributo di qualità* che valuta 
 5. **Satisfaction (Soddisfazione):** Quanto è piacevole utilizzare il design?
 
 ### 2. La definizione ISO 9241-11
+
 - **Idea centrale:** L'usabilità è il grado in cui un sistema/prodotto/servizio permette a specifici utenti di raggiungere specifici obiettivi con *efficacia, efficienza e soddisfazione* in un determinato *contesto d'uso* (utenti, obiettivi/task, risorse, ambienti).
 - **Risultato dell'uso (Outcome-of-use):** L'ISO sottolinea che l'usabilità è un *risultato* dell'interazione con il sistema; non è una proprietà intrinseca del prodotto.
 - **Revisione del 2018:** Rispetto alla versione del 1998, ha ampliato il campo d'azione includendo sistemi e servizi, ha legato l'efficienza ai risultati ottenuti e ha chiarito il concetto di soddisfazione per includere una gamma più ampia di aspetti.
@@ -218,6 +231,7 @@ Quando si dispone di un prototipo, l'azione fondamentale da intraprendere è **t
 Questo processo consente di valutare un prodotto o servizio testandolo direttamente con i suoi utenti finali. Attraverso il testing è possibile identificare la maggior parte (seppur non la totalità) dei problemi di usabilità, scoprire opportunità di miglioramento e comprendere a fondo i comportamenti e le preferenze degli utenti.
 
 **Perché fare Usability Testing?**
+
 - **Scoprire problemi** nel design.
 - **Individuare opportunità** per migliorare la progettazione.
 - **Imparare a conoscere gli utenti**, i loro comportamenti e le loro preferenze.
@@ -230,6 +244,7 @@ Questo processo consente di valutare un prodotto o servizio testandolo direttame
 ## Cognitive Walkthrough
 
 Il **Cognitive Walkthrough** è un metodo di valutazione dell'usabilità basato sull'idea che:
+
 - L'utente impara a utilizzare l'interfaccia in modo esplorativo.
 - L'utente ha degli obiettivi precisi da raggiungere.
 - L'utente applica un semplice ragionamento di tipo "mezzi-fini" (means-ends reasoning).
@@ -238,12 +253,14 @@ Questa valutazione viene condotta da un **esperto**, il quale esegue una serie d
 
 ### Preparazione
 Per condurre un Cognitive Walkthrough sono necessari quattro elementi fondamentali:
+
 1. **User description (Descrizione dell'utente):** Include il livello di esperienza con i computer e qualsiasi assunzione fatta dal designer sul target.
 2. **System description (Descrizione del sistema):** Include le operazioni e le performance del sistema (può essere applicato anche su prototipi cartacei/paper design).
 3. **Task description (Descrizione del task):** Specifica il compito che l'esperto deve portare a termine, visto dalla prospettiva dell'utente.
 4. **Action sequence (Sequenza di azioni):** Descrive le schermate del sistema e le azioni dell'utente necessarie per completare il task. *Una schermata del sistema unita a un'azione dell'utente costituiscono un singolo "step".*
 
 ### Il Processo
+
 1. Il designer/sviluppatore prepara il prototipo, la descrizione dell'utente, del sistema, del task e la lista delle azioni.
 2. Il designer consegna questi documenti all'esperto.
 3. L'esperto legge attentamente le descrizioni.
@@ -251,6 +268,7 @@ Per condurre un Cognitive Walkthrough sono necessari quattro elementi fondamenta
 
 ### Le 4 Domande del Cognitive Walkthrough
 Durante il processo, per **OGNI step** della lista di azioni, l'esperto deve porsi le seguenti quattro domande critiche:
+
 1. L'obiettivo successivo è chiaro in questa fase?
 2. L'azione appropriata da compiere è ovvia?
 3. È chiaro che questa specifica azione porterà all'obiettivo?
@@ -320,6 +338,7 @@ Prima di tutto, è necessario definire lo scopo della ricerca. Cosa si vuole tes
 
 ### 2. Scegliere il formato (The format)
 Bisogna stabilire le modalità di esecuzione del test valutando tre dimensioni:
+
 - **In lab o in field:** Considerare la location. Il test si svolgerà in sede (nel proprio laboratorio) o presso la sede/abitazione del partecipante?
 - **Moderato o non moderato:** 
   - Gli studi *moderati* (con facilitatore) forniscono insight più ricchi e un migliore accesso a commenti aperti, ma sono più costosi e difficili da organizzare.
@@ -328,6 +347,7 @@ Bisogna stabilire le modalità di esecuzione del test valutando tre dimensioni:
 
 ### 3. Numero di partecipanti
 Quanti tester servono? La risposta dipende dal tipo di studio:
+
 - **Studi qualitativi:** Jakob Nielsen evidenzia che **5 persone** sono un numero ideale; testare con più utenti generalmente non garantisce un aumento significativo di nuovi insight (si raggiunge la saturazione).
 - **Studi quantitativi:** La regola dei 5 utenti non si applica. Per ottenere dati statisticamente rilevanti, il numero raccomandato è di **almeno 20 partecipanti**.
 
@@ -337,6 +357,7 @@ Bisogna **evitare i proxy users** (utenti sostitutivi a cui viene chiesto di "fi
 
 ### 5. Scrivere i task corretti
 Nello usability testing, i task vengono scritti sotto forma di scenari e devono allinearsi agli obiettivi dello studio. Possono essere di due tipi:
+
 - **Task esplorativi:** Sono aperti e servono a capire come le persone esplorano le informazioni (non sono adatti per la ricerca quantitativa).
 - **Task specifici:** Sono mirati e prevedono una risposta corretta o un punto di arrivo preciso (utilizzabili sia in test qualitativi che quantitativi).
 *Attenzione: il wording (la scelta delle parole) è fondamentale per non alterare i risultati.*
@@ -345,12 +366,14 @@ Nello usability testing, i task vengono scritti sotto forma di scenari e devono 
 Prima di avviare le sessioni ufficiali, è necessario eseguire uno studio pilota per affinare il testo dei task, determinarne l'ordine e la quantità, e assicurarsi di aver reclutato il target giusto. Questo passaggio è vitale nei test *non moderati* online, dove non ci sarà modo di intervenire per chiarire dubbi. Intercettare i problemi in questa fase previene il fallimento della sessione reale.
 
 ### 7. Decidere le metriche
+
 - Negli **studi qualitativi**, la priorità è ottenere insight sul design (tramite interviste semi-strutturate o strutturate) piuttosto che misurare l'usabilità con metriche rigide, dato che un campione ristretto non è statisticamente rappresentativo.
 - Negli **studi quantitativi**, la misurazione è centrale. Le metriche comuni includono: *Time on task* (tempo impiegato), rating di soddisfazione, *Success rate* (tasso di successo) ed *Error rate* (tasso di errore).
 Se si raccolgono misurazioni soggettive (tramite questionari), bisogna decidere preventivamente quando somministrarli: dopo ogni task, alla fine dell'intera sessione, o in entrambi i momenti.
 
 ### 8. Redigere il Test Plan
 Una volta definita la strategia, è essenziale documentare l'approccio in un *Test Plan* e condividerlo col team. Serve come strumento di comunicazione e come storico per studi futuri. Non deve essere prolisso, ma deve contenere:
+
 - Nome del prodotto/sito testato.
 - Obiettivi dello studio.
 - Logistica (orari, date, luogo, formato).
