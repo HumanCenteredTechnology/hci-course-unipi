@@ -1,60 +1,10 @@
-**9 - HUMAN FACTORS & MEASUREMENT**
-
-**Chiara Giordano**
-
-**Interazione uomo-macchina**
-
-**2025/2026  **
-
-# **Indice**
-
-[1. HUMAN FACTORS - FATTORI UMANI [1](#human-factors---fattori-umani)](#human-factors---fattori-umani)
-
-[1.1 PERCHE’ MISURIAMO? [2](#perche-misuriamo)](#perche-misuriamo)
-
-[1.2 DAI COSTRUTTI AGLI INDICATORI [3](#_Toc215920654)](#_Toc215920654)
-
-[2. FONDAMENTI DI PSICOMETRIA [6](#_Toc215920655)](#_Toc215920655)
-
-[2.1 MISURARE IL COSTRUTTO GIUSTO – VALIDITA’ [7](#misurare-il-costrutto-giusto-validita)](#misurare-il-costrutto-giusto-validita)
-
-[2.2 CONSISTENZA DELLE MISURE – AFFIDABILITA’ [8](#consistenza-delle-misure-affidabilita)](#consistenza-delle-misure-affidabilita)
-
-[2.3 SCALE DI MISURAZIONE E RISPOSTE LIKERT [10](#scale-di-misurazione-e-risposte-likert)](#scale-di-misurazione-e-risposte-likert)
-
-[3. SCALE DI USABILITA’ [12](#scale-di-usabilita)](#scale-di-usabilita)
-
-[3.1 MISURARE L’USABILITA’ COME UN COSTRUTTO [12](#misurare-lusabilita-come-un-costrutto)](#misurare-lusabilita-come-un-costrutto)
-
-[3.2 SYSTEM USABILITY SCALE (SUS) [13](#system-usability-scale-sus)](#system-usability-scale-sus)
-
-[3.3 UMUX e UMUX-Lite [14](#umux-e-umux-lite)](#umux-e-umux-lite)
-
-[3.4 Scala di Usabilità dei Chatbot (BUS-11) [14](#scala-di-usabilità-dei-chatbot-bus-11)](#scala-di-usabilità-dei-chatbot-bus-11)
-
-[4. MENTAL WORKLOAD [15](#mental-workload)](#mental-workload)
-
-[4.1 Non è tutto oro quel che luccica – Parte 1 [16](#non-è-tutto-oro-quel-che-luccica-parte-1)](#non-è-tutto-oro-quel-che-luccica-parte-1)
-
-[4.2 Non è tutto oro quel che luccica – Parte 2 [16](#non-è-tutto-oro-quel-che-luccica-parte-2)](#non-è-tutto-oro-quel-che-luccica-parte-2)
-
-[4.3 Misurazione del Mental Workload: NASA-TLX [17](#misurazione-del-mental-workload-nasa-tlx)](#misurazione-del-mental-workload-nasa-tlx)
-
-[4.4 Altre Misure Soggettive del Workload [18](#altre-misure-soggettive-del-workload)](#altre-misure-soggettive-del-workload)
-
-[4.5 INDICATORI FISIOLOGICI DI WORKLOAD [21](#indicatori-fisiologici-di-workload)](#indicatori-fisiologici-di-workload)
-
-[5. QUALITA’ DEI DATI COME PROBLEMA DI RICERCA [22](#qualita-dei-dati-come-problema-di-ricerca)](#qualita-dei-dati-come-problema-di-ricerca)
-
-[5.1 PROGETTARE PER UNA MIGLIORE QUALITA’ DEI DATI [23](#progettare-per-una-migliore-qualita-dei-dati)](#progettare-per-una-migliore-qualita-dei-dati)
-
 # **1. HUMAN FACTORS - FATTORI UMANI**
 
 Lo studio dei Fattori Umani (Human Factors) è una delle discipline da cui trae origine la Human-Computer Interaction (HCI).
 
-L'approccio principale dei Fattori Umani consiste nella comprensione del **comportamento**, delle **capacità** e dei **limiti** degli esseri umani (siano essi fisici, sociali, ecc.) al fine di progettare sistemi che siano a loro ben **adattabili**.
+L'approccio principale dei Fattori Umani consiste nella comprensione del **comportamento**, delle **capacità** e dei **limiti** degli esseri umani (siano essi fisici, sociali, cognitivi, ecc.) al fine di progettare sistemi che siano a loro ben **adattabili**.
 
-Gli "Human Factors" analizzano, quindi: **come gli esseri umani percepiscono, pensano, si muovono e prendono decisioni**. Questi sono tutti aspetti che concorrono all'utilizzo del sistema.
+Gli "Human Factors" analizzano, quindi: **come gli esseri umani percepiscono, pensano, si muovono, prendono decisioni e commettono errori (falliscono)**. Questi sono tutti aspetti che concorrono all'utilizzo del sistema.
 
 L'HCI richiede anche una **misurazione**. Se vogliamo sapere quanto bene un sistema si adatta a una persona, abbiamo bisogno di un metodo per stabilire **se** funziona, **quanto** è efficace e **in che modo** opera.
 
@@ -72,7 +22,7 @@ Se un medicinale non funziona, ovvero non cura la malattia, probabilmente richie
 
 Al contrario, se un medicinale mostra ottimi risultati quantitativi (è statisticamente efficace), ma le persone non si sentono a proprio agio con il metodo di somministrazione o l'esperienza complessiva, questo fornisce indicazioni importanti per valutare se e in quali contesti debba essere utilizzato.
 
-Il nostro obiettivo qui è l'aspetto **quantitativo**. Ci servono **dati e fatti concreti** per giustificare le decisioni e le soluzioni che adottiamo nella fase di design.
+Il nostro obiettivo qui è l'aspetto **quantitativo**. Senza misurazioni, la ricerca e il design rischierebbero di basarsi principalmente su opinioni, abitudini o semplice estetica. Ci servono invece **dati e fatti concreti** per giustificare le decisioni e le soluzioni che adottiamo nella fase di design.
 
 Se consideriamo la Human-Computer Interaction (HCI) come una scienza sociale, essa presenta due aspetti fondamentali:
 
@@ -108,15 +58,14 @@ Ovviamente, nel processo reale, le cose non procedono sempre in maniera così li
 
 Alla luce di quello che scopriremo in questa fase, decideremo **quanto, come e in che caso**, il sistema potrebbe funzionare, perché disporremo di evidenze basate su **fatti e dati concreti.**
 
-Perché misuriamo? Vogliamo delle prove:
+Perché misuriamo? Vogliamo delle prove (evidenze) su:
 
-1.  **Sulle performance** del sistema
+1.  **Performance:** ad esempio il tempo di completamento di un task, il tasso di errore, il *throughput* e la curva di apprendimento.
+2.  **Esperienza:** come l'usabilità percepita, il carico mentale (*mental workload*), la fiducia nel sistema (*reliance*) e il controllo percepito.
+3.  **Sicurezza:** analizzando i quasi-incidenti (*near-misses*), gli incidenti critici e le capacità di recupero dall'errore.
+4.  **Soddisfazione** (qui intesa come una misura latente).
 
-2.  **Sull'esperienza** utente.
-
-3.  **Sulla soddisfazione** (qui intesa come una misura latente).
-
-Questa esigenza di misurazione si mappa perfettamente sulla definizione di usabilità e sugli standard internazionali ad essa correlati. Non è un caso che questi standard provengano non solo dagli studi sulla qualità, ma anche dall'ergonomia e dagli human factors.
+Questa esigenza di misurazione si mappa perfettamente sulla definizione di usabilità (di Nielsen) e sugli standard internazionali (ISO) ad essa correlati. Non è un caso che questi standard provengano non solo dagli studi sulla qualità, ma anche dall'ergonomia e dagli human factors.
 
 Nelle performance andiamo a vedere metriche come:
 
@@ -126,7 +75,7 @@ Nelle performance andiamo a vedere metriche come:
 
 - Il livello di **difficoltà** percepita dagli utenti.
 
-Questo si allinea bene con i concetti di efficienza e limitabilità di un'innovazione.
+Questo si allinea bene con i concetti di efficienza e **apprendibilità** (*learnability*) di un'innovazione.
 
 Una volta che andiamo a misurare queste cose, i dati ci permettono di:
 
@@ -134,7 +83,7 @@ Una volta che andiamo a misurare queste cose, i dati ci permettono di:
 
 2.  **Diagnosticare Problemi:** A seconda della tipologia e della qualità dei dati, possiamo diagnosticare **dove e perché** gli utenti hanno problemi in uno specifico design.
 
-3.  **Costruire Conoscenza Generalizzabile:** Questo è fondamentale. Ci permette di generalizzare e di **distillare conoscenze** sul comportamento umano.
+3.  **Costruire Conoscenza Generalizzabile:** Questo è fondamentale. Ci permette di generalizzare e di **distillare conoscenze cumulative** sul comportamento umano.
 
 Questa conoscenza ci aiuta a capire come solitamente gli esseri umani si comportano in determinati contesti e, di conseguenza, come possiamo **informare il prossimo design**.
 
@@ -148,7 +97,7 @@ Quando parliamo di queste caratteristiche, ci riferiamo a dei **<u>costrutti lat
 
 Ad esempio, l'usabilità non è qualcosa che esiste come una proprietà fisica e oggettiva; l'usabilità è un concetto che emerge nella relazione tra una persona e un sistema. Possiamo dire che una cosa è *più* usabile di un'altra in media, ma non è sempre vero per tutti. Non è una proprietà intrinseca dell'oggetto, né una proprietà fissa del sistema o della persona.
 
-Lo stesso vale, per esempio, per l'apprendimento del sistema o la sua stabilità. Pensiamoci: che cos'è l'apprendimento? Ci sono tantissime definizioni diverse di cosa sia l'apprendere.
+Lo stesso vale, per esempio, per l'apprendimento del sistema, il coinvolgimento (*engagement*) o la sua stabilità. Pensiamoci: che cos'è l'apprendimento? Ci sono tantissime definizioni diverse di cosa sia l'apprendere.
 
 Quando definiamo queste caratteristiche, dunque, le consideriamo dei **costrutti** che noi **postuliamo** (o ipotizziamo) come *latenti* (nascosti), rispetto a ciò che è davvero misurabile. Sono dei **costrutti che abbiamo costruito** a livello di ricerca.
 
@@ -178,7 +127,7 @@ Il problema principale è che il costrutto, essendo qualcosa di **latente** (nas
 
 - **Un costrutto può essere rappresentato da molti indicatori:** Un singolo costrutto, come l'usabilità, è particolarmente complicato e sfumato e può essere misurato attraverso diversi metodi. Per questo, un solo indicatore non è sufficiente.
 
-- **Un indicatore è influenzato da diversi costrutti:** Lo stesso indicatore può essere influenzato da diversi costrutti. Ad esempio, il fatto che una persona impieghi molto tempo a completare un *task* non è necessariamente legato solo a una cattiva usabilità del sistema. Potrebbe anche essere collegato a caratteristiche personali dell'utente (come l'esperienza pregressa o l'abilità).
+- **Un indicatore è influenzato da diversi costrutti:** Lo stesso indicatore può essere influenzato da diversi costrutti (ci possono essere spiegazioni alternative). Ad esempio, il fatto che una persona impieghi molto tempo a completare un *task* non è necessariamente legato solo a una cattiva usabilità del sistema. Potrebbe anche essere collegato a caratteristiche personali dell'utente (come l'esperienza pregressa o la scarsa familiarità).
 
 Quindi, è difficile collegare in modo univoco gli indicatori a un solo costrutto.
 
@@ -190,7 +139,7 @@ In generale, per effettuare una buona misurazione (o "configurazione"), dobbiamo
 
 2.  **Rapporto Plausibile tra Costrutto e Indicatori:** Dobbiamo avere un rapporto **plausibile** (credibile e teoricamente fondato) tra il costrutto e gli indicatori che si intendono utilizzare. Questo è un problema specialmente quando non esiste una letteratura scientifica consolidata che dimostri il *link* tra i due. Ad esempio, ci si chiede: l'apprendimento può essere misurato con il solo tempo di esecuzione del *task*? O è più efficace un questionario specifico? E cosa cambia se le domande o le scale di misurazione sono leggermente diverse?
 
-3.  **Consapevolezza delle Limitazioni:** Essendo dei costrutti latenti, dobbiamo essere sempre consapevoli delle loro limitazioni. Non possiamo stabilire con certezza dei **nessi causali** (causa-effetto) assoluti basandoci solo su queste misurazioni.
+3.  **Consapevolezza delle Limitazioni:** Essendo dei costrutti latenti, dobbiamo essere sempre consapevoli delle loro limitazioni e delle possibili spiegazioni alternative. Non possiamo stabilire con certezza dei **nessi causali** (causa-effetto) assoluti basandoci solo su queste misurazioni.
 
 C'è sempre una certa probabilità che:
 
@@ -215,9 +164,6 @@ In HCI (e nelle scienze sociali in generale):
 Di conseguenza, **tutto rimane in parte soggettivo**.
 
 Questa complessità comporta il dover essere **il più rigorosi possibile**. Se il **rigore metodologico** viene meno, allora l'intero lavoro di ricerca perde di validità e significato.
-
-<span id="_Toc215920655" class="anchor"></span>**  **
-
 # **2. FONDAMENTI DI PSICOMETRIA**
 
 Vediamo adesso come misurare questi costrutti, attingendo ai fondamenti della **Psicometria**.
@@ -234,11 +180,11 @@ Uno degli obiettivi principali della psicometria è assicurarsi che gli strument
 
 2.  **Validi:** Questo si ricollega al concetto di *link* affermato prima. Dobbiamo assicurarci che lo strumento stia **effettivamente misurando ciò che intendiamo misurare**, e che i risultati non siano dovuti a un altro costrutto latente.
 
-3.  **Sensibili all'Errore:** Bisogna conoscere il potenziale **errore di misurazione** e l'impatto che tale errore può avere sui risultati ottenuti.
+3.  **Sensibili all'Errore:** Bisogna conoscere il potenziale **errore di misurazione** e l'impatto che tale errore può avere sulle conclusioni ottenute.
 
 Perché la psicometria è importante in HCI?
 
-Tutti i **questionari** che utilizziamo (come la **SUS - System Usability Scale**, che vedremo più avanti) sono strumenti che devono sottostare a queste leggi psicometriche.
+Tutti i **questionari** e le scale che utilizziamo o adattiamo (come la **SUS - System Usability Scale**, o il **NASA-TLX** per il carico mentale) sono strumenti che devono sottostare a queste leggi psicometriche. A volte, inoltre, vengono create nuove scale per tecnologie o contesti emergenti.
 
 Poiché operiamo in un campo dove non sempre esiste una teoria solida di riferimento per i costrutti latenti (la materia è "giovane"), se non applichiamo un rigore psicometrico:
 
@@ -282,7 +228,7 @@ Lo strumento dovrebbe correlare in modo forte con altri strumenti che misurano c
 
 *Esempio:* Due questionari diversi che misurano l'usabilità dovrebbero mostrare un'alta correlazione tra loro.
 
-- **Validità Divergente (Divergent Validity)**
+- **Validità Discriminante (Discriminant Validity)** (spesso nota anche come divergente)
 
 Lo strumento deve non correlare in modo forte con costrutti che non sono collegati (o che sono distinti).
 
@@ -302,17 +248,17 @@ Se un alto punteggio di usabilità non è correlato negativamente con il numero 
 
 È cruciale ricordare che una scala o una misura può essere molto affidabile, ma non valida.
 
-- Affidabilità: Lo strumento funziona bene internamente e misura sempre la stessa cosa.
+- Affidabilità: Lo strumento funziona bene internamente e misura sempre la stessa cosa in modo coerente.
 
 - Validità: Lo strumento misura la cosa giusta.
 
 *Esempio:* Potrei voler misurare l'usabilità, ma per caso sto misurando la personalità. La mia misurazione di personalità può essere molto affidabile (esce sempre lo stesso risultato), ma alla fine, mi rendo conto che non sto misurando l'usabilità.
 
-Avvertimento: il fatto che una scala o uno strumento sia popolare non significa che sia valido. Ci sono strumenti e tecniche molto diffusi che hanno un basso grado di validità. Dobbiamo essere sempre consapevoli di cosa stiamo facendo e cosa vogliamo misurare.
+Avvertimento: il fatto che una scala o uno strumento sia popolare non significa che sia valido per il tuo specifico contesto d'uso. Ci sono strumenti e tecniche molto diffusi che hanno un basso grado di validità. Dobbiamo essere sempre consapevoli di cosa stiamo facendo e cosa vogliamo misurare.
 
 ## **2.2 CONSISTENZA DELLE MISURE – AFFIDABILITA’**
 
-Se la validità risponde alla domanda "Sto misurando la cosa giusta?", l’affidabilità risponde a: **"Stiamo misurando il segnale in modo coerente e consistente?"**
+Se la validità risponde alla domanda "Sto misurando la cosa giusta?", l’affidabilità risponde a: **"Quanto del punteggio è segnale rispetto al rumore?"**
 
 L'affidabilità si riferisce a quanto una misurazione è **consistente** e **stabile** nel tempo e tra gli *item*. Ne esistono tre tipi principali:
 
@@ -328,45 +274,35 @@ Esempio: Se abbiamo un questionario che misura la soddisfazione del sistema, tut
 
 **2. Affidabilità Test-Retest**
 
-Si verifica se lo strumento fornisce **risultati simili** quando viene applicato **più volte nelle stesse condizioni** (o su soggetti simili, separati nel tempo)
+Si verifica se, a patto che il costrutto sottostante non cambi, lo strumento fornisce **risultati simili nel tempo**.
 
 **🡪**Se misuro la stessa cosa più volte, dovrei ottenere lo stesso risultato.
 
 Esempio: Se misuro un oggetto con un righello diverse volte, il risultato dovrebbe essere sempre lo stesso, al netto di piccoli errori di misurazione dovuti magari alla temperatura o alla manipolazione. Se il risultato è stabile, lo strumento è affidabile su questa dimensione.
 
-**3. Affidabilità Inter-Giudice**
+**3. Affidabilità Inter-Giudice (Inter-rater reliability)**
 
-Misura il grado di **accordo** tra **diverse persone** (*rater* o *giudici*) che utilizzano lo stesso strumento per valutare la stessa cosa.
+Misura il grado di **accordo** tra **diverse persone** (*rater* o valutatori umani) che codificano o valutano lo stesso comportamento.
 
-Esempio: Se chiedo a diverse persone di valutare la soddisfazione su uno stesso sistema, il loro grado di accordo, misurato con tecniche statistiche, indica l'affidabilità.
-
-Se un campione numeroso di persone (diciamo 400, 500 o 1000) esprime un alto grado di accordo sulle risposte, è probabile che lo strumento stia misurando la stessa cosa in modo coerente.
-
-**L'affidabilità non garantisce la validità**, ma ne è un prerequisito. Se uno strumento non è affidabile, non può essere valido.
+Esempio: Se chiediamo a due o tre ricercatori di osservare le registrazioni video di un test utente e di contare autonomamente gli errori commessi, il loro grado di accordo indica l'affidabilità inter-giudice. Non si tratta quindi di migliaia di utenti che rispondono a un questionario, ma di valutatori esperti che classificano/codificano gli stessi dati.
 
 Una misura **poco affidabile** significa che è molto esposta all'**errore casuale** e questo ha gravi conseguenze statistiche:
 
-- **Riduce la potenza statistica:** È difficile individuare se un effetto (una differenza) esiste realmente.
+- **Riduce la potenza statistica:** È più difficile individuare se un effetto (una differenza reale) esiste.
 
-- **Può mascherare differenze reali:** Se misuriamo due oggetti che hanno una differenza di 1.5 cm ma il nostro strumento (il righello) ha un errore di misurazione (o *rumore*) pari o superiore a 1.5 cm non riusciremo a vedere la differenza.
+- **Può mascherare differenze reali:** Se misuriamo due oggetti che hanno una differenza di 1.5 cm ma il nostro strumento (il righello) ha un errore di misurazione (o *rumore*) pari o superiore a 1.5 cm non riusciremo a vedere la differenza tra le interfacce.
 
-In sostanza, uno strumento poco affidabile non è sensibile abbastanza da rilevare le variazioni che ci interessano.
+**Azioni Pratiche per l'Affidabilità**
 
-**1. Verifica Statistica dell'Affidabilità**
+- **Verifica Statistica:** Si utilizzano indici come l'**Alpha di Cronbach** o l'**Omega di McDonald** per verificare la consistenza interna.
 
-Una delle prime cose che si fa è **controllare l'affidabilità** dello strumento. Questo è un modo per prendere atto che lo strumento ha funzionato a un livello accettabile.
+- **Revisione degli *Item*:** Si controllano le **correlazioni item-totale**. Se alcuni item risultano problematici, si rimuovono o si revisionano.
 
-- Si utilizza, ad esempio, l'**Alpha di Cronbach** per verificare la **correlazione tra le domande**.
-
-- **Revisione degli *Item*:** Si ricorre a tecniche statistiche per **identificare ed eliminare** le domande che non stanno misurando la stessa dimensione del costrutto (ovvero, quelle che abbassano l'Alpha di Cronbach).
-
-**2. Evitare Domande Ridondanti**
-
-L'altra pratica fondamentale è **evitare domande a doppia canna**, ovvero domande che chiedono **due cose diverse** contemporaneamente.
+- **Evitare Domande Problematiche:** È fondamentale **evitare domande estremamente vaghe o "a doppia canna"** (double-barreled), ovvero domande che chiedono **due cose diverse** contemporaneamente nello stesso item.
 
 ## **2.3 SCALE DI MISURAZIONE E RISPOSTE LIKERT**
 
-Le scale di misurazione influenzano i test statistici che possiamo applicare. Si dividono in quattro categorie:
+Le variabili quantitative differiscono per il tipo di scala e questo influenza pesantemente i test statistici che possiamo applicare. Si dividono in quattro categorie:
 
 **1. Scala Nominale (Categorica)**
 
@@ -376,21 +312,21 @@ Esempio in HCI: **Sesso** (Maschio, Femmina, Non-binario), **tipologia di dispos
 
 **2. Scala Ordinale**
 
-Le scale ordinali permettono di **ordinare** i valori (sapere che uno è maggiore o minore dell'altro), ma **non permettono di quantificare** l'esatta differenza tra i valori consecutivi.
+Le scale ordinali permettono di **ordinare** i valori (sapere che uno è maggiore o minore dell'altro), ma **non permettono di conoscere la grandezza dell'intervallo** tra i valori consecutivi.
 
 C'è un ordine (poco 🡪molto), ma non si conosce la distanza tra i gradini. Non sappiamo quanta differenza ci sia tra il valore 1 e 2, o tra il 5 e il 6.
 
 Ti dicono che 2 è maggiore di 1, ma non che la distanza tra 1 e 2 è la stessa che tra 4 e 5.
 
-Esempio: le scale Likert (da 1 "Per niente d'accordo" a 5 "Molto d'accordo") sono scale ordinali.
+Esempio: le singole risposte Likert (da 1 "Per niente d'accordo" a 5 "Molto d'accordo") sono su scala ordinale.
 
 **3. Scala a Intervalli**
 
-Nelle scale a intervalli, sappiamo che i valori sono ordinati e hanno anche lo **stesso intervallo** tra i gradini.
+Nelle scale a intervalli, sappiamo che i valori sono ordinati e hanno anche la **stessa distanza** tra i gradini.
 
 La differenza tra 1 e 2 è la stessa che tra 2 e 3.
 
-Esempio: La temperatura misurata in **gradi Celsius (°C)**. La differenza tra 0 °C e 1 °C è la stessa che tra 20 °C e 21°C.
+Esempio: La temperatura misurata in **gradi Celsius (°C)** o gli anni del calendario.
 
 **Limitazione:** Non si possono fare rapporti (moltiplicazioni o divisioni). Lo **zero è arbitrario** e non indica l'assenza della proprietà. Ad esempio, 20 °C non è il doppio più caldo di 10 °C.
 
@@ -402,19 +338,18 @@ Lo zero indica la completa **assenza** della proprietà misurata. Poiché lo zer
 
 Esempio: La temperatura misurata in **Kelvin (K)**. Lo zero Kelvin (0 K) rappresenta l'assenza totale di energia termica (zero assoluto). Per questo, si può dire che 40 K è il doppio di 20 K.
 
-**Esempio in HCI:** Tempo di completamento del *task* (dove 0 secondi significa assenza di tempo impiegato) o numero di errori.
+**Esempio in HCI:** Tempo di completamento del *task* misurato in secondi (dove 0 significa assenza di tempo impiegato) o numero di errori (o euro).
 
-Le **Scale Likert** sono strettamente **ordinali**. Questo è un punto cruciale, perché molti articoli di ricerca le trattano erroneamente come **intervallari**, rischiando di commettere errori di interpretazione.
+Le singole voci di una **Scala Likert** sono strettamente **ordinali**. Questo è un punto cruciale, perché molti le trattano erroneamente come **intervallari**, rischiando di commettere errori di interpretazione.
 
-Quando possiamo considerare le scale Likert in maniera intervallare?
+Tuttavia, è accettabile trattare approssimativamente i dati Likert come una scala a intervalli quando si verificano specifiche condizioni:
 
-1.  **Media degli Item:** Quando non analizziamo una singola domanda (che rimane più strettamente ordinale), ma facciamo una **media** dei punteggi ottenuti da diverse domande che misurano lo stesso costrutto.
+1.  **Somma o Media degli Item:** Quando non analizziamo un singolo item (che rimane strettamente ordinale), ma aggreghiamo diversi item calcolandone la **somma o la media** per valutare lo stesso costrutto.
 
-2.  **Scale Bilanciate:** Quando le risposte sono **bilanciate** (ad esempio, una scala da 1 a 5, dove 3 è il valore neutrale, 1 è il peggiore e 5 è il migliore) e presentano una **modalità normale** (ovvero, un'ampia distribuzione delle risposte).
+2.  **Scale Bilanciate e Simmetriche:** Quando le opzioni di risposta sono **bilanciate e simmetriche** (ad esempio, una scala con un punto neutrale centrale e opzioni simmetricamente speculari ai lati, come "Fortemente in disaccordo" vs "Fortemente d'accordo").
 
-Se si rispettano queste condizioni (bilanciamento, ampia variabilità e calcolo della media), è accettabile considerare la misura come intervallare e applicare i relativi test statistici.
+Tenere a mente questa distinzione è **estremamente importante** nel momento in cui si deve scegliere il test di ipotesi (test statistico) da applicare!
 
-**  **
 
 # **3. SCALE DI USABILITA’**
 
@@ -564,9 +499,9 @@ Prima di utilizzare questo costrutto nella ricerca, è necessario chiarire la te
 
 Il **Carico Mentale** (*Mental Workload*) **non è la stessa cosa** del **Carico Cognitivo** (*Cognitive Load*).
 
-Il **Carico Cognitivo** si occupa precisamente dell'**apprendimento** e deriva dalla **Teoria del Carico Cognitivo** (Cognitive Load Theory), che è una teoria dell’educazione, non psicologica. Di conseguenza, il *Cognitive Load* misura un aspetto diverso e più specifico (l'impatto di un *task* sull'apprendimento).
+Il **Carico Cognitivo** si occupa precisamente dell'**apprendimento** e deriva dalla **Teoria del Carico Cognitivo** (Cognitive Load Theory), che è una teoria profondamente radicata nella **psicologia cognitiva** (in particolare focalizzata sui limiti della memoria di lavoro) e applicata all’educazione e all'*instructional design*. Di conseguenza, il *Cognitive Load* misura un aspetto diverso e più specifico (l'impatto di un *task* sull'apprendimento e sull'acquisizione di informazioni).
 
-Se vogliamo utilizzare la definizione di usabilità che include l'apprendimento (*learnability*), la scelta di misurare il Carico Mentale o il Carico Cognitivo dipende da **cosa vogliamo esattamente includere** nella vostra misurazione.
+Se vogliamo utilizzare la definizione di usabilità che include l'apprendimento (*learnability*), la scelta di misurare il Carico Mentale o il Carico Cognitivo dipende da **cosa vogliamo esattamente includere** nella nostra misurazione.
 
 Molti articoli commettono l'errore di misurare il *Mental Workload* pensando che sia un'indicazione diretta della facilità di apprendimento (*Cognitive Load*). Non c'è un collegamento diretto e garantito, quindi non si può dare per scontato che un basso *Mental Workload* implichi un migliore apprendimento.
 
@@ -614,7 +549,7 @@ I sei livelli sono:
 
 6.  **Frustrazione**
 
-È corretto dire **'livelli'** e non **'dimensioni'**, perché quest’ultime implicherebbero che le sei scale rappresentino sei **sottocostrutti distinti e scientificamente provati** del Carico Mentale!
+È corretto dire **'livelli'** e non **'dimensioni'**, perché queste ultime implicherebbero che le sei scale rappresentino sei **sottocostrutti distinti e scientificamente provati** del Carico Mentale!
 
 Non si può definire con certezza che queste sei scale siano **dimensioni psicometriche** che esauriscono completamente il costrutto di Carico Mentale. La scelta di fermarsi a sei livelli è stata fatta dai suoi creatori per motivi pratici, non perché avesse un preciso significato statistico.
 
@@ -699,7 +634,6 @@ Esistono anche indicatori fisiologici e neurologici che offrono un punto di vist
 - Spesso richiedono un **ambiente di laboratorio** controllato.
 
 È fondamentale utilizzare i dati fisiologici per **complementare** i dati comportamentali (tempi, errori) e i dati soggettivi (questionari), e **non per sostituirli**. La triangolazione di queste diverse fonti di dati è essenziale per ottenere una visione completa del *workload*.
-
 # **5. QUALITA’ DEI DATI COME PROBLEMA DI RICERCA**
 
 Adesso che sappiamo come misurare, dobbiamo garantire che i risultati siano di qualità sufficiente per poter condurre analisi statistiche valide. **Se misuriamo male, sprechiamo tempo, risorse e denaro.**
@@ -707,9 +641,9 @@ Adesso che sappiamo come misurare, dobbiamo garantire che i risultati siano di q
 | **Minaccia** | **Descrizione** |
 |:---|:---|
 | **Risposte Inattentive** | L'utente risponde a caso (*random responding*). Esempi: **Speeding** (risposta troppo veloce) o **Straight-lining** (rispondere sempre con lo stesso valore, es. 1, 1, 1, 1). |
-| **Comprensione Errata** | Istruzioni o domande ambigue, che portano l'utente a **fraintendere** il *task*. |
+| **Comprensione Errata** | Istruzioni o domande ambigue (o con esempi scarsi), che portano l'utente a **fraintendere** il *task*. |
 | **Demand Characteristics** | (Molto insidioso) Il partecipante risponde in base a **ciò che pensa che il ricercatore voglia** o si aspetti, e non in base alla sua esperienza reale. |
-| **Contesto Online** | I partecipanti fanno **multi-tasking**, usano schermi piccoli, sono distratti o i *logging* si interrompono per **problemi tecnici** (*ad-blocker*, *timeout*, *logging errors*). |
+| **Contesto Online / Problemi Tecnici** | I partecipanti fanno **multi-tasking**, usano schermi piccoli, sono distratti o le registrazioni dei dati (*logging*) si interrompono per **problemi tecnici** (*ad-blocker*, errori di sistema, *timeout*). |
 
 **Risultato:** Dati rumorosi o *biased* (distorti) che possono portare a **Falsi Negativi** (mancare un effetto reale) o **Falsi Positivi** (vedere effetti che in realtà non sono robusti).
 
@@ -721,31 +655,30 @@ Adesso che sappiamo come misurare, dobbiamo garantire che i risultati siano di q
 
 **1. Istruzioni e Durata (Study Design)**
 
-- **Istruzioni Chiare:** Fornire istruzioni chiare, concise e, se possibile, includere un **blocco di pratica** per assicurarsi che l'utente abbia compreso il *task*.
+- **Istruzioni Chiare:** Fornire istruzioni chiare, concise e, se possibile, includere un **blocco di pratica** (*practice block*) per assicurarsi che l'utente abbia compreso il *task*.
 
-- **Limitare la Durata:** Limitare la durata totale della sessione per evitare l'affaticamento (*workload*) e la disattenzione. Se non si limitasse il tempo, l'utente potrebbe impiegare molto più tempo del necessario ottenendo magari un *workload* percepito molto basso solo perché non si è impegnato.
+- **Limitare la Durata della Sessione:** Mantenere l'esperimento complessivamente breve per evitare l'affaticamento mentale (*survey fatigue*) e il calo di attenzione. Non si intende tanto mettere fretta nell'esecuzione di un singolo *task*, quanto piuttosto evitare che l'intera sessione di test duri così tanto da esaurire la pazienza e l'impegno del partecipante, inducendolo a rispondere in modo inattentivo.
 
 - **Allineare il Compenso:** Il compenso deve essere **allineato allo sforzo** richiesto. Se un *task* è complesso e pagato poco, si incentiva l’imbroglio o la scarsa attenzione. Piattaforme come Prolific forniscono dati sulla paga media oraria per paese per aiutare a stabilire un compenso equo.
 
 **2. Strumenti**
 
-- **Pilot Test:** **Pilotare** i questionari e i *task* (anche con un piccolo campione) per identificare ambiguità.
+- **Pilot Test:** **Pilotare** i questionari e i *task* (anche con un piccolo campione) per identificare e correggere eventuali ambiguità prima dello studio reale.
 
 - **Evitare Gergo e Ambiguità:** Usare un linguaggio semplice e **non usare domande *multi-barreled*** (che chiedono due cose diverse in un unico *item*).
 
 **3. Controlli e Filtri**
 
-È fondamentale inserire controlli interni per scartare i dati inaffidabili:
+È fondamentale inserire controlli interni per scartare i dati inaffidabili e individuare bot, *cheater* (imbroglioni) o *slacker* (fannulloni):
 
-- **Controlli di Attenzione:** Inserire domande semplici, come "Seleziona il colore rosso" tra più opzioni. Chi sbaglia è probabilmente disattento.
+- **Controlli di Attenzione (*Attention checks*):** Inserire domande semplici, come "Seleziona il colore rosso" tra più opzioni. Chi sbaglia è probabilmente disattento. 
+**IMPORTANTE**: Vanno **usati con attenzione e in modo trasparente**, senza creare "trappole" ingannevoli che frustrano l'utente onesto o violano le policy etiche delle piattaforme.
 
-- **Controlli di Comprensione:** Porre domande per verificare che l'utente abbia assimilato le informazioni critiche fornite durante l'esperimento.
+- **Controlli di Comprensione:** Porre domande per verificare che l'utente abbia effettivamente assimilato le informazioni critiche fornite all'inizio o durante l'esperimento.
 
 - **Monitoraggio dei Tempi:** Controllare il tempo di completamento del *task*.
-
   - Se il tempo è **troppo veloce** (es. 15 secondi per un *task* che dovrebbe durarne 3 minuti), è probabile che si tratti di un *cheater* o *bot*.
-
-  - Se il tempo è **troppo lento**, si può trattare di uno *slacker* (qualcuno che si è distratto).
+  - Se il tempo è **troppo lento**, si può trattare di uno *slacker* (qualcuno che si è distratto o sta facendo contemporaneamente altro).
 
 **4. Gestione delle Risposte e Creatività**
 
