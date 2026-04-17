@@ -414,7 +414,7 @@ L'unione di metodi qualitativi e quantitativi è estremamente potente per ottene
 <br>
 <br>
 
-<!-- SEPARATORE PER RICORDARE CHE E' UN'ALTRA SLIDE!!! -->
+[//]: # SEPARATORE PER RICORDARE CHE E' UN'ALTRA SLIDE!!!
 
 # 6 La Ricerca Quantitativa 
 

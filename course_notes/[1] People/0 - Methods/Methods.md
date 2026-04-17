@@ -23,4 +23,4 @@ L'UX Designer si concentra sulla logica, sulla struttura e sull’esperienza d�
 ## 1.3 User Interface Designer (UI Designer)
 L'UI Designer si occupa dell’aspetto estetico e della struttura interattiva dell’interfaccia. Basandosi sull'architettura e sugli schemi (wireframe) forniti dallo UX Designer, lo UI Designer progetta gli elementi visivi (colori, tipografia, bottoni, layout) per guidare l’utente e abilitare materialmente l’esperienza pianificata.
 
-<!-- Non so perché ma waterfall e tutto il resto viene fatto non in methods ma in innovation methods. Dunque questo si potrebbe rinominare in introduzione -->
+[//]: # Non so perché ma waterfall e tutto il resto viene fatto non in methods ma in innovation methods. Dunque questo si potrebbe rinominare in introduzione
