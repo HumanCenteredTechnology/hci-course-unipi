@@ -1,0 +1,52 @@
+name: Generate PDFs and Update README
+
+on:
+  push:
+    branches:
+      - '*'  # Cambia con nome del branch principale, per ora main
+    paths:
+      - 'course_notes/**/*.pptx'
+      - 'course_notes/**/*.md'
+      - 'tools/pipeline.py'
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install System Dependencies (LibreOffice & Pandoc)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+
+      - name: Install Python Dependencies
+        run: pip install pypdf
+
+      - name: Run Pipeline Script
+        run: python tools/pipeline.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # -A assicura di fare il commit anche delle eliminazioni dei PPTX!
+          git add -A
+          
+          # Fai commit solo se ci sono file modificati o eliminati
+          if git diff --staged --quiet; then
+            echo "Nessun cambiamento rilevato."
+          else
+            git commit -m "docs: Auto-generate PDFs, remove PPTX, and update README"
+            git push
+          fi

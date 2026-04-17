@@ -26,7 +26,7 @@ Below you can quickly access all themes and modules in the repository.
 <!-- AUTO_NAV_START -->
 
 
-| Theme | Module | Notes |
+| Theme | Module | Documents |
 |-------|--------|-----------|
 | [[1] People](../course_notes/%5B1%5D%20People) | 📁 [0 - Methods](../course_notes/%5B1%5D%20People/0%20-%20Methods) | 📄 [Methods](../course_notes/%5B1%5D%20People/0%20-%20Methods/Methods.md) |
 |  | 📁 [1 - Fundamental Principles of HCI](../course_notes/%5B1%5D%20People/1%20-%20Fundamental%20Principles%20of%20HCI) | 📄 [Fundamental Principles of HCI](../course_notes/%5B1%5D%20People/1%20-%20Fundamental%20Principles%20of%20HCI/Fundamental%20Principles%20of%20HCI.md) |
