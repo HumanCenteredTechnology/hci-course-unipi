@@ -72,21 +72,13 @@ Sono le più aperte e più flessibili di tutte: non ci sono domande predetermina
 
 Per pianificare uno studio basato su delle interviste si seguono alcuni passaggi:
 
-- **Si definiscono le domande di ricerca**:
+- **Si definiscono le domande di ricerca**: Va definito chiaramente cosa si sta cercando di capire. Si deve stabilire se le interviste sono davvero il metodo giusto per investigare quella specifica domanda (es. capire il "perché"). Se la domanda è “quanto aumenta la produttività del mouse rispetto alla tastiera?”, questa è più adatta a una ricerca quantitativa.
 
-Va definito chiaramente cosa si sta cercando di capire. Si deve stabilire se le interviste sono davvero il metodo giusto per investigare quella specifica domanda (es. capire il "perché"). Se la domanda è “quanto aumenta la produttività del mouse rispetto alla tastiera?”, questa è più adatta a una ricerca quantitativa.
+- **Si identificano i partecipanti**: Chi può rispondere alle vostre domande, quanti ne servono (solitamente si parla di **8-15 partecipanti** per le interviste) e come reclutarli. Quest’ultima parte può essere complessa se servono utenti di un dominio specifico (a volte si usa il metodo *snowball*).
 
-- **Si identificano i partecipanti**:
+- **Si sviluppa una guida dell’intervista**: Si sviluppano i temi principali da coprire e delle domande di esempio (soprattutto per le semi-strutturate), con l'aggiunta di *probes* (domande di *follow-up*). I *probes* aiutano ad approfondire e a far argomentare maggiormente le persone che tendono a dare risposte brevi.
 
-Chi può rispondere alle vostre domande, quanti ne servono (solitamente si parla di **8-15 partecipanti** per le interviste) e come reclutarli. Quest’ultima parte può essere complessa se servono utenti di un dominio specifico (a volte si usa il metodo *snowball*).
-
-- **Si sviluppa una guida dell’intervista**:
-
-Si sviluppano i temi principali da coprire e delle domande di esempio (soprattutto per le semi-strutturate), con l'aggiunta di *probes* (domande di *follow-up*). I *probes* aiutano ad approfondire e a far argomentare maggiormente le persone che tendono a dare risposte brevi.
-
-- **Si effettua un pilot dell’intervista**:
-
-Si testa l'intervista con un collega o un amico per affinare le domande, valutare il proprio approccio come intervistatore e controllare le tempistiche (solitamente un'intervista dura dai 45 ai 90 minuti).
+- **Si effettua un pilot dell’intervista**: Si testa l'intervista con un collega o un amico per affinare le domande, valutare il proprio approccio come intervistatore e controllare le tempistiche (solitamente un'intervista dura dai 45 ai 90 minuti).
 
 #### 2.4 Condurre Interviste Efficaci 
 
@@ -96,6 +88,7 @@ Prima dell'intervista bisogna preparare i moduli di consenso informato, testare 
 Durante l'intervista: è utile iniziare con domande aperte e facili. Bisogna ascoltare attivamente senza interrompere, per poi fare alla fine *follow-up questions* o domande di riflessione per approfondire (evitando assolutamente le domande suggestive o *leading questions*, che introducono bias). Di solito si prendono anche delle note molto brevi (anche se si sta registrando) per annotare il linguaggio non verbale o concetti chiave.
 
 Tecniche chiave di interrogazione:
+
 - Domande aperte (*Open-ended*): "Raccontami di..."
 - *Probing*: "Cosa è successo dopo? Puoi dirmi di più?"
 - Chiarificazione: "Cosa intendevi con..."
@@ -109,6 +102,7 @@ Il goal è creare uno spazio in cui i partecipanti si sentano a loro agio nel co
 Un caso particolare che combina l’intervista con l’osservazione dell’utente nel suo ambiente naturale è la *contextual inquiry*.
 
 I principi base sono:
+
 1. **Contesto**: andare nel luogo di lavoro/ambiente dell'utente.
 2. **Partnership**: l'intervistatore agisce come un apprendista, l'utente come il maestro.
 3. **Interpretazione**: creare significato insieme.
@@ -137,11 +131,8 @@ Quali benefici ha? Innanzitutto, le persone non sempre fanno quello che dicono d
 > I **tipi di osservazione** sono diversi:
 
 - **Osservazioni dirette**, in cui il ricercatore è presente e prende nota di quello che succede;
-
 - **Registrazioni video**, quindi si registrano i partecipanti fare alcune cose per un'analisi dettagliata successiva. Per esempio, una ricercatrice che lavorava per un progetto di Google aveva reclutato partecipanti che avevano installato una *dash cam* sul loro cruscotto in macchina per registrare sempre il loro tragitto casa-lavoro: questo per capire le loro abitudini e studiare come supportare gli utenti nel mondo dell’auto e nel percorso di rientro a casa;
-
 - **Diary studies**, questi sono una sorta di *journal*, perché si chiede agli utenti di tenere un diario dove ogni giorno riportano autonomamente le osservazioni (auto-osservazione): ad esempio, “Oggi ho preso otto caffè”. Questo si usa spesso anche in medicina.
-
 - **Etnografia (immersione estesa)**, cioè il metodo più costoso e complesso perché esteso in un lungo periodo, che consiste nell'immergersi nel mondo degli utenti (es. andare al loro posto di lavoro per mesi).
 
 Le osservazioni rivelano quello che le interviste potrebbero omettere, poiché le interviste si basano su ricordi (*recollection*) individuali e soggettivi.
@@ -151,17 +142,11 @@ Le osservazioni rivelano quello che le interviste potrebbero omettere, poiché l
 Le *field notes* sono le registrazioni che si fanno sul campo. Ma come si catturano le osservazioni? Cosa si registra in queste note?
 
 - Cosa è successo (attività, interazioni);
-
 - Chi era coinvolto;
-
 - Quando e dove è successo;
-
 - L’ambiente fisico e gli artefatti utilizzati: l’interazione con un’interfaccia potrebbe essere mediata da altri oggetti, in un ambiente diverso, o mentre l’utente sta facendo un’altra cosa;
-
 - Dinamiche sociali e di relazione;
-
 - Le proprie interpretazioni e domande (che sorgono durante l'osservazione);
-
 - *Quotes*: ovvero le citazioni e frasi chiave dette dagli utenti.
 
 Tra le *best practices* si consiglia di scrivere le note il prima possibile, perché i dettagli svaniscono in fretta. Quindi, negli studi osservazionali, bisogna prendere nota subito delle cose. Un altro consiglio è essere descrittivi e non solo interpretativi: nel momento dell’osservazione si cerca di descrivere l'evento nel modo più oggettivo possibile. Si annotano a parte le proprie reazioni e i propri bias. Durante l'osservazione si può usare la stenografia/abbreviazioni per poi espandere gli appunti in seguito. Si può arricchire il tutto con diagrammi, sketch, e foto quando appropriato.
@@ -175,11 +160,8 @@ Gli studi etnografici sono quelli più complicati e costosi: sono studi in cui s
 Ci sono quattro fasi:
 
 1.  **Avere accesso (Getting access)**: trovare un modo per accedere e approcciare i partecipanti. Ad esempio, un ricercatore ha fatto un grosso studio etnografico sull’equipe medica che sta sulle ambulanze per capire come prendono le decisioni in situazioni critiche. Ha lavorato ed è stato sulle ambulanze per mesi, con vari turni e vari *team*, osservando innumerevoli situazioni.
-
 2.  **Sviluppare una membership**: costruire fiducia e familiarità per non farsi più vedere solo come l'intervistatore estraneo. Osservare un lavoratore in fabbrica introduce un bias (l'utente è consapevole di essere osservato). L’obiettivo è che il ricercatore si integri all’interno del *team*, creando fiducia, in modo che i comportamenti siano meno alterati dalla sua presenza. 
-
 3.  **Collezionare i dati**: tramite osservazioni, interviste e artefatti.
-
 4.  **Analizzare i dati**: dare un senso a tutto e trovare pattern.
 
 I principi chiave sono l’*engagement* a lungo termine (si parla di mesi, a volte anche anni), una prospettiva olistica, l'osservazione partecipante e la comprensione culturale. Ci si approccia come apprendisti, seguendo le piste fornite dai partecipanti e cercando di rendere "strano" ciò che è familiare (*defamiliarizzazione*).
@@ -201,6 +183,7 @@ Cosa comporta analizzare tutti questi dati qualitativi (che possono essere testi
 L’analisi qualitativa prevede un ciclo simile a quello del diamante visto in UX, basato su **espansione e condensazione**. C’è una parte di espansione, in cui si esplorano i significati e le interpretazioni dei dati, e poi si cerca di condensarli riducendoli a pattern e temi comuni.
 
 Ci sono due approcci principali: 
+
 - **Approccio induttivo (bottom-up)**: i temi emergono direttamente dai dati (si prendono le interviste, si codificano e si vede cosa emerge in comune).
 - **Approccio deduttivo (top-down)**: si applicano teorie o framework esistenti ai dati per categorizzarli.
 
@@ -229,13 +212,9 @@ I codici possono essere:
 Alcuni esempi di codici, per un estratto di intervista sull'utilizzo delle password, potrebbero essere:
 
 - “riutilizzo delle password”
-
 - “frustrazione per i requisiti di complessità”
-
 - “soluzione alternativa (*workaround*): annotare le password”
-
 - “compromesso sicurezza/convenienza”
-
 - “mancanza di comprensione del rischio”
 
 Il processo varia da etichette molto specifiche (descrittive) a più astratte (concettuali). Inizialmente si consiglia di essere generosi con le etichette: i codici simili possono sempre essere uniti o collassati in fasi successive.
@@ -253,11 +232,8 @@ Si utilizzano i post-it (fisici o digitali) per spezzare i dati in piccole unit�
 In sintesi, si suddivide in quattro fasi:
 
 1.  **Creare note**: suddividere i dati in unità piccole e significative (i post-it funzionano bene).
-
 2.  **Raggruppare note**: mettere insieme le note correlate, spiegando la logica del raggruppamento.
-
 3.  **Walk the wall**: revisionare l’organizzazione globale, unire o dividere i cluster, aggiungere o raffinare le note.
-
 4.  **Documentare**: trasferire l’organizzazione in formato digitale e dare un nome definitivo ai cluster.
 
 È un metodo molto rapido, tattile e visivo, ideale per *workshop* o analisi di team.
@@ -269,15 +245,10 @@ Il secondo metodo è la *Thematic Analysis* (Analisi Tematica): un'identificazio
 Si compone di sei step:
 
 1.  **Familiarizzare**: leggere le trascrizioni, annotare i pensieri iniziali.
-
 2.  **Generare codici**: etichettare sistematicamente le caratteristiche interessanti dei dati.
-
 3.  **Cercare i temi**: raggruppare i codici in potenziali temi.
-
 4.  **Revisionare i temi**: controllare i temi confrontandoli con i dati originali per vedere se reggono, e in caso affinarli.
-
 5.  **Definire i temi**: dare un nome chiaro e descrivere accuratamente ogni singolo tema.
-
 6.  **Redigere il rapporto (*Write up*)**: intrecciare i temi in una narrazione coerente e supportata da evidenze.
 
 > **Cosa rende buono un tema?**
@@ -414,7 +385,8 @@ L'unione di metodi qualitativi e quantitativi è estremamente potente per ottene
 <br>
 <br>
 
-<!-- SEPARATORE PER RICORDARE CHE E' UN'ALTRA SLIDE!!! -->
+[//]: # SEPARATORE PER RICORDARE CHE E' UN'ALTRA SLIDE!!!
+
 # 6 La Ricerca Quantitativa 
 
 La parte di ricerca quantitativa utilizza numeri per prendere decisioni, quindi misurare, comparare le alternative in maniera oggettiva – non che la parte qualitativa compari in maniera soggettiva, ma inteso riguardo alle misure esatte e sperimentali.
@@ -448,27 +420,18 @@ Si usano anche **procedure più replicabili** dal punto di vista dell’analisi,
 La ricerca quantitativa è ideale quando si tratta di:
 
 - **Testare ipotesi specifiche**: per esempio, l’ipotesi che utilizzare un mouse renda più efficiente lavorare rispetto a usare solo una tastiera. Dopodiché testo la mia ipotesi: disegno un esperimento e la testo.
-
 - **Misurare le performance**: come misuro le performance? La performance potrebbe essere la velocità, l'accuratezza, il numero di errori, o tutti questi insieme; è una parola che contiene al suo interno diverse metriche.
-
 - **Comparare alternative**: cioè disegnare un esperimento che ha due o più alternative e analizzare statisticamente qual è la migliore alternativa secondo la misura scelta.
-
 - **Identificare pattern statistici**
-
 - **Generalizzare alla popolazione**
-
 - **Stabilire la causalità**: il punto forte degli esperimenti che andiamo a disegnare è stabilire se il cambio di un certo fattore influenza davvero un altro. È il motivo per cui si fanno gli esperimenti, non solo in HCI, ma anche in medicina, ad esempio: se un farmaco ha un effetto sul miglioramento dell’aspettativa di vita o no, si cerca di capire se esiste un effetto di causalità (cioè se è stato davvero prendere il farmaco a migliorare l'aspettativa di vita) o se è dovuto a un effetto random.
-
 - **Tracciare i cambiamenti nel tempo**
 
 > **Esempi in HCI**:
 
 - Il touch typing è più veloce dell’hunt-and-peck (scrivere pigiando i tasti sulla tastiera uno a uno)?
-
 - La dark mode riduce lo sforzo visivo?
-
 - Che percentuale di utenti completa l’onboarding?
-
 - Quale organizzazione del menu porta a un più veloce completamento dei task?
 
 Queste sono domande di ricerca su cui si può disegnare un esperimento quantitativo per misurare; in generale si utilizzano i metodi quantitativi quando bisogna misurare, comparare o testare su scala per una popolazione.
@@ -498,7 +461,6 @@ La maggior parte dei questionari cattura le attitudini e le opinioni delle perso
 Ci sono due tipi di questionari:
 
 - **Descrittivi**: utilizzati per descrivere qual è la distribuzione di un fenomeno, ovvero quanto è comune una certa cosa;
-
 - **Analitici**: utili per capire che relazione esiste fra alcune variabili, oppure che cosa predice un'altra variabile, cercando di trovare dei link e delle relazioni (pur non potendo stabilire la causalità rigorosa).
 
 I questionari forniscono dati strutturati auto-riportati da campioni potenzialmente molto ampi.
@@ -533,6 +495,7 @@ Per misurare le attitudini si usano molto le scale: le più diffuse in HCI sono 
 ### 7.4 Campionamento per questionari (Sampling)
 
 La terminologia del campionamento:
+
 - **Popolazione (Population)**: Tutti i potenziali utenti. Se l’interesse è sapere se i medici hanno fiducia in un sistema di AI, la popolazione sono *tutti* i medici. Poiché non si può contattarli tutti, è necessario campionare.
 - **Sampling frame (Cornice di campionamento)**: Quelli che possono effettivamente essere contattati (es. iscritti a un determinato forum o network).
 - **Campione (Sample)**: Quelli che vengono concretamente invitati a compilare il questionario.
@@ -557,6 +520,7 @@ Il ***response rate*** (tasso di risposta) è spesso un problema nei questionari
 Un basso tasso di risposta introduce il **Non-response bias**: chi decide di rispondere potrebbe avere caratteristiche e opinioni molto diverse da chi sceglie di ignorare il questionario, diminuendo la generalizzabilità dei risultati.
 
 Strategie per **migliorare il *response rate***:
+
 - Mantenere i questionari brevi (sotto i 10 minuti);
 - Creare un invito chiaro e convincente;
 - Spiegare perché è importante partecipare;
@@ -589,13 +553,9 @@ Gli esperimenti sono il **metodo scientifico**: nell’immagine sopra c’è la 
 > **Quando usare gli esperimenti?**
 
 - Quando si vuole testare un’ipotesi specifica;
-
 - Quando si vogliono comparare due cose, due alternative (es. due diversi design d’interfaccia);
-
 - Quando si vogliono misurare le performance (la velocità, l’accuratezza, …); 
-
 - Quando si vogliono capire le tecniche di interazione; 
-
 - Quando si vogliono valutare degli algoritmi.
 
 Ovviamente gli esperimenti si possono fare in interazione (HCI) con le persone, ma anche tramite simulazioni o in altri ambiti.
@@ -645,23 +605,16 @@ Una grande sfida degli esperimenti è progettarli in maniera da isolare l'effett
 Degli esempi di variabili di confusione potrebbero essere:
 
 - **Esperienze pregresse**: gli utenti potrebbero avere già molta esperienza con interfacce simili. Per questo è buona norma chiedere in un *pre-screener* il livello di esperienza pregressa con la tecnologia in esame.
-
 - **Ora del giorno**: far fare il task la mattina o la sera porta a risultati diversi a causa della stanchezza.
-
 - **Rumore nell’ambiente**: distrazioni esterne possono inficiare i tempi di reazione o l'accuratezza.
-
 - **Differenze individuali**: età, expertise di dominio, limitazioni fisiche.
 
 > Come si controllano e si limitano queste variabili di confusione?
 
 - **Randomizzazione**: assegnare casualmente i partecipanti alle varie condizioni (fondamentale nel between-subjects).
-
 - **Controbilanciamento**: variare l’ordine delle condizioni per bilanciare gli effetti di apprendimento e affaticamento (fondamentale nel within-subjects).
-
 - **Standardizzazione**: mantenere costanti tutti gli altri fattori ambientali e di setup, diminuendo il rumore di fondo.
-
 - **Blocking**: raggruppare per la variabile di confusione. Ad esempio, raggruppare e analizzare i dati separandoli per fasce d'età, in modo da isolare quell'effetto. Ovviamente, bisogna sapere in anticipo quali potrebbero essere i *confounds*.
-
 - **Controllo Statistico**: misurare la variabile di disturbo e tenerne conto durante l'analisi statistica (es. tramite co-variate).
 
 Gli esperimenti ben progettati minimizzano i confounds in modo che si possa essere fiduciosi riguardo al rapporto causa-effetto.
@@ -671,7 +624,6 @@ Gli esperimenti ben progettati minimizzano i confounds in modo che si possa esse
 Le ipotesi si formulano esplicitamente prima di eseguire un esperimento. Si definiscono due tipi di ipotesi:
 
 1.  **Ipotesi Nulla (H<sub>0</sub>)**: Afferma che non c’è nessun effetto o nessuna differenza tra le condizioni testate (es. "Non c’è differenza nel tempo di completamento del task tra mouse e touch input").
-
 2.  **Ipotesi Alternativa (H<sub>1</sub>)**: Afferma che c'è un effetto o una differenza (es. "Il tempo di completamento del task è diverso tra mouse e touch input").
 
 L'ipotesi alternativa può anche essere **direzionale**, cioè prevedere già la direzione dell'effetto (es. "Il touch input sarà *più veloce* del mouse").
@@ -706,6 +658,7 @@ Un esempio di esperimento controllato in ambito HCI, con 12 partecipanti, che co
 ### 9.1 Perché l’analisi statistica? 
 
 In questo contesto si utilizzano due branche della statistica: 
+
 1. **Statistica descrittiva**: serve per riassumere e descrivere i dati raccolti (media, mediana e moda come misure di tendenza centrale; deviazione standard, range, range interquartile come misure di dispersione) e per visualizzarli graficamente (es. box plot, bar chart). 
 2. **Statistica inferenziale**: serve per fare il salto logico; non si limita a riassumere i dati del campione, ma usa quei dati per trarre conclusioni valide per l'intera popolazione di riferimento.
 
@@ -730,6 +683,7 @@ Ottenere p < 0,05 non significa avere la "certezza assoluta" (prova matematica),
 ### 9.3 Test statistici comuni 
 
 Il test statistico base per comparare le medie di due gruppi è il **T-test**. Esistono diverse varianti di T-test in base a come è disegnato l’esperimento:
+
 - *Independent samples t-test* (T-test a campioni indipendenti) per design between-subjects.
 - *Paired samples t-test* (T-test a campioni appaiati) per design within-subjects.
 
@@ -773,6 +727,7 @@ Anche in questo caso, c’è lo stesso problema della ricerca qualitativa sulla 
 ### 10.3 Considerazioni Etiche negli esperimenti
 
 Come suggerisce il titolo del capitolo, l'etica è una responsabilità continua, non solo una formalità di approvazione (IRB):
+
 - **Consenso informato** — Spiegare chiaramente scopo, procedure e rischi. La partecipazione è volontaria ed esiste il diritto di ritirarsi in qualsiasi momento.
 - **Nessun danno (No harm)** — Evitare danni fisici, mentali o emotivi, minimizzando il disagio dell'utente e monitorandolo.
 - **Privacy e riservatezza** — Anonimizzare i dati e conservarli in modo sicuro, condividendo solo il necessario.
@@ -781,6 +736,7 @@ Come suggerisce il titolo del capitolo, l'etica è una responsabilità continua,
 ### 10.4 Riportare la ricerca quantitativa 
 
 La regola base è la trasparenza: riportare tutto il necessario per permettere la replicazione dello studio!
+
 1.  **Introduzione** — Domande di ricerca, ipotesi, motivazione (rationale);
 2.  **Lavori correlati** — Risultati precedenti, contesto teorico;
 3.  **Metodo**:
@@ -814,11 +770,13 @@ Ci sono molti altri problemi nella ricerca quantitativa, che non ne è esente:
 ### 10.6 Qualitativa + Quantitativa 
 
 I metodi **misti** offrono:
+
 - Ampiezza quantitativa + profondità qualitativa
 - “Cosa” e “quanto” + “perché” e “come”
 - Misurazione + comprensione
 
 **Esempio**: Valutazione di una nuova interfaccia
+
 - **Quantitativa**: Misurare tempi dei task, tasso di errore, soddisfazione
 - **Qualitativa**: Intervistare gli utenti su esperienza, frustrazioni
 - **Risultato**: Sapere che è più lenta (numeri) e spiegare il *perché* (es. navigazione confusa scoperta tramite interviste).

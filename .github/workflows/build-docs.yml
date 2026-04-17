@@ -1,0 +1,57 @@
+name: Generate PDFs and Update README
+
+on:
+  push:
+    branches:
+      - '*'
+    paths:
+      - 'course_notes/**/*.pptx'
+      - 'course_notes/**/*.md'
+      - 'tools/pipeline.py'
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # Aggiornato alla v4 per rimuovere il warning di Node.js 20
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Aggiornato alla v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          # Installiamo wkhtmltopdf al posto di LaTeX per zero crash!
+          sudo apt-get install -y libreoffice pandoc wkhtmltopdf
+
+      - name: Install Python Dependencies
+        run: pip install pypdf
+
+      - name: Run Pipeline Script
+        run: python tools/pipeline.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Aggiunge tutto, comprese le eliminazioni
+          git add -A
+          
+          # FORZATURA: Se hai un .gitignore che blocca i pdf, questo lo bypassa!
+          git add -f "**/*.pdf"
+          
+          if git diff --staged --quiet; then
+            echo "Nessun cambiamento rilevato."
+          else
+            git commit -m "docs: Auto-generate PDFs via wkhtmltopdf and update README"
+            git push
+          fi

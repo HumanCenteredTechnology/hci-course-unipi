@@ -5,24 +5,18 @@
 L’Intelligenza Artificiale (AI) è sempre più importante ed ormai onnipresente. Le funzionalità dell’AI si trovano all’interno di moltissime applicazioni e questo conferisce grande rilevanza al settore; si possono trovare in:
 
 - assistenti vocali
-
 - sistemi di raccomandazione
-
 - veicoli autonomi
-
 - dispositivi smart home
-
 - filtraggio e-mail (spam o no), etc.
 
 > <img src="Media_User_Experience_for_AI/image2.png" style="width:4.84952in;height:2.4413in" alt="Immagine che contiene testo, Veicolo terrestre, veicolo, automobile Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
 
 Ma c’è un **problema**:
 
-• Quando l’AI funziona, è incredibile.
-
-• Quando fallisce, fallisce in modo spettacolare.
-
-• Gli utenti non capiscono perché o come.
+- Quando l’AI funziona, è incredibile.
+- Quando fallisce, fallisce in modo spettacolare.
+- Gli utenti non capiscono perché o come.
 
 <img src="Media_User_Experience_for_AI/image3.png" style="width:3.53066in;height:1.40205in" alt="Immagine che contiene testo, automobile, schermata, veicolo Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
 
@@ -35,13 +29,9 @@ Nei **software tradizionali** il comportamento dei sistemi è **deterministico**
 Nell’AI ci troviamo spesso di fronte a **sistemi probabilistici** (basati sulla statistica), il che comporta diverse problematiche:
 
 - **Difficoltà di comprensione:** Tanti studi dimostrano che il pensiero probabilistico non è intuitivo per le persone; per il grande pubblico non è facile comprendere la natura statistica dietro questi sistemi.
-
 - **Output variabili:** A differenza dei software tradizionali, dallo stesso input possono potenzialmente scaturire output diversi.
-
 - **Gestione dell'errore:** Questa variabilità implica la necessità di gestire la presenza di falsi positivi e falsi negativi.
-
 - **Decisioni opache (Black Box):** I modelli moderni sono spesso "scatole nere" che non spiegano il processo decisionale. Di conseguenza, non ci dicono come arrivano a una risposta, rendendo difficile capire se il risultato sia giusto o sbagliato.
-
 - **Imprevedibilità:** I comportamenti del sistema possono risultare confusi, dirompenti e, in alcuni casi, persino pericolosi.
 
 <img src="Media_User_Experience_for_AI/image4.png" style="width:2.19855in;height:2.91546in" alt="Immagine che contiene cartone animato, vestiti, schizzo, Viso umano Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
@@ -99,13 +89,11 @@ Il problema della fiducia da sola è che non garantisce un comportamento adeguat
 Ci sono due situazioni problematiche legate a un affidamento non appropriato:
 
 1.  **Over-reliance:** Gli utenti dipendono dall’AI anche quando non dovrebbero. Si affidano totalmente anche in momenti in cui non dovrebbero (fenomeno conosciuto anche come *automation bias*).
-
 2.  **Under-reliance:** Gli utenti si affidano troppo poco; i suggerimenti dell’AI vengono ignorati anche quando potrebbero essere di aiuto. L’AI potrebbe aiutarmi ma io scelgo di non utilizzarla (*disuse*).
 
 Quello che dovremmo cercare è disegnare AI che propongano una **appropriate reliance,** calibrata alle reali performance del sistema. L’obiettivo è far combaciare la *reliance* con le capacità effettive dell’AI:
 
 - **Alta accuratezza + Basso rischio (low stakes):** In questo caso è corretto affidarsi di più al sistema (es. suggerimento canzoni).
-
 - **Bassa accuratezza + Decisioni ad alto impatto (high stakes):** In questo caso è meglio essere più cauti e affidarsi meno al sistema (es. diagnosi medica).
 
 Gli utenti devono poter capire quando fare affidamento sull’AI e quando è preferibile verificare. Un affidamento appropriato si costruisce attraverso la spiegabilità, la trasparenza e il controllo (*explainability, transparency, control*).
@@ -123,7 +111,6 @@ Un modo efficace per visualizzare questi processi è l'utilizzo di **modelli ad 
 Osservando un albero decisionale, l'algoritmo diventa comprensibile perché possiamo seguire la logica passo dopo passo. Nella pratica, le tecniche di explainability possono seguire due strade:
 
 1.  Utilizzare direttamente modelli intrinsecamente spiegabili (come gli alberi decisionali).
-
 2.  Quando si usano modelli complessi di tipo "black box", si cerca di abbinarvi modelli più semplici (come quelli ad albero) per approssimare e spiegare il funzionamento della scatola nera.
 
 **Promuovere l'uso corretto dell'AI**
@@ -133,11 +120,8 @@ Rendere l'AI spiegabile è fondamentale per incentivarne un uso appropriato. Cap
 Per permettere all'utente di comprendere il sistema, l’explainability deve raggiungere quattro obiettivi principali:
 
 - Mostrare la gamma completa delle capacità: L'utente deve avere chiaro fin da subito cosa il sistema è in grado di fare (e cosa no), per evitare false aspettative.
-
 - Far capire come il cambiamento dell'input influenza l'output.
-
 - Costruire una corretta comprensione del rapporto causa-effetto.
-
 - Essere specifici e trasparenti sulle performance del sistema: ad esempio, “90% di accuratezza su X, 60% su Y”.
 
 **2. Transparency (Trasparenza)**  
@@ -148,16 +132,13 @@ L'obiettivo della trasparenza è aiutare gli utenti a capire **quando fare affid
 > *Esempio:* Se l'AI diagnostica che un utente è malato, non deve limitarsi al risultato, ma deve specificare il grado di sicurezza (es. "Risultato: Patologia X rilevata con una **confidenza del 50%**").
 
 - **Performance contestuali:** Bisogna mostrare le performance divise per contesto e categoria, chiarendo che l'accuratezza non è uniforme ovunque (es. "Accuratezza alta per immagini diurne, bassa per notturne").
-
 - **Dati fuori dal training set:** Il sistema deve avvisare l'utente quando sta lavorando con dati o condizioni che differiscono significativamente da quelli usati durante l'addestramento, poiché in questi casi l'affidabilità cala.
-
 - **Richiesta di verifica:** Il sistema deve indicare esplicitamente quando è raccomandata una verifica umana, specialmente se la confidenza è bassa o il contesto è critico.
 
 **3. Control (Controllo)**  
 L'obiettivo è fornire agli utenti la giusta dose di autonomia rispetto al sistema. Questo controllo si esercita su due fronti:
 
 - **Controllo sui dati:** L'utente deve poter gestire i dati forniti al sistema e le proprie informazioni personali.
-
 - **Controllo sugli output:** Deve essere garantita la possibilità di modificare, gestire o rifiutare i risultati prodotti dall'AI. È fondamentale prevedere sempre un'opzione di **override** o un'uscita alternativa, permettendo all'utente di intervenire manualmente e scavalcare la decisione dell'algoritmo se necessario.
 
 ### 2.2 Augmentation vs. Automation
@@ -165,7 +146,6 @@ L'obiettivo è fornire agli utenti la giusta dose di autonomia rispetto al siste
 Il rapporto tra esseri umani e AI non è una scelta binaria, ma esiste uno spettro continuo che va dal **potenziamento delle capacità umane** alla **completa automazione**. Spesso si immaginano queste due dimensioni come opposte su un'unica linea, ma in realtà sono concetti multidimensionali che si possono mescolare. Esistono vari livelli di automazione (spesso descritti in scale da 5 o anche 10 livelli):
 
 - **Livelli bassi (Augmentation):** L'AI agisce come assistente. Offre alternative e suggerimenti, ma esegue l'azione solo se il comportamento viene approvato dall'utente. In questa fase, l'essere umano mantiene l'approvazione finale e il controllo decisionale.
-
 - **Livelli alti (Automation):** L'AI opera in modo autonomo. Il sistema prende decisioni, le esegue e si limita a informare l'utente a fatto compiuto.
 
 La sfida è scegliere il livello appropriato in base al compito, al rischio e alla maturità del sistema.
@@ -175,17 +155,13 @@ La sfida è scegliere il livello appropriato in base al compito, al rischio e al
 L'Augmentation indica che l’AI amplifica le capacità umane senza sostituirle. In questo scenario:
 
 - L'AI assiste l'utente offrendo alternative o suggerendo opzioni.
-
 - Il sistema esegue un’azione solo dopo aver ricevuto conferma (l'approvazione finale rimane sempre all’umano).
 
 **È necessario mantenere il controllo umano (Augmentation) quando:**
 
 - Le decisioni sono ad alto impatto (*high stakes*).
-
 - L’AI è in una fase iniziale di apprendimento.
-
 - Compaiono casi nuovi o ai margini del dominio (casi non previsti dal training).
-
 - L’utente deve monitorare il processo o imparare dal sistema.
 
 **2. Automation**
@@ -193,19 +169,14 @@ L'Augmentation indica che l’AI amplifica le capacità umane senza sostituirle.
 L'Automation indica che l’AI esegue da sola compiti o decisioni. In questo scenario:
 
 - Il sistema agisce autonomamente.
-
 - L'AI informa l'utente quando necessario e decide autonomamente quando coinvolgerlo.
-
 - Con l’aumento dell’automazione, il ruolo umano tende a ridursi.
 
 **L’automazione può essere aumentata quando:**
 
 - I compiti sono ripetitivi, noiosi o pericolosi.
-
 - Gli errori hanno conseguenze basse.
-
 - L’AI raggiunge un’elevata accuratezza.
-
 - L’utente può annullare o correggere facilmente l'azione dell'AI.
 
 **I Fattori di Scelta**
@@ -213,9 +184,7 @@ L'Automation indica che l’AI esegue da sola compiti o decisioni. In questo sce
 La scelta del corretto livello di automazione non è casuale, ma deve considerare tre fattori fondamentali:
 
 1.  **Il tipo di compito.**
-
 2.  **Le conseguenze degli errori.**
-
 3.  **La maturità del sistema.**
 
 <img src="Media_User_Experience_for_AI/image6.png" style="width:5.77244in;height:3.22222in" alt="Immagine che contiene testo, schermata, Carattere, documento Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
@@ -276,7 +245,6 @@ Per gestire correttamente le aspettative, bisogna agire in due momenti distinti:
 **Durante l’Onboarding:**
 
 - Bisogna chiarire subito cosa il sistema può fare, ma soprattutto **cosa non può fare** (limiti e accuratezza).
-
 - È necessario spiegare come il sistema apprende, come cambia e come migliora nel tempo, evitando di creare false speranze.
 
 > *Esempio:* I *disclaimer* degli LLM (come ChatGPT) che avvisano esplicitamente l'utente dei limiti del modello e della possibilità di errori, ridimensionando l'idea di onnipotenza dell'AI.
@@ -284,9 +252,7 @@ Per gestire correttamente le aspettative, bisogna agire in due momenti distinti:
 **Durante l’Uso:**
 
 - La **trasparenza** deve continuare durante l'interazione quotidiana. Bisogna mostrare i **livelli di confidenza** e indicare chiaramente se il sistema è incerto su una risposta.
-
 - Se l'AI ha un comportamento inaspettato, questo va spiegato.
-
 - È importante informare costantemente gli utenti sui cambiamenti o aggiornamenti del sistema, affinché non si trovino spiazzati da nuove funzionalità o comportamenti diversi dal solito.
 
 > <img src="Media_User_Experience_for_AI/image8.png" style="width:4.73367in;height:2.52381in" />
@@ -302,15 +268,12 @@ Il presupposto fondamentale è che **gli errori ci sono sempre**. Quando si pro
 Quando si verificano problemi, questi possono appartenere a diverse categorie:
 
 - **Errori di sistema:** Sono i classici guasti tecnici, crash o interruzioni del servizio.
-
 - **Errori del modello:** Includono predizioni errate o "allucinazioni" (l'AI inventa informazioni).
 
 > *Nota sui limiti diagnostici:* È importante capire che esistono limiti strutturali: non si può costruire un sistema di AI perfetto per diagnosticare gli errori di un altro sistema di AI. Ad esempio, non è possibile creare un'AI che identifichi con certezza assoluta se un testo è stato generato da ChatGPT o meno. Se esistesse un discriminatore perfetto, il modello generativo (OpenAI) potrebbe usarlo nel proprio addestramento per imparare ad aggirarlo.
 
 - **Errori nei dati:** Derivano da dati di training scarsi, incompleti o distorti (*bias*).
-
 - **Errori di rilevanza:** Si verificano quando il sistema fornisce risultati tecnicamente corretti, ma irrilevanti o inutili per l'utente in quel momento.
-
 - **Errori dell’utente:** Causati da input poco chiari, incomprensioni o utilizzo improprio dello strumento.
 
 **  **
@@ -320,9 +283,7 @@ Quando si verificano problemi, questi possono appartenere a diverse categorie:
 Come si gestiscono questi inevitabili errori? Non bisogna mai perdere l'occasione per essere trasparenti con l'utente:
 
 1.  **Indicare e Spiegare:** Quando si verifica un errore, bisogna indicarlo chiaramente e spiegare *cosa* è andato storto. L'utente non deve rimanere con il dubbio.
-
 2.  **Facilitare la Recovery (Recupero):** Bisogna permettere un recupero semplice e rapido. La strategia migliore è restituire il controllo all’utente, permettendogli di correggere manualmente o scegliere un'altra strada.
-
 3.  **Usare gli errori per migliorare:** Ogni errore è un'opportunità di apprendimento per il sistema. Attraverso il feedback (esplicito o implicito) sui fallimenti, l'AI può aggiustare il tiro.
 
 *Esempio pratico (Playlist):* Immaginiamo un sistema che genera una playlist musicale. Se l'AI sbaglia e inserisce una canzone heavy metal in una playlist rilassante (Errore di rilevanza/modello), il sistema deve permettere all'utente di "saltare" o rimuovere facilmente la traccia (*recovery*). Questo feedback negativo segnala all'AI che quella canzone era fuori contesto, permettendole di non ripetere l'errore in futuro (*miglioramento*).
@@ -340,7 +301,6 @@ La soluzione risiede in un approccio graduale e rispettoso dell'autonomia.
 Non mostrare tutto subito. L'interfaccia deve adattarsi alla curva di apprendimento dell'utente.
 
 - **Iniziare con semplicità:** Presenta inizialmente solo le funzionalità di base essenziali, nascondendo la complessità sottostante. Questo evita il sovraccarico cognitivo.
-
 - **Costruire modelli mentali:** Permetti all'utente di esplorare le funzioni avanzate gradualmente. Man mano che l'utente comprende come "ragiona" l'AI e costruisce il proprio modello mentale, puoi introdurre opzioni più complesse.
 
 **2. Rispetto Assoluto dell'Autonomia dell’utente**
@@ -348,9 +308,7 @@ Non mostrare tutto subito. L'interfaccia deve adattarsi alla curva di apprendime
 L'automazione deve essere un "potenziamento" su richiesta, mai un obbligo. L'utente deve sentirsi sempre al comando.
 
 - **Nessuna automazione forzata:** L'intervento dell'AI deve essere un'opzione preceduta dal consenso, mai l'unica via percorribile.
-
 - **Sovrascrittura e Vie d'uscita:** Fornisci sempre meccanismi semplici ("Escape Hatches") per ignorare i suggerimenti dell'AI, tornare a una modalità manuale o disattivare le funzioni intelligenti.
-
 - **Controllo sui Dati:** Garantisci trasparenza e gestione totale sulle preferenze apprese. L'utente deve poter: visualizzare cosa l'AI ha imparato, modificare le preferenze, resettare o eliminare i dati per far "dimenticare" all'AI comportamenti passati.
 
 **3. Il Pattern Evolutivo: Fiducia e Tempo**
@@ -378,31 +336,22 @@ Il design deve adattarsi al livello di rischio e alla tolleranza dell'utente ver
 - **High-stakes AI** (es. diagnosi medica, decisioni finanziarie, giustizia penale)
 
   - **Richiede:** Massima trasparenza, controllo ed esplicabilità.
-
   - **Errori:** Conseguenze catastrofiche.
-
   - **Tolleranza utente:** Molto bassa.
-
   - **Approccio di design:** Forte controllo umano, l'AI funge solo da *advisor*.
 
 - **Medium-stakes AI** (es. raccomandazioni lavorative, content moderation, istruzione)
 
   - **Richiede:** Buona trasparenza e controllo moderato.
-
   - **Errori:** Significativi ma non irreversibili.
-
   - **Tolleranza utente:** Moderata.
-
   - **Approccio di design:** Potenziamento bilanciato.
 
 - **Low-stakes AI** (es. raccomandazioni musicali, filtri fotografici, auto-complete)
 
   - **Richiede:** Trasparenza di base.
-
   - **Errori:** Fastidiosi ma innocui.
-
   - **Tolleranza utente:** Relativamente alta.
-
   - **Approccio di design:** Maggiore automazione, mantenendo la possibilità di *override* (sovrascrittura).
 
 <img src="Media_User_Experience_for_AI/image12.png" style="width:6.14139in;height:2.85322in" alt="Immagine che contiene testo, biglietto da visita, schermata, diagramma Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
@@ -414,13 +363,11 @@ Per valutare un modello è fondamentale partire dalla Confusion Matrix (Matrice 
 Finché siamo nei quadranti dei Veri Positivi (TP) e Veri Negativi (TN), il sistema funziona. I problemi sorgono con gli errori:
 
 - **Falsi Positivi (FP):** L'AI rileva qualcosa che non c'è (es. dice che sono malato, ma sono sano).
-
 - **Falsi Negativi (FN):** L'AI non rileva qualcosa che c'è (es. dice che sono sano, ma sono malato).
 
 Da questa matrice derivano due metriche chiave, spesso in contrasto tra loro:
 
 - **Precision** (TP / (TP + FP)): "Quando il sistema ha trovato qualcosa, quanto spesso è corretto?"
-
 - **Recall** (TP / (TP + FN)): "Di tutte le cose che avrebbe dovuto trovare, quante ne individua davvero?"
 
 <img src="Media_User_Experience_for_AI/image13.png" style="width:6.20594in;height:2.06025in" alt="Immagine che contiene testo, schermata, Carattere, numero Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
@@ -432,17 +379,13 @@ Precision e Recall sono solitamente l'opposto l'una dell'altra: migliorare una t
 - **Ottimizzare la Precision (Evitare i Falsi Positivi)**
 
   - *Esempio:* Filtri anti-spam nelle e-mail.
-
   - *Caso peggiore:* L'AI classifica una mail importante come spam (Falso Positivo).
-
   - *Strategia:* L'importante è che le e-mail valide vengano viste. Si accetta di avere qualche spam nella posta in arrivo pur di non perdere messaggi importanti.
 
 - **Ottimizzare la Recall (Evitare i Falsi Negativi)**
 
   - *Esempio:* Diagnosi di malattie gravi / Screening.
-
   - *Caso peggiore:* Non diagnosticare una malattia a una persona malata (Falso Negativo).
-
   - *Strategia:* L'importante è individuare tutti i casi reali. Si accetta di dare qualche falso allarme (dire a un sano che potrebbe essere malato) pur di non lasciarsi sfuggire nessuno che ha bisogno di cure.
 
 <img src="Media_User_Experience_for_AI/image14.png" style="width:5.15295in;height:2.48983in" alt="Immagine che contiene testo, cerchio, schermata, diagramma Il contenuto generato dall&#39;IA potrebbe non essere corretto." />
@@ -462,13 +405,9 @@ Considerare prima soluzioni più semplici, introdurre l’AI solo se aggiunge va
 Quando si progetta con l’AI, si iterano contemporaneamente tre elementi: **l’interfaccia, il modello di AI e i dati**.
 
 1.  **Comprendere i bisogni degli utenti:** La base del processo rimane la comprensione dell’utente, con attenzione al livello di controllo di cui ha bisogno, agli *stakes* nel caso in cui l’AI sbagli e al modo in cui costruirà fiducia nel tempo.
-
 2.  **Prototipare presto con test “Wizard of Oz”:** Prima di costruire modelli reali, simulare l’AI per valutare l’esperienza utente. Questo permette di validare i pattern di interazione senza dover implementare l’infrastruttura di machine learning.
-
 3.  **Definire i requisiti del modello in modo collaborativo:** Designer e Data Scientist devono concordare insieme le metriche di successo. Non si deve misurare solo l’accuratezza del modello, ma anche la performance umana, la soddisfazione dell’utente e la capacità di completare i compiti.
-
 4.  **Testare presto con dati reali:** La qualità dei dati influenza fortemente le prestazioni dell’AI; perciò, è importante testare fin da subito con dati autentici, esplorare *edge case* e *failure mode* e migliorare progressivamente le strategie di raccolta dati.
-
 5.  **Collaborazione continua:** L’intero processo richiede un flusso costante di comunicazione tra i team di design e di machine learning. È essenziale condividere ricerche utente (non solo richieste di funzionalità) e stabilire obiettivi comuni che vadano oltre la semplice performance algoritmica.
 
 **Testare sistemi AI**
@@ -482,17 +421,11 @@ Quando si progetta con l’AI, si iterano contemporaneamente tre elementi: **l�
 **Riassumendo l’UX per l’AI**
 
 1.  **L’UX per l’AI è diversa:** Incertezza, opacità e comportamento probabilistico richiedono approcci progettuali nuovi rispetto al software tradizionale.
-
 2.  **L’obiettivo è un affidamento appropriato:** Non fiducia cieca, non disuso, ma una dipendenza calibrata sulle reali capacità dell’AI.
-
 3.  **L’affidamento si costruisce attraverso tre meccanismi:** *Explainability* (perché), *Transparency* (quando) e *Control* (quanto controllo ha l’utente).
-
 4.  **I feedback loop sono essenziali:** L’AI migliora tramite feedback espliciti, impliciti e duali forniti dagli utenti.
-
 5.  **Progettare per errori e incertezza:** Impostare aspettative chiare, fornire un terreno deterministico e permettere un fallimento elegante.
-
 6.  **Il contesto guida il design:** Il livello di *stakes*, il rapporto *precision/recall* e le caratteristiche del task definiscono l’approccio progettuale.
-
 7.  **Collaborare e iterare continuamente:** Lavorare a stretto contatto con i team di ML, prototipare presto con Wizard of Oz e misurare anche gli outcome umani.
 
 *L’obiettivo della Human-Centered AI è potenziare le capacità umane mantenendo il sistema affidabile, sicuro e degno di fiducia.*<span id="_Toc215042009" class="anchor"></span>

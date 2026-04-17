@@ -7,7 +7,7 @@ build/
 dist/
 
 # pdf generati
-*.pdf
+# *.pdf
 
 # pandoc temporary
 *.log
@@ -26,4 +26,4 @@ Thumbs.db
 tools/output/
 
 # Da rivedere
-"course_notes/[4] IUM Appunti Riassunti Completi/"
+# "course_notes/[4] IUM Appunti Riassunti Completi/"
