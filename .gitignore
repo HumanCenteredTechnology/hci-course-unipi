@@ -7,7 +7,7 @@ build/
 dist/
 
 # pdf generati
-*.pdf
+# *.pdf
 
 # pandoc temporary
 *.log
