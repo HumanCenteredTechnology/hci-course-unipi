@@ -4,26 +4,15 @@ Welcome to the structured notes repository for the **Human-Computer Interaction 
 
 This repository is designed to be a collaborative and highly organized hub for all course materials. It provides an automated, always-up-to-date collection of lecture slides, written notes, and a comprehensive Full Notes PDF.
 
-## How it works (Automated Pipeline)
-
-This repository is powered by a GitHub Actions CI/CD pipeline. You don't need to manually convert files!
-Whenever a collaborator pushes a new presentation (`.pptx`) or note (`.md`), GitHub automatically:
-- Converts all `.pptx` slides to `.pdf` (and removes the heavy PPTX files).
-- Compiles `.md` notes into formatted `.pdf` documents.
-- Merges all individual notes into a single **Full Notes PDF**.
-- Updates the navigation table below.
-
-📖 **Want to contribute?** Please read our [CONTRIBUTING.md](CONTRIBUTING.md) to understand the folder structure and naming conventions.
-
 ---
 
 <!-- AUTO_NAV_START -->
 
 ## Repository Navigation
 
-### 📚[👉 Link repo per scaricare gli Appunti Completi in PDF](course_notes/%5B4%5D%20Appunti%20Completi/Appunti_Completi.pdf)
+### 📚[👉 If you want to download the entire lecture notes in a single PDF, click here](course_notes/%5B4%5D%20Appunti%20Completi/Appunti_Completi.pdf)
 
-> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.
+> 💡 **Note:** By clicking on the links to the module folders (📁) you can access the original Markdown files used to create the notes, the corresponding folders containing the images, and the PDFs of the slides.
 
 | Theme | Module | Notes |
 |-------|--------|-------|
@@ -41,3 +30,6 @@ Whenever a collaborator pushes a new presentation (`.pptx`) or note (`.md`), Git
 |  | 📁[11 - HCI Research - Models](course_notes/%5B3%5D%20HCI%20Research/11%20-%20HCI%20Research%20-%20Models) | 📕 [Human Factors And Measurement](course_notes/%5B3%5D%20HCI%20Research/11%20-%20HCI%20Research%20-%20Models/Human%20Factors%20And%20Measurement.pdf) |
 
 <!-- AUTO_NAV_END -->
+
+
+📖 **Want to contribute?** Please read our [CONTRIBUTING.md](CONTRIBUTING.md) to understand the folder structure, naming conventions and the available tools.
