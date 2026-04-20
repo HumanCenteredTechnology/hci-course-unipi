@@ -22,6 +22,7 @@ MASTER_PDF_NAME = "Appunti_Completi.pdf"
 
 EMOJI_FOLDER = "📁"
 EMOJI_DOC_PDF = "📕"
+EMOJI_SLIDES = "📊"  # Reinserito per la nuova colonna
 
 def natural_sort_key(s):
     return[int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
@@ -195,13 +196,14 @@ def merge_pdfs(pdf_list, output_folder, output_filename):
 def generate_table_navigation():
     master_pdf_link = get_rel_link(os.path.join(MASTER_PDF_FOLDER, MASTER_PDF_NAME))
     
+
     lines = [
-        f"### 📚[👉 Link repo per scaricare gli Appunti Completi in PDF]({master_pdf_link})",
+        f"### 📚[👉 If you want to download the entire lecture notes in a single PDF, click here]({master_pdf_link})",
         "",
-        "> 💡 **Nota:** Cliccando sui link alle cartelle dei moduli (📁) potrai accedere ai file Markdown originali usati per stilare gli appunti, alle relative cartelle contenenti le immagini, e ai PDF delle Slide.",
+        "> 💡 **Note**: By clicking on the links to the module folders (📁) you can access the original Markdown files used to create the notes, the corresponding folders containing the images, and the PDFs of the slides.",
         "",
-        "| Theme | Module | Notes |",
-        "|-------|--------|-------|"
+        "| Theme | Module | Notes | Slides |",
+        "|-------|--------|-------|--------|"
     ]
     
     themes =[d for d in os.listdir(NOTES_DIR) if os.path.isdir(os.path.join(NOTES_DIR, d)) and d.startswith("[") and "Appunti" not in d]
@@ -225,18 +227,28 @@ def generate_table_navigation():
             md_bases = [f.replace(".md", "") for f in files if f.endswith(".md")]
             all_pdfs = [f for f in files if f.endswith(".pdf")]
             
+            # 1. Notes Links
             notes_links =[]
             for md_base in sorted(md_bases, key=natural_sort_key):
                 pdf_version = f"{md_base}.pdf"
                 if pdf_version in all_pdfs:
                     pdf_link = get_rel_link(os.path.join(module_path, pdf_version))
-                    notes_links.append(f"{EMOJI_DOC_PDF} [{md_base}]({pdf_link})")
+                    notes_links.append(f"{EMOJI_DOC_PDF}[{md_base}]({pdf_link})")
             notes_cell = "<br>".join(notes_links) if notes_links else "-"
+            
+            # 2. Slides Links
+            slide_pdfs = [f for f in all_pdfs if f.replace(".pdf", "") not in md_bases]
+            slides_links =[]
+            for sp in sorted(slide_pdfs, key=natural_sort_key):
+                sp_base = sp.replace(".pdf", "")
+                sp_link = get_rel_link(os.path.join(module_path, sp))
+                slides_links.append(f"{EMOJI_SLIDES} [{sp_base}]({sp_link})")
+            slides_cell = "<br>".join(slides_links) if slides_links else "-"
             
             theme_cell = f"[{theme}]({theme_link})" if first_row else ""
             first_row = False
             
-            lines.append(f"| {theme_cell} | {EMOJI_FOLDER}[{module}]({module_link}) | {notes_cell} |")
+            lines.append(f"| {theme_cell} | {EMOJI_FOLDER}[{module}]({module_link}) | {notes_cell} | {slides_cell} |")
     
     return "\n".join(lines)
 
